@@ -1,0 +1,19 @@
+# The .gitattributes file allows you to specify the files and paths attributes
+# that should be used by git when performing git actions, such as `git commit`, etc.
+#
+# In other words git automatically saves the file according to the attributes
+# specified, every time a file is created or saved.
+#
+# One of these attributes is the eol (end of line) and is used to configure
+# the line endings for a file.
+# Reference: https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld
+# Explicitly declare files you want to always be normalized and converted
+# to native line endings on checkout.
+*.py text eol=lf
+*.txt text eol=lf
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.db filter=lfs diff=lfs merge=lfs -text
+*.sqlite filter=lfs diff=lfs merge=lfs -text
+*.ico filter=lfs diff=lfs merge=lfs -text
