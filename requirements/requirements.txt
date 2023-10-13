@@ -1,6 +1,8 @@
+absl-py
 click
 numpy
 pytest
 pyyaml
+tensorboard
 torch
 torchvision
