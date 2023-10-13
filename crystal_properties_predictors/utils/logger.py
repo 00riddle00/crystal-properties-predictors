@@ -1,10 +1,10 @@
-import yaml
 import logging
 import logging.config
 from pathlib import Path
 
-from .saving import log_path
+import yaml
 
+from .saving import log_path
 
 LOG_LEVEL = logging.INFO
 
@@ -42,6 +42,6 @@ def setup_logging(run_config, log_config="logging.yml") -> None:
 
 
 def setup_logger(name):
-    log = logging.getLogger(f'crystal_properties_predictors.{name}')
+    log = logging.getLogger(f"crystal_properties_predictors.{name}")
     log.setLevel(LOG_LEVEL)
     return log

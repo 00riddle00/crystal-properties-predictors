@@ -4,7 +4,6 @@ import torch.nn.functional as F
 from crystal_properties_predictors.base import ModelBase
 from crystal_properties_predictors.utils import setup_logger
 
-
 log = setup_logger(__name__)
 
 
@@ -17,7 +16,7 @@ class MnistModel(ModelBase):
         self.fc1 = nn.Linear(320, 50)
         self.fc2 = nn.Linear(50, num_classes)
 
-        log.info(f'<init>: \n{self}')
+        log.info(f"<init>: \n{self}")
 
     def forward(self, x):
         x = F.relu(F.max_pool2d(self.conv1(x), 2))

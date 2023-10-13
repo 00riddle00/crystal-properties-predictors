@@ -17,7 +17,6 @@ class AugmentationFactoryBase(abc.ABC):
 
 
 class MNISTTransforms(AugmentationFactoryBase):
-
     MEANS = [0]
     STDS = [1]
 

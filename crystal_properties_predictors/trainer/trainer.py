@@ -2,9 +2,8 @@ import numpy as np
 import torch
 from torchvision.utils import make_grid
 
-from crystal_properties_predictors.base import TrainerBase, AverageMeter
+from crystal_properties_predictors.base import AverageMeter, TrainerBase
 from crystal_properties_predictors.utils import setup_logger
-
 
 log = setup_logger(__name__)
 
@@ -14,9 +13,22 @@ class Trainer(TrainerBase):
     Responsible for training loop and validation.
     """
 
-    def __init__(self, model, loss, metrics, optimizer, start_epoch, config, device,
-                 data_loader, valid_data_loader=None, lr_scheduler=None):
-        super().__init__(model, loss, metrics, optimizer, start_epoch, config, device)
+    def __init__(
+        self,
+        model,
+        loss,
+        metrics,
+        optimizer,
+        start_epoch,
+        config,
+        device,
+        data_loader,
+        valid_data_loader=None,
+        lr_scheduler=None,
+    ):
+        super().__init__(
+            model, loss, metrics, optimizer, start_epoch, config, device
+        )
         self.data_loader = data_loader
         self.valid_data_loader = valid_data_loader
         self.do_validation = self.valid_data_loader is not None
@@ -34,7 +46,7 @@ class Trainer(TrainerBase):
         """
         self.model.train()
 
-        loss_mtr = AverageMeter('loss')
+        loss_mtr = AverageMeter("loss")
         metric_mtrs = [AverageMeter(m.__name__) for m in self.metrics]
 
         for batch_idx, (data, target) in enumerate(self.data_loader):
@@ -49,31 +61,40 @@ class Trainer(TrainerBase):
             loss_mtr.update(loss.item(), data.size(0))
 
             if batch_idx % self.log_step == 0:
-                self.writer.set_step((epoch) * len(self.data_loader) + batch_idx)
-                self.writer.add_scalar('batch/loss', loss.item())
-                for mtr, value in zip(metric_mtrs, self._eval_metrics(output, target)):
+                self.writer.set_step(
+                    (epoch) * len(self.data_loader) + batch_idx
+                )
+                self.writer.add_scalar("batch/loss", loss.item())
+                for mtr, value in zip(
+                    metric_mtrs, self._eval_metrics(output, target)
+                ):
                     mtr.update(value, data.size(0))
-                    self.writer.add_scalar(f'batch/{mtr.name}', value)
+                    self.writer.add_scalar(f"batch/{mtr.name}", value)
                 self._log_batch(
-                    epoch, batch_idx, self.data_loader.batch_size,
-                    len(self.data_loader), loss.item()
+                    epoch,
+                    batch_idx,
+                    self.data_loader.batch_size,
+                    len(self.data_loader),
+                    loss.item(),
                 )
 
             if batch_idx == 0:
-                self.writer.add_image('data', make_grid(data.cpu(), nrow=8, normalize=True))
+                self.writer.add_image(
+                    "data", make_grid(data.cpu(), nrow=8, normalize=True)
+                )
 
         del data
         del target
         del output
         torch.cuda.empty_cache()
 
-        self.writer.add_scalar('epoch/loss', loss_mtr.avg)
+        self.writer.add_scalar("epoch/loss", loss_mtr.avg)
         for mtr in metric_mtrs:
-            self.writer.add_scalar(f'epoch/{mtr.name}', mtr.avg)
+            self.writer.add_scalar(f"epoch/{mtr.name}", mtr.avg)
 
         results = {
-            'loss': loss_mtr.avg,
-            'metrics': [mtr.avg for mtr in metric_mtrs]
+            "loss": loss_mtr.avg,
+            "metrics": [mtr.avg for mtr in metric_mtrs],
         }
 
         if self.do_validation:
@@ -89,7 +110,10 @@ class Trainer(TrainerBase):
         n_samples = batch_size * len_data
         n_complete = batch_idx * batch_size
         percent = 100.0 * batch_idx / len_data
-        msg = f'Train Epoch: {epoch} [{n_complete}/{n_samples} ({percent:.0f}%)] Loss: {loss:.6f}'
+        msg = (
+            f"Train Epoch: {epoch} [{n_complete}/{n_samples} ("
+            f"{percent:.0f}%)] Loss: {loss:.6f}"
+        )
         log.debug(msg)
 
     def _eval_metrics(self, output, target):
@@ -108,7 +132,7 @@ class Trainer(TrainerBase):
             Contains keys 'val_loss' and 'val_metrics'.
         """
         self.model.eval()
-        loss_mtr = AverageMeter('loss')
+        loss_mtr = AverageMeter("loss")
         metric_mtrs = [AverageMeter(m.__name__) for m in self.metrics]
         with torch.no_grad():
             for batch_idx, (data, target) in enumerate(self.valid_data_loader):
@@ -116,22 +140,26 @@ class Trainer(TrainerBase):
                 output = self.model(data)
                 loss = self.loss(output, target)
                 loss_mtr.update(loss.item(), data.size(0))
-                for mtr, value in zip(metric_mtrs, self._eval_metrics(output, target)):
+                for mtr, value in zip(
+                    metric_mtrs, self._eval_metrics(output, target)
+                ):
                     mtr.update(value, data.size(0))
                 if batch_idx == 0:
-                    self.writer.add_image('input', make_grid(data.cpu(), nrow=8, normalize=True))
+                    self.writer.add_image(
+                        "input", make_grid(data.cpu(), nrow=8, normalize=True)
+                    )
 
         del data
         del target
         del output
         torch.cuda.empty_cache()
 
-        self.writer.set_step(epoch, 'valid')
-        self.writer.add_scalar('loss', loss_mtr.avg)
+        self.writer.set_step(epoch, "valid")
+        self.writer.add_scalar("loss", loss_mtr.avg)
         for mtr in metric_mtrs:
             self.writer.add_scalar(mtr.name, mtr.avg)
 
         return {
-            'val_loss': loss_mtr.avg,
-            'val_metrics': [mtr.avg for mtr in metric_mtrs]
+            "val_loss": loss_mtr.avg,
+            "val_metrics": [mtr.avg for mtr in metric_mtrs],
         }
