@@ -1,11 +1,14 @@
 =============================
-crystal-properties-predictors
+Crystal Properties Predictors
 =============================
 
-.. image:: https://img.shields.io/badge/built_with-Cookiecutter_Pytorch-ee4c2c?logo=cookiecutter&link=https%3A%2F%2Fgithub.com%2Fkhornlund%2Fcookiecutter-pytorch
+.. image:: https://img.shields.io/badge/built_with-Cookiecutter_Pytorch-ee4c2c?logo=cookiecutter
+   :target: https://github.com/khornlund/cookiecutter-pytorch
    :alt: Static Badge
 
+
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
    :alt: Static Badge
 
 This project was initially setup with `Cookiecutter <https://github.com/cookiecutter/cookiecutter/>`_ using these
