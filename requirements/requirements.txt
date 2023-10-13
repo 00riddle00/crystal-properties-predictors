@@ -1,6 +1,11 @@
 absl-py
+black
 click
+isort
+mypy
 numpy
+overrides
+pydocstyle
 pytest
 pyyaml
 tensorboard
