@@ -86,7 +86,7 @@ Config files are in `.yml` format:
   name: Mnist_LeNet
   n_gpu: 1
   save_dir: saved/
-  seed: 1234
+  seed: 42
 
   arch:
     type: MnistModel

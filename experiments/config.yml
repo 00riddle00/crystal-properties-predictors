@@ -1,6 +1,6 @@
 name: Mnist_LeNet
 save_dir: saved/
-seed: 1234
+seed: 42
 target_devices: [ 0 ]
 
 arch:
