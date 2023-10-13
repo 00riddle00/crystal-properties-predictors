@@ -1,0 +1,6 @@
+click
+numpy
+pytest
+pyyaml
+torch
+torchvision
