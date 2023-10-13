@@ -45,7 +45,7 @@ class TrainerBase:
         for epoch in range(self.start_epoch, self.epochs):
             result = self._train_epoch(epoch)
 
-            # save logged informations into log dict
+            # save logged information into log dict
             results = {"epoch": epoch}
             for key, value in result.items():
                 if key == "metrics":
@@ -65,12 +65,12 @@ class TrainerBase:
                 else:
                     results[key] = value
 
-            # print logged informations to the screen
+            # print logged information to the screen
             for key, value in results.items():
                 log.info(f"{str(key):15s}: {value}")
 
             # evaluate model performance according to configured metric,
-            # save best checkpoint as model_best
+            # save the best checkpoint as model_best
             best = False
             if self.mnt_mode != "off":
                 try:

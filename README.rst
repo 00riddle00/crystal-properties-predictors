@@ -132,7 +132,7 @@ Config files are in `.yml` format:
     num_workers: 8
 
 
-Add addional configurations if you need.
+Add additional configurations if you need.
 
 Using config files
 ------------------

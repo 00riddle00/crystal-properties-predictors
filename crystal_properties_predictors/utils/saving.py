@@ -17,7 +17,7 @@ def ensure_exists(p: Path) -> Path:
 def arch_path(config: dict) -> Path:
     """Construct a path based on the name of a configuration file.
 
-    eg. 'saved/EfficientNet'
+    e.g. 'saved/EfficientNet'
     """
     p = Path(config["save_dir"]) / config["name"]
     return ensure_exists(p)
@@ -38,7 +38,7 @@ def trainer_paths(config: dict) -> Path:
     """
     Return the paths to save checkpoints and tensorboard runs.
 
-    eg.
+    e.g.
     .. code::
 
         saved/EfficientNet/1002-123456/checkpoints
