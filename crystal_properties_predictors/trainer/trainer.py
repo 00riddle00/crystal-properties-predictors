@@ -9,9 +9,7 @@ log = setup_logger(__name__)
 
 
 class Trainer(TrainerBase):
-    """
-    Responsible for training loop and validation.
-    """
+    """Responsible for training loop and validation."""
 
     def __init__(
         self,
@@ -36,8 +34,7 @@ class Trainer(TrainerBase):
         self.log_step = int(np.sqrt(data_loader.batch_size)) * 8
 
     def _train_epoch(self, epoch: int) -> dict:
-        """
-        Training logic for an epoch
+        """Training logic for an epoch.
 
         Returns
         -------
@@ -123,8 +120,7 @@ class Trainer(TrainerBase):
                 yield value
 
     def _valid_epoch(self, epoch: int) -> dict:
-        """
-        Validate after training an epoch
+        """Validate after training an epoch.
 
         Returns
         -------

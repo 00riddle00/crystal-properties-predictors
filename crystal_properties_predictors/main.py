@@ -68,9 +68,7 @@ def train(cfg: Dict, resume: str) -> None:
 def setup_device(
     model: nn.Module, target_devices: List[int]
 ) -> Tuple[torch.device, List[int]]:
-    """
-    setup GPU device if available, move model into configured device
-    """
+    """Set up GPU device if available, move model into configured device."""
     available_devices = list(range(torch.cuda.device_count()))
 
     if not available_devices:
@@ -117,9 +115,7 @@ def setup_param_groups(model: nn.Module, config: Dict) -> List:
 
 
 def resume_checkpoint(resume_path, model, optimizer, config):
-    """
-    Resume from saved checkpoint.
-    """
+    """Resume from saved checkpoint."""
     if not resume_path:
         return model, optimizer, 0
 
@@ -147,8 +143,7 @@ def resume_checkpoint(resume_path, model, optimizer, config):
 def get_instance(
     module: ModuleType, name: str, config: Dict, *args: Any
 ) -> Any:
-    """
-    Helper to construct an instance of a class.
+    """Help to construct an instance of a class.
 
     Parameters
     ----------

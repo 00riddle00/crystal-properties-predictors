@@ -34,9 +34,11 @@ class TensorboardWriter:
         self.step = step
 
     def __getattr__(self, name):
-        """
+        """.
+
         If visualization is configured to use:
-            return add_data() methods of tensorboard with additional information (step, tag) added.
+            return add_data() methods of tensorboard with additional
+            information (step, tag) added.
         Otherwise:
             return a blank function handle that does nothing
         """
@@ -52,7 +54,8 @@ class TensorboardWriter:
 
             return wrapper
         else:
-            # default action for returning methods defined in this class, set_step() for instance.
+            # default action for returning methods defined in this class,
+            # set_step() for instance.
             try:
                 attr = object.__getattr__(name)
             except AttributeError:

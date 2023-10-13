@@ -7,9 +7,7 @@ from crystal_properties_predictors.base import DataLoaderBase
 
 
 class MnistDataLoader(DataLoaderBase):
-    """
-    MNIST data loading demo using DataLoaderBase
-    """
+    """MNIST data loading demo using DataLoaderBase."""
 
     def __init__(
         self,

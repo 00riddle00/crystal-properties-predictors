@@ -10,8 +10,7 @@ LOG_LEVEL = logging.INFO
 
 
 def setup_logging(run_config, log_config="logging.yml") -> None:
-    """
-    Setup ``logging.config``
+    """Set up ``logging.config``.
 
     Parameters
     ----------

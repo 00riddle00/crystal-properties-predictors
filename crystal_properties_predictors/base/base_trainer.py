@@ -14,9 +14,7 @@ log = setup_logger(__name__)
 
 
 class TrainerBase:
-    """
-    Base class for all trainers
-    """
+    """Base class for all trainers."""
 
     def __init__(
         self, model, loss, metrics, optimizer, start_epoch, config, device
@@ -42,9 +40,7 @@ class TrainerBase:
             yaml.dump(config, handle, default_flow_style=False)
 
     def train(self):
-        """
-        Full training logic
-        """
+        """Full training logic."""
         log.info("Starting training...")
         for epoch in range(self.start_epoch, self.epochs):
             result = self._train_epoch(epoch)
@@ -114,14 +110,11 @@ class TrainerBase:
                 self._save_checkpoint(epoch, save_best=best)
 
     def _train_epoch(self, epoch: int) -> dict:
-        """
-        Training logic for an epoch.
-        """
+        """Training logic for an epoch."""
         raise NotImplementedError
 
     def _save_checkpoint(self, epoch: int, save_best: bool = False) -> None:
-        """
-        Saving checkpoints
+        """Save checkpoints.
 
         :param epoch: current epoch number
         :param log: logging information of the epoch
@@ -146,9 +139,7 @@ class TrainerBase:
             log.info(f"Saving current best: {best_path}")
 
     def _setup_monitoring(self, config: dict) -> None:
-        """
-        Configuration to monitor model performance and save best.
-        """
+        """Configure to monitor model performance and save best."""
         self.epochs = config["epochs"]
         self.save_period = config["save_period"]
         self.monitor = config.get("monitor", "off")
@@ -163,9 +154,7 @@ class TrainerBase:
 
 
 class AverageMeter:
-    """
-    Computes and stores the average and current value.
-    """
+    """Compute and stores the average and current value."""
 
     def __init__(self, name):
         self.name = name
