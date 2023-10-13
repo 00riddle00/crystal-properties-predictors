@@ -1,6 +1,4 @@
-import numpy as np
 from torch.utils.data import DataLoader
-from torch.utils.data.sampler import SubsetRandomSampler
 from torchvision import datasets
 
 from crystal_properties_predictors.base import DataLoaderBase
