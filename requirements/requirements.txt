@@ -5,6 +5,7 @@ isort
 mypy
 numpy
 overrides
+pandas
 pydocstyle
 pytest
 pyyaml
