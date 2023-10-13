@@ -1,15 +1,15 @@
 name: Mnist_LeNet
 save_dir: saved/
 seed: 1234
-target_devices: [0]
+target_devices: [ 0 ]
 
 arch:
   type: MnistModel
-  args: {}
+  args: { }
 
 augmentation:
   type: MNISTTransforms
-  args: {}
+  args: { }
 
 data_loader:
   type: MnistDataLoader
@@ -29,8 +29,8 @@ lr_scheduler:
     step_size: 50
 
 metrics:
-- top_1_acc
-- top_3_acc
+  - top_1_acc
+  - top_3_acc
 
 optimizer:
   type: Adam

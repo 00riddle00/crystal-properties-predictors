@@ -27,4 +27,4 @@ dependencies:
   - tqdm
   - pip
   - pip:
-    - -e .  # install package in development mode
+      - -e .  # install package in development mode
