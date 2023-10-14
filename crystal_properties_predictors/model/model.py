@@ -1,5 +1,7 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from overrides import override
 
 from crystal_properties_predictors.base import ModelBase
 from crystal_properties_predictors.utils import setup_logger
@@ -26,3 +28,25 @@ class MnistModel(ModelBase):
         x = F.dropout(x, training=self.training)
         x = self.fc2(x)
         return F.log_softmax(x, dim=1)
+
+
+class CrystalPropModel(nn.Module):
+    """A neural network with two linear layers."""
+
+    @override
+    def __init__(self, input_dim: int) -> None:
+        super().__init__()
+        self.layer_1: nn.Linear = nn.Linear(
+            in_features=input_dim, out_features=input_dim // 2, bias=True
+        )
+        self.layer_2: nn.Linear = nn.Linear(
+            in_features=input_dim // 2, out_features=1, bias=True
+        )
+        nn.init.kaiming_uniform_(self.layer_1.weight)
+        nn.init.kaiming_uniform_(self.layer_2.weight)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        res1: torch.Tensor = F.relu(self.layer_1(x))
+        res2: torch.Tensor = F.relu(self.layer_2(res1))
+        res = F.relu(res2)
+        return res
