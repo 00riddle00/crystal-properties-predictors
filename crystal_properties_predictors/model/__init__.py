@@ -1,3 +1,3 @@
-from .loss import *
-from .metric import *
-from .model import *
+from .losses import *
+from .metrics import *
+from .models import *
