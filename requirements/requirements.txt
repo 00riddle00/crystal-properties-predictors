@@ -11,4 +11,5 @@ pytest
 pyyaml
 tensorboard
 torch
+torcheval
 torchvision
