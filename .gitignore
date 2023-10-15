@@ -106,11 +106,13 @@ data/*
 datasets/
 input/
 saved/*
+# CrystalMpPred INFO log
 !saved/CrystalMpPred/
 saved/CrystalMpPred/*
 !saved/CrystalMpPred/logs
 saved/CrystalMpPred/logs/*
 !saved/CrystalMpPred/logs/info.log
+# Mnist_Lenet INFO log
 !saved/Mnist_LeNet/
 saved/Mnist_LeNet/*
 !saved/Mnist_LeNet/logs
