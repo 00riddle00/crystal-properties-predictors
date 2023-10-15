@@ -25,3 +25,12 @@ class MNISTTransforms(AugmentationFactoryBase):
 
     def build_test(self):
         return T.Compose([T.ToTensor(), T.Normalize(self.MEANS, self.STDS)])
+
+
+# This is a dummy augmentation factory that does nothing
+class NONE(AugmentationFactoryBase):
+    def build_train(self):
+        pass
+
+    def build_test(self):
+        pass
