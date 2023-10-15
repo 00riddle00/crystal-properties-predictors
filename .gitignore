@@ -103,9 +103,19 @@ ENV/
 # input data, saved log, checkpoints
 data/*
 !data/CrystalDataset/
-input/
-saved/
 datasets/
+input/
+saved/*
+!saved/CrystalMpPred/
+saved/CrystalMpPred/*
+!saved/CrystalMpPred/logs
+saved/CrystalMpPred/logs/*
+!saved/CrystalMpPred/logs/info.log
+!saved/Mnist_LeNet/
+saved/Mnist_LeNet/*
+!saved/Mnist_LeNet/logs
+saved/Mnist_LeNet/logs/*
+!saved/Mnist_LeNet/logs/info.log
 
 # editor, os cache directory
 .vscode/
