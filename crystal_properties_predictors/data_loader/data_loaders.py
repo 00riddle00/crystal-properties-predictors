@@ -1,4 +1,4 @@
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, random_split
 from torchvision import datasets
 
 from crystal_properties_predictors.base import DataLoaderBase
@@ -70,16 +70,13 @@ class CrystalDataLoader(DataLoaderBase):
             download=False,
             transform=transforms.build_transforms(train=True),
         )
-        self.valid_dataset = (
-            CrystalDataset(
-                self.data_dir,
-                train=False,
-                download=False,
-                transform=transforms.build_transforms(train=False),
+
+        if train:
+            self.train_dataset, self.valid_dataset = random_split(
+                self.train_dataset, [1 - validation_split, validation_split]
             )
-            if train
-            else None
-        )
+        else:
+            self.valid_dataset = None
 
         self.init_kwargs = {"batch_size": batch_size, "num_workers": nworkers}
         super().__init__(

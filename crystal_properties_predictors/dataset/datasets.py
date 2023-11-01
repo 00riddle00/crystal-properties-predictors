@@ -30,8 +30,8 @@ class CrystalDataset(DatasetBase):
     resources = [
         ("train-crystal-structures.csv", "<place_for_md5_hash>"),
         ("train-crystal-melting-points.csv", "<place_for_md5_hash>"),
-        ("test-crystal-structures.csv", "<place_for_md5_hash>"),
-        ("test-crystal-melting-points.csv", "<place_for_md5_hash>"),
+        # ("test-crystal-structures.csv", "<place_for_md5_hash>"),
+        # ("test-crystal-melting-points.csv", "<place_for_md5_hash>"),
     ]
 
     @override
@@ -70,25 +70,40 @@ class CrystalDataset(DatasetBase):
             f"{'train' if self.train else 'test'}-crystal-structures.csv"
         )
 
-        data: torch.Tensor = torch.tensor(
-            pd.read_csv(
-                os.path.join(self.raw_folder, structure_file)
-            ).to_numpy(),
-            dtype=torch.float32,
-        )
-
         melting_point_file: str = (
             f"{'train' if self.train else 'test'}-crystal-melting-points.csv"
         )
 
+        data_df: pd.DataFrame = (
+            pd.read_csv(os.path.join(self.raw_folder, structure_file))
+            .set_index(["CODID"])
+            .sort_index()
+        )
+
+        targets_df: pd.DataFrame = (
+            pd.read_csv(os.path.join(self.raw_folder, melting_point_file))
+            .set_index(["CODID"])
+            .sort_index()
+        )
+
+        if not self._validate_keys(data_df, targets_df):
+            raise RuntimeError(
+                "CODID keys in data file do not correspond to the keys in "
+                "targets file. Make sure both files contain the same keys."
+            )
+
+        data: torch.Tensor = torch.tensor(
+            data_df.to_numpy(), dtype=torch.float32
+        )
         targets: torch.Tensor = torch.tensor(
-            pd.read_csv(
-                os.path.join(self.raw_folder, melting_point_file)
-            ).to_numpy(),
-            dtype=torch.float32,
+            targets_df.to_numpy(), dtype=torch.float32
         )
 
         return data, targets
+
+    @staticmethod
+    def _validate_keys(data: pd.DataFrame, targets: pd.DataFrame) -> bool:
+        return data.index.equals(targets.index)
 
     # TODO implement if needed
     def download(self) -> None:
