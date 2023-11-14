@@ -11,7 +11,8 @@ Crystal Properties Predictors
    :target: https://github.com/psf/black
    :alt: Static Badge
 
-This project was initially setup with `Cookiecutter <https://github.com/cookiecutter/cookiecutter/>`_ using these
+This project was initially setup with
+`Cookiecutter <https://github.com/cookiecutter/cookiecutter/>`_ using these
 choices (the image below):
 
 .. image:: docs/_static/cookiecutter_initial_setup.png
@@ -72,8 +73,8 @@ Usage
   $ conda env create --file environment.yml
   $ conda activate crystal_properties_predictors
 
-The code in this repo is an MNIST example of the template. You can run the tests,
-and the example project using:
+The code in this repo is an MNIST example of the template. You can run the
+tests, and the example project using:
 
 .. code-block::
 
@@ -161,8 +162,8 @@ You can specify the name of the training session in config files:
 
   "name": "MNIST_LeNet"
 
-The checkpoints will be saved in `save_dir/name/timestamp/checkpoint_epoch_n`, with timestamp in
-mmdd_HHMMSS format.
+The checkpoints will be saved in `save_dir/name/timestamp/checkpoint_epoch_n`,
+with timestamp in mmdd_HHMMSS format.
 
 A copy of config file will be saved in the same folder.
 
@@ -181,7 +182,8 @@ A copy of config file will be saved in the same folder.
 
 Tensorboard Visualization
 --------------------------
-This template supports `<https://pytorch.org/docs/stable/tensorboard.html>`_ visualization.
+This template supports `<https://pytorch.org/docs/stable/tensorboard.html>`_
+visualization.
 
 1. Run training
 
@@ -189,16 +191,18 @@ This template supports `<https://pytorch.org/docs/stable/tensorboard.html>`_ vis
 
 2. Open tensorboard server
 
-    Type `tensorboard --logdir saved/runs/` at the project root, then server will open at
-    `http://localhost:6006`
+    Type `tensorboard --logdir saved/runs/` at the project root, then server
+    will open at `http://localhost:6006`
 
-By default, values of loss and metrics specified in config file, input images, and histogram of
-model parameters will be logged. If you need more visualizations, use `add_scalar('tag', data)`,
-`add_image('tag', image)`, etc in the `trainer._train_epoch` method. `add_something()` methods in
-this template are basically wrappers for those of `tensorboard.SummaryWriter` module.
+By default, values of loss and metrics specified in config file, input images,
+and histogram of model parameters will be logged. If you need more
+visualizations, use `add_scalar('tag', data)`, `add_image('tag', image)`, etc
+in the `trainer._train_epoch` method. `add_something()` methods in this
+template are basically wrappers for those of `tensorboard.SummaryWriter`
+module.
 
-**Note**: You don't have to specify current steps, since `TensorboardWriter` class defined at
-`logger/visualization.py` will track current steps.
+**Note**: You don't have to specify current steps, since `TensorboardWriter`
+class defined at `logger/visualization.py` will track current steps.
 
 Acknowledgments
 ===============
