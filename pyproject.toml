@@ -1,0 +1,49 @@
+# ==== black ====
+[tool.black]
+line-length = 88
+extend-exclude = "migrations"
+target-version = ["py311"]
+
+# ==== flake8 ====
+[tool.flake8]
+max-line-length = 88
+exclude = [
+    ".tox",
+    ".git",
+    "__pycache__",
+    "*/migrations/*",
+    "*/static/CACHE/*",
+    "docs",
+    "node_modules",
+    ".env",
+    "venv",
+    ".venv",
+]
+# Use extend-ignore to add to already ignored checks which are anti-patterns
+# like W503.
+extend-ignore = [
+    # PEP 8 recommends to treat : in slices as a binary operator with the
+    # lowest priority, and to leave an equal amount of space on either side,
+    # except if a parameter is omitted (e.g. ham[1 + 1 :]). This behaviour may
+    # raise E203 whitespace before ':' warnings in style guide enforcement
+    # tools like Flake8. Since E203 is not PEP 8 compliant, we tell Flake8 to
+    # ignore this warning.
+    # https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#slices
+    "E203"
+]
+
+# ==== isort ====
+[tool.isort]
+profile = "black"
+line_length = 88
+skip = ["venv/"]
+skip_glob = ["**/migrations/*.py"]
+
+# ==== mypy ====
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
