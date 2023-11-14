@@ -88,16 +88,12 @@ class CrystalDataset(DatasetBase):
 
         if not self._validate_keys(data_df, targets_df):
             raise RuntimeError(
-                "CODID keys in data file do not correspond to the keys in "
-                "targets file. Make sure both files contain the same keys."
+                "CODID keys in data file do not correspond to the keys in targets file."
+                " Make sure both files contain the same keys."
             )
 
-        data: torch.Tensor = torch.tensor(
-            data_df.to_numpy(), dtype=torch.float32
-        )
-        targets: torch.Tensor = torch.tensor(
-            targets_df.to_numpy(), dtype=torch.float32
-        )
+        data: torch.Tensor = torch.tensor(data_df.to_numpy(), dtype=torch.float32)
+        targets: torch.Tensor = torch.tensor(targets_df.to_numpy(), dtype=torch.float32)
 
         return data, targets
 

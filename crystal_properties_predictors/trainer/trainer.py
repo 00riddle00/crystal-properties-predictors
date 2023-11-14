@@ -24,9 +24,7 @@ class Trainer(TrainerBase):
         valid_data_loader=None,
         lr_scheduler=None,
     ):
-        super().__init__(
-            model, loss, metrics, optimizer, start_epoch, config, device
-        )
+        super().__init__(model, loss, metrics, optimizer, start_epoch, config, device)
         self.data_loader = data_loader
         self.valid_data_loader = valid_data_loader
         self.do_validation = self.valid_data_loader is not None
@@ -58,13 +56,9 @@ class Trainer(TrainerBase):
             loss_mtr.update(loss.item(), data.size(0))
 
             if batch_idx % self.log_step == 0:
-                self.writer.set_step(
-                    (epoch) * len(self.data_loader) + batch_idx
-                )
+                self.writer.set_step((epoch) * len(self.data_loader) + batch_idx)
                 self.writer.add_scalar("batch/loss", loss.item())
-                for mtr, value in zip(
-                    metric_mtrs, self._eval_metrics(output, target)
-                ):
+                for mtr, value in zip(metric_mtrs, self._eval_metrics(output, target)):
                     mtr.update(value, data.size(0))
                     self.writer.add_scalar(f"batch/{mtr.name}", value)
                 self._log_batch(
@@ -136,9 +130,7 @@ class Trainer(TrainerBase):
                 output = self.model(data)
                 loss = self.loss(output, target)
                 loss_mtr.update(loss.item(), data.size(0))
-                for mtr, value in zip(
-                    metric_mtrs, self._eval_metrics(output, target)
-                ):
+                for mtr, value in zip(metric_mtrs, self._eval_metrics(output, target)):
                     mtr.update(value, data.size(0))
                 if batch_idx == 0:
                     self.writer.add_image(

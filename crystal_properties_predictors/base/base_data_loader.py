@@ -7,7 +7,7 @@ class DataLoaderBase(DataLoader):
     def split_validation(self) -> DataLoader:
         """.
 
-        Return a `torch.utils.data.DataLoader` for validation, or None if
-        not available.
+        Return a `torch.utils.data.DataLoader` for validation, or None if not
+        available.
         """
         raise NotImplementedError

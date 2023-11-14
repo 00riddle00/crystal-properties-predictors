@@ -26,18 +26,12 @@ def train(cfg: Dict, resume: str) -> None:
 
     model = get_instance(module_arch, "arch", cfg)
     model, device = setup_device(model, cfg["target_devices"])
-    torch.backends.cudnn.benchmark = (
-        True  # disable if not consistent input sizes
-    )
+    torch.backends.cudnn.benchmark = True  # disable if not consistent input sizes
 
     param_groups = setup_param_groups(model, cfg["optimizer"])
     optimizer = get_instance(module_optimizer, "optimizer", cfg, param_groups)
-    lr_scheduler = get_instance(
-        module_scheduler, "lr_scheduler", cfg, optimizer
-    )
-    model, optimizer, start_epoch = resume_checkpoint(
-        resume, model, optimizer, cfg
-    )
+    lr_scheduler = get_instance(module_scheduler, "lr_scheduler", cfg, optimizer)
+    model, optimizer, start_epoch = resume_checkpoint(resume, model, optimizer, cfg)
 
     transforms = get_instance(module_aug, "augmentation", cfg)
     data_loader = get_instance(module_data, "data_loader", cfg, transforms)
@@ -73,8 +67,8 @@ def setup_device(
 
     if not available_devices:
         log.warning(
-            "There's no GPU available on this machine. Training will be "
-            "performed on CPU."
+            "There's no GPU available on this machine. Training will be performed on "
+            "CPU."
         )
         device = torch.device("cpu")
         model = model.to(device)
@@ -91,16 +85,14 @@ def setup_device(
 
     if max_target_gpu > max_available_gpu:
         msg = (
-            f"Configuration requests GPU #{max_target_gpu} but only "
-            f"{max_available_gpu} available. Check the configuration and try "
-            f"again."
+            f"Configuration requests GPU #{max_target_gpu} but only {max_available_gpu}"
+            f" available. Check the configuration and try again."
         )
         log.critical(msg)
         raise Exception(msg)
 
     log.info(
-        f"Using devices {target_devices} of available devices "
-        f"{available_devices}"
+        f"Using devices {target_devices} of available devices " f"{available_devices}"
     )
     device = torch.device(f"cuda:{target_devices[0]}")
     if len(target_devices) > 1:
@@ -125,13 +117,10 @@ def resume_checkpoint(resume_path, model, optimizer, config):
 
     # load optimizer state from checkpoint only when optimizer type is not
     # changed.
-    if (
-        checkpoint["config"]["optimizer"]["type"]
-        != config["optimizer"]["type"]
-    ):
+    if checkpoint["config"]["optimizer"]["type"] != config["optimizer"]["type"]:
         log.warning(
-            "Warning: Optimizer type given in config file is different from "
-            "that of checkpoint. Optimizer parameters not being resumed."
+            "Warning: Optimizer type given in config file is different from that of "
+            "checkpoint. Optimizer parameters not being resumed."
         )
     else:
         optimizer.load_state_dict(checkpoint["optimizer"])
@@ -140,9 +129,7 @@ def resume_checkpoint(resume_path, model, optimizer, config):
     return model, optimizer, checkpoint["epoch"]
 
 
-def get_instance(
-    module: ModuleType, name: str, config: Dict, *args: Any
-) -> Any:
+def get_instance(module: ModuleType, name: str, config: Dict, *args: Any) -> Any:
     """Help to construct an instance of a class.
 
     Parameters

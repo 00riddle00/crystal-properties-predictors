@@ -38,9 +38,7 @@ class MnistDataLoader(DataLoaderBase):
         )
 
         self.init_kwargs = {"batch_size": batch_size, "num_workers": nworkers}
-        super().__init__(
-            self.train_dataset, shuffle=shuffle, **self.init_kwargs
-        )
+        super().__init__(self.train_dataset, shuffle=shuffle, **self.init_kwargs)
 
     def split_validation(self):
         if self.valid_dataset is None:
@@ -79,9 +77,7 @@ class CrystalDataLoader(DataLoaderBase):
             self.valid_dataset = None
 
         self.init_kwargs = {"batch_size": batch_size, "num_workers": nworkers}
-        super().__init__(
-            self.train_dataset, shuffle=shuffle, **self.init_kwargs
-        )
+        super().__init__(self.train_dataset, shuffle=shuffle, **self.init_kwargs)
 
     def split_validation(self):
         if self.valid_dataset is None:

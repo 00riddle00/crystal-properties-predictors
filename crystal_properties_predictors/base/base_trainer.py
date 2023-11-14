@@ -16,9 +16,7 @@ log = setup_logger(__name__)
 class TrainerBase:
     """Base class for all trainers."""
 
-    def __init__(
-        self, model, loss, metrics, optimizer, start_epoch, config, device
-    ):
+    def __init__(self, model, loss, metrics, optimizer, start_epoch, config, device):
         self.model = model
         self.loss = loss
         self.metrics = metrics
@@ -30,9 +28,7 @@ class TrainerBase:
         self._setup_monitoring(config["training"])
 
         self.checkpoint_dir, writer_dir = trainer_paths(config)
-        self.writer = TensorboardWriter(
-            writer_dir, config["training"]["tensorboard"]
-        )
+        self.writer = TensorboardWriter(writer_dir, config["training"]["tensorboard"])
 
         # Save configuration file into checkpoint directory:
         config_save_path = Path(self.checkpoint_dir) / "config.yml"
@@ -50,10 +46,7 @@ class TrainerBase:
             for key, value in result.items():
                 if key == "metrics":
                     results.update(
-                        {
-                            mtr.__name__: value[i]
-                            for i, mtr in enumerate(self.metrics)
-                        }
+                        {mtr.__name__: value[i] for i, mtr in enumerate(self.metrics)}
                     )
                 elif key == "val_metrics":
                     results.update(
@@ -69,8 +62,8 @@ class TrainerBase:
             for key, value in results.items():
                 log.info(f"{str(key):15s}: {value}")
 
-            # evaluate model performance according to configured metric,
-            # save the best checkpoint as model_best
+            # evaluate model performance according to configured metric save
+            # the best checkpoint as model_best
             best = False
             if self.mnt_mode != "off":
                 try:
@@ -85,8 +78,8 @@ class TrainerBase:
                     )
                 except KeyError:
                     log.warning(
-                        f"Warning: Metric '{self.mnt_metric}' is not found. "
-                        f"Model performance monitoring is disabled."
+                        f"Warning: Metric '{self.mnt_metric}' is not found. Model "
+                        f"performance monitoring is disabled."
                     )
                     self.mnt_mode = "off"
                     improved = False
@@ -101,8 +94,8 @@ class TrainerBase:
 
                 if not_improved_count > self.early_stop:
                     log.info(
-                        f"Validation performance didn't improve for "
-                        f"{self.early_stop} epochs. Training stops."
+                        f"Validation performance didn't improve for {self.early_stop} "
+                        f"epochs. Training stops."
                     )
                     break
 
