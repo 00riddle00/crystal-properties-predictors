@@ -31,6 +31,8 @@ lr_scheduler:
 
 metrics:
   - mae_score
+  - mse_score
+  - r_2_score
 
 optimizer:
   type: Adam
