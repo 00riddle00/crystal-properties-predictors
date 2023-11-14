@@ -26,13 +26,13 @@ def mae_score(output, target):
     return mean_absolute_error(_output, _target)
 
 
-def r_2_score(output, target):
-    _output = torch.flatten(torch.transpose(output, 0, 1))
-    _target = torch.flatten(torch.transpose(target, 0, 1))
-    return r2_score(_output, _target)
-
-
 def mse_score(output, target):
     _output = torch.flatten(torch.transpose(output, 0, 1))
     _target = torch.flatten(torch.transpose(target, 0, 1))
     return mean_squared_error(_output, _target)
+
+
+def r_2_score(output, target):
+    _output = torch.flatten(torch.transpose(output, 0, 1))
+    _target = torch.flatten(torch.transpose(target, 0, 1))
+    return r2_score(_output, _target)
