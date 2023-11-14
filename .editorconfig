@@ -1,0 +1,185 @@
+# -----------------------------------------------------------------------------
+#    _____    _ _ _              ____             __ _
+#   | ____|__| (_) |_ ___  _ __ / ___|___  _ __  / _(_) __ _
+#   |  _| / _` | | __/ _ \| '__| |   / _ \| '_ \| |_| |/ _` |
+#  _| |__| (_| | | || (_) | |  | |__| (_) | | | |  _| | (_| |
+# (_)_____\__,_|_|\__\___/|_|   \____\___/|_| |_|_| |_|\__, |
+#                                                       |___/
+#
+# This is a configuration file for EditorConfig
+#
+# EditorConfig is a file format and collection of text editor plugins which
+# helps developers unify, define and maintain consistent coding styles between
+# different editors and IDEs. Most popular editors support this either natively
+# or via plugin.
+#
+# Documentation:
+#   https://EditorConfig.org
+# Properties:
+#   https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+# Plugins for text editors: https://editorconfig.org/#download
+#
+# Please, either use an editor supporting editorconfig or set up your editor
+# style according to this file manually.
+#
+# Emacs: you need https://github.com/10sr/editorconfig-custom-majormode-el to
+# automatically enable the appropriate major-mode for your files that are not
+# already caught by your existing config.
+#
+# For Windows Users: To create an .editorconfig file within Windows Explorer,
+# you need to create a file named .editorconfig. (note the trailing dot), which
+# Windows Explorer will automatically rename to .editorconfig for you.
+# -----------------------------------------------------------------------------
+#
+# When opening a file, EditorConfig plugins look for a file named .editorconfig
+# in the directory of the opened file and in every parent directory. A search
+# for .editorconfig files will stop if the root filepath is reached or an
+# EditorConfig file with root=true is found.
+#
+# This is the top-most .editorconfig file; do not search in parent directories.
+# (i.e. ignore any other .editorconfig files further up in the file system)
+root = true
+
+# [*] means this is a configuration which applies to all files. EditorConfig
+# files are read top to bottom and the most recent rules found take precedence.
+# Properties from matching EditorConfig sections are applied in the order they
+# were read, so properties in closer files take precedence.
+[*]
+# Enforce Unix style end of lines (line endings) (\n only)
+end_of_line = lf
+# Set default charset (utf-8)
+charset = utf-8
+# Remove whitespace characters at the end of line
+trim_trailing_whitespace = true
+# Always end files with a newline (a blank line)
+insert_final_newline = true
+
+[*.py]
+indent_style = space
+indent_size = 4
+# tab_width defaults to the value of indent_size and does not usually need to
+# be specified. It will not be specified in the entries below.
+tab_width = 4
+# Docstrings and comments use max_line_length = 79
+max_line_length = 88
+
+[*.sql]
+indent_style = space
+indent_size = 4
+
+# JavaScript/TypeScript files
+[*.{js,jsx,mjs,ts,tsx,vue}]
+indent_style = space
+indent_size = 4
+max_line_length = 100
+quote_type = double
+indent_brace_style = K&R
+
+# Minified JavaScript files should not be changed
+[*.min.js]
+indent_style = unset
+insert_final_newline = unset
+
+; JSON files (normal and commented version, and JSON Lines)
+[*.{json,jsonc,jsonl}]
+indent_style = space
+indent_size = 4
+# The JSON files contain newlines inconsistently
+insert_final_newline = unset
+max_line_length = off
+quote_type = double
+indent_brace_style = K&R
+
+# The indent size used in the `package.json` file cannot be changed
+# https://github.com/npm/npm/pull/3180#issuecomment-16336516
+[{package,bower}.json]
+indent_size = 2
+
+[*.html]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+quote_type = double
+
+# CSS, SASS, LESS stylesheet files
+[*.{css,scss,less}]
+indent_style = space
+indent_size = 2
+quote_type = double
+indent_brace_style = K&R
+
+# Markdown files
+[*.{md,markdown}]
+indent_style = space
+indent_size = 2
+# (preserve trailing spaces, double whitespace at the end of line denotes a
+# line break in Markdown, e.g. in multi-line bullet list items)
+trim_trailing_whitespace = false
+insert_final_newline = false
+max_line_length = 79
+
+[*.txt]
+max_line_length = 79
+
+# ReStructuredText files
+[*.{rst,rst.txt}]
+indent_style = space
+indent_size = 4
+max_line_length = 79
+
+# YAML uses two spaces
+# Tabs may not be valid YAML (https://yaml.org/spec/1.2/spec.html#id2777534)
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.ini]
+indent_style = space
+indent_size = 4
+
+[*.xml]
+indent_style = space
+indent_size = 2
+
+# Makefiles always use tabs for indentation
+[{Makefile*,Makelib,make.bat,*.mk,*.mak}]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = false
+
+# Unix shell scripts
+[*.{sh,bash,zsh}]
+indent_style = space
+indent_size = 4
+
+; DOS/Windows batch scripts
+; Batch files use tabs for indentation
+[*.{bat,cmd}]
+end_of_line = crlf
+indent_style = tab
+indent_size = 4
+
+; Windows PowerShell scripts
+[*.{ps1,psd1,psm1}]
+end_of_line = crlf
+indent_style = space
+indent_size = 4
+
+[*.diff]
+# Trailing whitespace is crucial for diffs
+trim_trailing_whitespace = false
+
+# Patch files
+# Trailing whitespace is crucial for patches
+[*.{patch,patch.*}]
+trim_trailing_whitespace = false
+
+[COMMIT_EDITMSG]
+indent_size = 4
+indent_style = space
+max_line_length = off
+
+# Indentation override for all files under .git directory
+[.git/**]
+indent_style = space
+indent_size = 4
