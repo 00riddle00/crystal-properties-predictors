@@ -1,7 +1,7 @@
 import pytest
 from click.testing import CliRunner
 
-from crystal_properties_predictors.cli import cli
+from crystal_property_predictor.cli import cli
 
 
 @pytest.fixture()

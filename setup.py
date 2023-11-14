@@ -22,7 +22,7 @@ requirements = [
 
 
 setup(
-    name="crystal_properties_predictors",
+    name="crystal_property_predictor",
     version="0.0.1",
     url="https://gitlab.com/the-study-of-crystal-structures-using-machine-learning/crystal-properties-predictors",
     author="Tomas Giedraitis",
@@ -32,7 +32,7 @@ setup(
     packages=find_packages(exclude=("tests",)),
     entry_points={
         "console_scripts": [
-            "crystal_properties_predictors=crystal_properties_predictors.cli:cli"
+            "crystal_property_predictor=crystal_property_predictor.cli:cli"
         ]
     },
     install_requires=requirements,

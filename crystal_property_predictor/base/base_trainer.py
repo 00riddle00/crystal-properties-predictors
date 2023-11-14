@@ -4,7 +4,7 @@ from pathlib import Path
 import torch
 import yaml
 
-from crystal_properties_predictors.utils import (
+from crystal_property_predictor.utils import (
     TensorboardWriter,
     setup_logger,
     trainer_paths,

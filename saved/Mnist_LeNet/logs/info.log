@@ -1,5 +1,5 @@
-2023-10-15 23:35:53,706 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: crystal_properties_predictors.model.models.MnistModel
-2023-10-15 23:35:53,708 - crystal_properties_predictors.crystal_properties_predictors.model.models - INFO - <init>: 
+2023-10-15 23:35:53,706 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.model.models.MnistModel
+2023-10-15 23:35:53,708 - crystal_property_predictor.crystal_property_predictor.model.models - INFO - <init>:
 MnistModel(
   (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
   (conv2): Conv2d(10, 20, kernel_size=(5, 5), stride=(1, 1))
@@ -8,617 +8,617 @@ MnistModel(
   (fc2): Linear(in_features=50, out_features=10, bias=True)
 )
 Trainable parameters: 21840
-2023-10-15 23:35:53,719 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Using devices [0] of available devices [0]
-2023-10-15 23:35:53,793 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: torch.optim.Adam
-2023-10-15 23:35:53,793 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: torch.optim.lr_scheduler.StepLR
-2023-10-15 23:35:53,793 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: crystal_properties_predictors.data_loader.augmentations.MNISTTransforms
-2023-10-15 23:35:53,793 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: crystal_properties_predictors.data_loader.data_loaders.MnistDataLoader
-2023-10-15 23:35:53,814 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Getting loss and metric function handles
-2023-10-15 23:35:53,814 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Initialising trainer
-2023-10-15 23:35:53,816 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Starting training...
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 0
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.7309906709194184
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.6979166666666666
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.8411458333333334
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.15275623454451562
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9522
-2023-10-15 23:35:57,826 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9945
-2023-10-15 23:35:57,829 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch0.pth ...
-2023-10-15 23:35:57,831 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 1
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.3315900598049164
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9153645833333334
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.10388656118661166
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9674
-2023-10-15 23:36:01,462 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9967
-2023-10-15 23:36:01,465 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch1.pth ...
-2023-10-15 23:36:01,467 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 2
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.2631032114982605
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9192708333333334
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9830729166666666
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.08200450741164386
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.974
-2023-10-15 23:36:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9975
-2023-10-15 23:36:05,102 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch2.pth ...
-2023-10-15 23:36:05,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:08,878 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 3
-2023-10-15 23:36:08,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.23747594635486602
-2023-10-15 23:36:08,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9244791666666666
-2023-10-15 23:36:08,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.984375
-2023-10-15 23:36:08,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.07099225145857781
-2023-10-15 23:36:08,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.978
-2023-10-15 23:36:08,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9986
-2023-10-15 23:36:08,881 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch3.pth ...
-2023-10-15 23:36:08,883 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:12,660 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 4
-2023-10-15 23:36:12,661 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.2136622751077016
-2023-10-15 23:36:12,661 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9427083333333334
-2023-10-15 23:36:12,661 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
-2023-10-15 23:36:12,661 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.0651750266241841
-2023-10-15 23:36:12,661 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9793
-2023-10-15 23:36:12,661 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9987
-2023-10-15 23:36:12,663 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch4.pth ...
-2023-10-15 23:36:12,665 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:16,288 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 5
-2023-10-15 23:36:16,288 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.19943105409145356
-2023-10-15 23:36:16,288 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9401041666666666
-2023-10-15 23:36:16,288 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9921875
-2023-10-15 23:36:16,288 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.05771444214303047
-2023-10-15 23:36:16,288 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9816
-2023-10-15 23:36:16,289 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.999
-2023-10-15 23:36:16,291 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch5.pth ...
-2023-10-15 23:36:16,292 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 6
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.18603682498931884
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96484375
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.05725286394143477
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9816
-2023-10-15 23:36:20,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.999
-2023-10-15 23:36:20,106 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch6.pth ...
-2023-10-15 23:36:20,107 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:24,222 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 7
-2023-10-15 23:36:24,222 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1774150968472163
-2023-10-15 23:36:24,222 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9583333333333334
-2023-10-15 23:36:24,223 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9921875
-2023-10-15 23:36:24,223 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.05220295841912739
-2023-10-15 23:36:24,223 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9843
-2023-10-15 23:36:24,223 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.999
-2023-10-15 23:36:24,225 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch7.pth ...
-2023-10-15 23:36:24,227 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:28,100 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 8
-2023-10-15 23:36:28,100 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.16863532512187956
-2023-10-15 23:36:28,100 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9427083333333334
-2023-10-15 23:36:28,100 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:36:28,100 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.05303792142709717
-2023-10-15 23:36:28,100 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9834
-2023-10-15 23:36:28,101 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9989
-2023-10-15 23:36:28,103 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch8.pth ...
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 9
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.16359593585630258
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9583333333333334
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.04965933653099928
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9838
-2023-10-15 23:36:32,209 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:36:32,212 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch9.pth ...
-2023-10-15 23:36:32,214 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:35,963 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 10
-2023-10-15 23:36:35,964 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.15541055852572122
-2023-10-15 23:36:35,964 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9544270833333334
-2023-10-15 23:36:35,964 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9921875
-2023-10-15 23:36:35,964 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.045581488172966055
-2023-10-15 23:36:35,964 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9852
-2023-10-15 23:36:35,964 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:36:35,966 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch10.pth ...
-2023-10-15 23:36:35,968 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:39,610 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 11
-2023-10-15 23:36:39,610 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.15699282764196396
-2023-10-15 23:36:39,610 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9427083333333334
-2023-10-15 23:36:39,610 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:36:39,610 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.04529710028488189
-2023-10-15 23:36:39,611 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9857
-2023-10-15 23:36:39,611 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:36:39,613 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch11.pth ...
-2023-10-15 23:36:39,615 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:43,494 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 12
-2023-10-15 23:36:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1543929397026698
-2023-10-15 23:36:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.94921875
-2023-10-15 23:36:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.98828125
-2023-10-15 23:36:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.044320890422468076
-2023-10-15 23:36:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9863
-2023-10-15 23:36:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:36:43,499 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch12.pth ...
-2023-10-15 23:36:43,502 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:47,559 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 13
-2023-10-15 23:36:47,559 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1406917816797892
-2023-10-15 23:36:47,559 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9505208333333334
-2023-10-15 23:36:47,559 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9921875
-2023-10-15 23:36:47,559 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.04561161986677907
-2023-10-15 23:36:47,560 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9857
-2023-10-15 23:36:47,560 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.999
-2023-10-15 23:36:47,562 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch13.pth ...
-2023-10-15 23:36:51,405 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 14
-2023-10-15 23:36:51,406 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.14419194002946217
-2023-10-15 23:36:51,406 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9596354166666666
-2023-10-15 23:36:51,406 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:36:51,406 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.04246699979426339
-2023-10-15 23:36:51,406 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9865
-2023-10-15 23:36:51,406 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9993
-2023-10-15 23:36:51,408 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch14.pth ...
-2023-10-15 23:36:51,410 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:36:55,600 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 15
-2023-10-15 23:36:55,601 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.14484558547933896
-2023-10-15 23:36:55,601 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9557291666666666
-2023-10-15 23:36:55,601 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:36:55,601 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.0427678199919872
-2023-10-15 23:36:55,601 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9872
-2023-10-15 23:36:55,601 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:36:55,603 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch15.pth ...
-2023-10-15 23:36:59,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 16
-2023-10-15 23:36:59,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1336839082956314
-2023-10-15 23:36:59,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96484375
-2023-10-15 23:36:59,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:36:59,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.04118991444255225
-2023-10-15 23:36:59,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9872
-2023-10-15 23:36:59,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9993
-2023-10-15 23:36:59,623 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch16.pth ...
-2023-10-15 23:36:59,625 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 17
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.13719237308502197
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9518229166666666
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.0400596133699175
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9875
-2023-10-15 23:37:03,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:37:03,493 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch17.pth ...
-2023-10-15 23:37:03,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:07,432 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 18
-2023-10-15 23:37:07,433 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1333225273569425
-2023-10-15 23:37:07,433 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96875
-2023-10-15 23:37:07,433 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:37:07,433 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03965166762459558
-2023-10-15 23:37:07,433 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.988
-2023-10-15 23:37:07,433 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:37:07,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch18.pth ...
-2023-10-15 23:37:07,437 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:11,479 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 19
-2023-10-15 23:37:11,479 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.13049183299938838
-2023-10-15 23:37:11,480 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9505208333333334
-2023-10-15 23:37:11,480 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
-2023-10-15 23:37:11,481 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.040131278781453145
-2023-10-15 23:37:11,481 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9874
-2023-10-15 23:37:11,481 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:37:11,486 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch19.pth ...
-2023-10-15 23:37:15,475 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 20
-2023-10-15 23:37:15,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.128828271540006
-2023-10-15 23:37:15,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9596354166666666
-2023-10-15 23:37:15,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:37:15,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.04254096063306788
-2023-10-15 23:37:15,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9874
-2023-10-15 23:37:15,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:37:15,479 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch20.pth ...
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 21
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.13079420944452286
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.95703125
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.038809181252180136
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9891
-2023-10-15 23:37:19,449 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:37:19,452 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch21.pth ...
-2023-10-15 23:37:19,454 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:23,273 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 22
-2023-10-15 23:37:23,273 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.12593071186939875
-2023-10-15 23:37:23,273 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9557291666666666
-2023-10-15 23:37:23,273 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:37:23,273 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03954016846534796
-2023-10-15 23:37:23,274 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9882
-2023-10-15 23:37:23,274 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:37:23,276 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch22.pth ...
-2023-10-15 23:37:27,028 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 23
-2023-10-15 23:37:27,029 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.12815254802703857
-2023-10-15 23:37:27,029 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9466145833333334
-2023-10-15 23:37:27,029 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9934895833333334
-2023-10-15 23:37:27,029 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03940165759571828
-2023-10-15 23:37:27,029 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9882
-2023-10-15 23:37:27,029 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9992
-2023-10-15 23:37:27,031 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch23.pth ...
-2023-10-15 23:37:30,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 24
-2023-10-15 23:37:30,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.12254817015329997
-2023-10-15 23:37:30,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9609375
-2023-10-15 23:37:30,784 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:37:30,784 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03788579167382559
-2023-10-15 23:37:30,784 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9885
-2023-10-15 23:37:30,784 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:37:30,786 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch24.pth ...
-2023-10-15 23:37:30,787 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:34,616 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 25
-2023-10-15 23:37:34,617 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.12260016223589579
-2023-10-15 23:37:34,617 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.94921875
-2023-10-15 23:37:34,617 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9895833333333334
-2023-10-15 23:37:34,617 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03753775097719626
-2023-10-15 23:37:34,617 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9885
-2023-10-15 23:37:34,617 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9994
-2023-10-15 23:37:34,619 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch25.pth ...
-2023-10-15 23:37:34,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:38,326 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 26
-2023-10-15 23:37:38,326 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1204370104153951
-2023-10-15 23:37:38,326 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96875
-2023-10-15 23:37:38,327 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:37:38,327 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03711907317714067
-2023-10-15 23:37:38,327 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9886
-2023-10-15 23:37:38,327 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:37:38,329 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch26.pth ...
-2023-10-15 23:37:38,331 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:37:41,980 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 27
-2023-10-15 23:37:41,980 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.122125446387132
-2023-10-15 23:37:41,980 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:37:41,980 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:37:41,980 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03786574241851922
-2023-10-15 23:37:41,981 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.988
-2023-10-15 23:37:41,981 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:37:41,983 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch27.pth ...
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 28
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11743330460786819
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03873568962770514
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9884
-2023-10-15 23:37:45,682 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:37:45,685 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch28.pth ...
-2023-10-15 23:37:49,588 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 29
-2023-10-15 23:37:49,589 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11963027820587158
-2023-10-15 23:37:49,589 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9661458333333334
-2023-10-15 23:37:49,589 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:37:49,589 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03744912319694413
-2023-10-15 23:37:49,589 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9881
-2023-10-15 23:37:49,589 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:37:49,591 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch29.pth ...
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 30
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11922197124958038
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96484375
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03974849458803656
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9883
-2023-10-15 23:37:53,435 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:37:53,438 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch30.pth ...
-2023-10-15 23:37:57,527 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 31
-2023-10-15 23:37:57,527 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.12336763604879379
-2023-10-15 23:37:57,527 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9713541666666666
-2023-10-15 23:37:57,527 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:37:57,527 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03800874546287814
-2023-10-15 23:37:57,527 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9884
-2023-10-15 23:37:57,528 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:37:57,530 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch31.pth ...
-2023-10-15 23:38:01,408 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 32
-2023-10-15 23:38:01,409 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1150424723426501
-2023-10-15 23:38:01,409 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9713541666666666
-2023-10-15 23:38:01,409 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:38:01,409 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03750807313012192
-2023-10-15 23:38:01,409 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9895
-2023-10-15 23:38:01,409 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:38:01,411 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch32.pth ...
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 33
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11607870106299718
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9674479166666666
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03866860332748038
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9884
-2023-10-15 23:38:05,099 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:38:05,102 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch33.pth ...
-2023-10-15 23:38:08,861 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 34
-2023-10-15 23:38:08,861 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11218781358798345
-2023-10-15 23:38:08,862 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:38:08,862 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:38:08,862 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03563729978398187
-2023-10-15 23:38:08,862 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9894
-2023-10-15 23:38:08,862 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:38:08,864 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch34.pth ...
-2023-10-15 23:38:08,866 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:38:12,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 35
-2023-10-15 23:38:12,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11398340666294098
-2023-10-15 23:38:12,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.97265625
-2023-10-15 23:38:12,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:38:12,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.035079536452243334
-2023-10-15 23:38:12,620 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9897
-2023-10-15 23:38:12,621 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:38:12,623 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch35.pth ...
-2023-10-15 23:38:12,625 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:38:16,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 36
-2023-10-15 23:38:16,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11007504875262579
-2023-10-15 23:38:16,490 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:38:16,491 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:38:16,491 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03859484435467748
-2023-10-15 23:38:16,491 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9882
-2023-10-15 23:38:16,491 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:38:16,493 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch36.pth ...
-2023-10-15 23:38:20,227 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 37
-2023-10-15 23:38:20,227 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11168523512283961
-2023-10-15 23:38:20,228 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9557291666666666
-2023-10-15 23:38:20,228 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9934895833333334
-2023-10-15 23:38:20,228 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03858584889001213
-2023-10-15 23:38:20,228 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9879
-2023-10-15 23:38:20,228 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:38:20,230 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch37.pth ...
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 38
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11060289001464843
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9635416666666666
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03575252966916887
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9897
-2023-10-15 23:38:24,077 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:38:24,080 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch38.pth ...
-2023-10-15 23:38:28,127 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 39
-2023-10-15 23:38:28,128 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11068154754638672
-2023-10-15 23:38:28,128 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
-2023-10-15 23:38:28,128 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:38:28,128 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.0346773948075599
-2023-10-15 23:38:28,128 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9898
-2023-10-15 23:38:28,128 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:38:28,130 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch39.pth ...
-2023-10-15 23:38:28,132 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:38:31,845 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 40
-2023-10-15 23:38:31,846 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11167817563613255
-2023-10-15 23:38:31,846 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9583333333333334
-2023-10-15 23:38:31,846 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:38:31,846 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.035977700251259376
-2023-10-15 23:38:31,846 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9888
-2023-10-15 23:38:31,846 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:38:31,848 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch40.pth ...
-2023-10-15 23:38:35,808 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 41
-2023-10-15 23:38:35,809 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.11062628918886185
-2023-10-15 23:38:35,809 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9674479166666666
-2023-10-15 23:38:35,809 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:38:35,809 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03461335977149429
-2023-10-15 23:38:35,809 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9893
-2023-10-15 23:38:35,809 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:38:35,811 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch41.pth ...
-2023-10-15 23:38:35,813 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 42
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.10576248160998027
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96484375
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03756298493940849
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9887
-2023-10-15 23:38:39,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9995
-2023-10-15 23:38:39,611 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch42.pth ...
-2023-10-15 23:38:43,494 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 43
-2023-10-15 23:38:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1112196694513162
-2023-10-15 23:38:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
-2023-10-15 23:38:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:38:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03489770071063831
-2023-10-15 23:38:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9896
-2023-10-15 23:38:43,495 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:38:43,497 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch43.pth ...
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 44
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1077867081284523
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03476142439747928
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9899
-2023-10-15 23:38:47,345 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:38:47,348 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch44.pth ...
-2023-10-15 23:38:51,069 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 45
-2023-10-15 23:38:51,069 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.10506120951573054
-2023-10-15 23:38:51,069 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
-2023-10-15 23:38:51,069 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:38:51,070 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.034459338052006204
-2023-10-15 23:38:51,070 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9906
-2023-10-15 23:38:51,070 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:38:51,072 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch45.pth ...
-2023-10-15 23:38:51,074 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:38:54,860 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 46
-2023-10-15 23:38:54,860 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.10518933333953222
-2023-10-15 23:38:54,860 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:38:54,860 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:38:54,861 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03500837130564032
-2023-10-15 23:38:54,861 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9889
-2023-10-15 23:38:54,861 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:38:54,863 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch46.pth ...
-2023-10-15 23:38:58,829 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 47
-2023-10-15 23:38:58,829 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.1085383049428463
-2023-10-15 23:38:58,830 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:38:58,830 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
-2023-10-15 23:38:58,830 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.036498888239113146
-2023-10-15 23:38:58,830 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9891
-2023-10-15 23:38:58,830 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:38:58,832 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch47.pth ...
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 48
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.10427984453837078
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03297097928039729
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9898
-2023-10-15 23:39:02,800 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:39:02,803 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch48.pth ...
-2023-10-15 23:39:02,805 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 49
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.10725519445339839
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9674479166666666
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03383365719476133
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9895
-2023-10-15 23:39:06,518 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:06,521 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch49.pth ...
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 50
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09802427710692088
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9791666666666666
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032550566884397995
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.99
-2023-10-15 23:39:10,558 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:10,561 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch50.pth ...
-2023-10-15 23:39:10,562 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:39:14,472 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 51
-2023-10-15 23:39:14,472 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09486579788128535
-2023-10-15 23:39:14,472 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.97265625
-2023-10-15 23:39:14,472 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:39:14,472 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.031603080016421155
-2023-10-15 23:39:14,472 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9903
-2023-10-15 23:39:14,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9998
-2023-10-15 23:39:14,475 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch51.pth ...
-2023-10-15 23:39:14,477 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:39:18,199 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 52
-2023-10-15 23:39:18,199 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09316671479344368
-2023-10-15 23:39:18,199 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:39:18,200 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:39:18,200 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03227843051317614
-2023-10-15 23:39:18,200 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.99
-2023-10-15 23:39:18,200 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9998
-2023-10-15 23:39:18,202 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch52.pth ...
-2023-10-15 23:39:22,210 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 53
-2023-10-15 23:39:22,210 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09414925156434377
-2023-10-15 23:39:22,210 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:39:22,210 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:39:22,210 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032066224147804315
-2023-10-15 23:39:22,211 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9901
-2023-10-15 23:39:22,211 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9998
-2023-10-15 23:39:22,213 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch53.pth ...
-2023-10-15 23:39:26,310 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 54
-2023-10-15 23:39:26,310 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09261640284856161
-2023-10-15 23:39:26,311 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.97265625
-2023-10-15 23:39:26,311 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:39:26,311 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032492629692787885
-2023-10-15 23:39:26,311 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9898
-2023-10-15 23:39:26,311 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:26,313 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch54.pth ...
-2023-10-15 23:39:30,358 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 55
-2023-10-15 23:39:30,358 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08921940746704737
-2023-10-15 23:39:30,359 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96484375
-2023-10-15 23:39:30,359 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.99609375
-2023-10-15 23:39:30,359 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.031966483423276806
-2023-10-15 23:39:30,359 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9899
-2023-10-15 23:39:30,359 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:30,361 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch55.pth ...
-2023-10-15 23:39:34,374 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 56
-2023-10-15 23:39:34,382 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.0895468622426192
-2023-10-15 23:39:34,382 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9765625
-2023-10-15 23:39:34,383 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:39:34,383 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03195478397845291
-2023-10-15 23:39:34,383 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9899
-2023-10-15 23:39:34,383 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:34,385 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch56.pth ...
-2023-10-15 23:39:38,334 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 57
-2023-10-15 23:39:38,335 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09092175423701604
-2023-10-15 23:39:38,335 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96875
-2023-10-15 23:39:38,335 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
-2023-10-15 23:39:38,335 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.0318133882393653
-2023-10-15 23:39:38,335 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9904
-2023-10-15 23:39:38,335 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:38,338 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch57.pth ...
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 58
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.0911541561126709
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03217711883776938
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9899
-2023-10-15 23:39:42,473 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9998
-2023-10-15 23:39:42,476 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch58.pth ...
-2023-10-15 23:39:46,313 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 59
-2023-10-15 23:39:46,314 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08963027718265851
-2023-10-15 23:39:46,314 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96875
-2023-10-15 23:39:46,314 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:39:46,314 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.031788411742032625
-2023-10-15 23:39:46,314 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9902
-2023-10-15 23:39:46,314 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:46,316 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch59.pth ...
-2023-10-15 23:39:50,055 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 60
-2023-10-15 23:39:50,055 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.09112494817972183
-2023-10-15 23:39:50,056 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:39:50,056 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:39:50,056 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03145748460793693
-2023-10-15 23:39:50,056 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.99
-2023-10-15 23:39:50,056 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9998
-2023-10-15 23:39:50,058 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch60.pth ...
-2023-10-15 23:39:50,060 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 61
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08776593927145004
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9713541666666666
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032124043519925906
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9903
-2023-10-15 23:39:53,783 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:53,786 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch61.pth ...
-2023-10-15 23:39:57,604 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 62
-2023-10-15 23:39:57,605 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08967198596199354
-2023-10-15 23:39:57,605 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9765625
-2023-10-15 23:39:57,605 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:39:57,605 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03179503970885417
-2023-10-15 23:39:57,605 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9901
-2023-10-15 23:39:57,605 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:39:57,608 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch62.pth ...
-2023-10-15 23:40:01,268 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 63
-2023-10-15 23:40:01,269 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08824316172003746
-2023-10-15 23:40:01,269 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:40:01,269 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:40:01,269 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03174348707589379
-2023-10-15 23:40:01,269 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9904
-2023-10-15 23:40:01,269 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:01,271 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch63.pth ...
-2023-10-15 23:40:05,012 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 64
-2023-10-15 23:40:05,012 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08935829436182975
-2023-10-15 23:40:05,012 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9830729166666666
-2023-10-15 23:40:05,012 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
-2023-10-15 23:40:05,012 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032661727009233435
-2023-10-15 23:40:05,012 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9898
-2023-10-15 23:40:05,013 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:40:05,015 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch64.pth ...
-2023-10-15 23:40:09,078 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 65
-2023-10-15 23:40:09,078 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08831246083875498
-2023-10-15 23:40:09,078 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.96484375
-2023-10-15 23:40:09,078 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:40:09,078 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03194115544566885
-2023-10-15 23:40:09,079 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9901
-2023-10-15 23:40:09,079 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:09,081 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch65.pth ...
-2023-10-15 23:40:13,020 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 66
-2023-10-15 23:40:13,021 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08663237633506457
-2023-10-15 23:40:13,021 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9778645833333334
-2023-10-15 23:40:13,021 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:40:13,021 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.031961785211582903
-2023-10-15 23:40:13,021 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9905
-2023-10-15 23:40:13,021 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:13,023 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch66.pth ...
-2023-10-15 23:40:16,876 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 67
-2023-10-15 23:40:16,876 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08849613109429677
-2023-10-15 23:40:16,876 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
-2023-10-15 23:40:16,876 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:40:16,877 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.031785061543263146
-2023-10-15 23:40:16,877 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9903
-2023-10-15 23:40:16,877 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:16,879 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch67.pth ...
-2023-10-15 23:40:20,889 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 68
-2023-10-15 23:40:20,890 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.0884310452024142
-2023-10-15 23:40:20,890 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
-2023-10-15 23:40:20,890 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:40:20,890 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.031884371084856686
-2023-10-15 23:40:20,890 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9901
-2023-10-15 23:40:20,890 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:20,892 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch68.pth ...
-2023-10-15 23:40:24,904 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 69
-2023-10-15 23:40:24,904 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08843667946457863
-2023-10-15 23:40:24,905 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.97265625
-2023-10-15 23:40:24,905 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:40:24,905 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.03252234262587735
-2023-10-15 23:40:24,905 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.99
-2023-10-15 23:40:24,905 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9996
-2023-10-15 23:40:24,909 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch69.pth ...
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 70
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08559083221157392
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032117595780207196
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9901
-2023-10-15 23:40:28,766 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:28,769 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch70.pth ...
-2023-10-15 23:40:32,805 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 71
-2023-10-15 23:40:32,805 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 0.08400021747350693
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_1_acc      : 0.9765625
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - top_3_acc      : 1.0
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 0.032241852745151844
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_1_acc  : 0.9903
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_top_3_acc  : 0.9997
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Validation performance didn't improve for 10 epochs. Training stops.
-2023-10-15 23:40:32,806 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Finished!
+2023-10-15 23:35:53,719 - crystal_property_predictor.crystal_property_predictor.main - INFO - Using devices [0] of available devices [0]
+2023-10-15 23:35:53,793 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.Adam
+2023-10-15 23:35:53,793 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.lr_scheduler.StepLR
+2023-10-15 23:35:53,793 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.augmentations.MNISTTransforms
+2023-10-15 23:35:53,793 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.data_loaders.MnistDataLoader
+2023-10-15 23:35:53,814 - crystal_property_predictor.crystal_property_predictor.main - INFO - Getting loss and metric function handles
+2023-10-15 23:35:53,814 - crystal_property_predictor.crystal_property_predictor.main - INFO - Initialising trainer
+2023-10-15 23:35:53,816 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Starting training...
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 0
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.7309906709194184
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.6979166666666666
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.8411458333333334
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.15275623454451562
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9522
+2023-10-15 23:35:57,826 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9945
+2023-10-15 23:35:57,829 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch0.pth ...
+2023-10-15 23:35:57,831 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 1
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.3315900598049164
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9153645833333334
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.10388656118661166
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9674
+2023-10-15 23:36:01,462 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9967
+2023-10-15 23:36:01,465 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch1.pth ...
+2023-10-15 23:36:01,467 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 2
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.2631032114982605
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9192708333333334
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9830729166666666
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.08200450741164386
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.974
+2023-10-15 23:36:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9975
+2023-10-15 23:36:05,102 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch2.pth ...
+2023-10-15 23:36:05,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:08,878 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 3
+2023-10-15 23:36:08,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.23747594635486602
+2023-10-15 23:36:08,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9244791666666666
+2023-10-15 23:36:08,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.984375
+2023-10-15 23:36:08,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.07099225145857781
+2023-10-15 23:36:08,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.978
+2023-10-15 23:36:08,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9986
+2023-10-15 23:36:08,881 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch3.pth ...
+2023-10-15 23:36:08,883 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:12,660 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 4
+2023-10-15 23:36:12,661 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.2136622751077016
+2023-10-15 23:36:12,661 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9427083333333334
+2023-10-15 23:36:12,661 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
+2023-10-15 23:36:12,661 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.0651750266241841
+2023-10-15 23:36:12,661 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9793
+2023-10-15 23:36:12,661 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9987
+2023-10-15 23:36:12,663 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch4.pth ...
+2023-10-15 23:36:12,665 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 5
+2023-10-15 23:36:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.19943105409145356
+2023-10-15 23:36:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9401041666666666
+2023-10-15 23:36:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9921875
+2023-10-15 23:36:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.05771444214303047
+2023-10-15 23:36:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9816
+2023-10-15 23:36:16,289 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.999
+2023-10-15 23:36:16,291 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch5.pth ...
+2023-10-15 23:36:16,292 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 6
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.18603682498931884
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96484375
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.05725286394143477
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9816
+2023-10-15 23:36:20,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.999
+2023-10-15 23:36:20,106 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch6.pth ...
+2023-10-15 23:36:20,107 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:24,222 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 7
+2023-10-15 23:36:24,222 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1774150968472163
+2023-10-15 23:36:24,222 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9583333333333334
+2023-10-15 23:36:24,223 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9921875
+2023-10-15 23:36:24,223 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.05220295841912739
+2023-10-15 23:36:24,223 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9843
+2023-10-15 23:36:24,223 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.999
+2023-10-15 23:36:24,225 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch7.pth ...
+2023-10-15 23:36:24,227 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:28,100 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 8
+2023-10-15 23:36:28,100 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.16863532512187956
+2023-10-15 23:36:28,100 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9427083333333334
+2023-10-15 23:36:28,100 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:36:28,100 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.05303792142709717
+2023-10-15 23:36:28,100 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9834
+2023-10-15 23:36:28,101 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9989
+2023-10-15 23:36:28,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch8.pth ...
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 9
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.16359593585630258
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9583333333333334
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.04965933653099928
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9838
+2023-10-15 23:36:32,209 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:36:32,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch9.pth ...
+2023-10-15 23:36:32,214 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:35,963 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 10
+2023-10-15 23:36:35,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.15541055852572122
+2023-10-15 23:36:35,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9544270833333334
+2023-10-15 23:36:35,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9921875
+2023-10-15 23:36:35,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.045581488172966055
+2023-10-15 23:36:35,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9852
+2023-10-15 23:36:35,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:36:35,966 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch10.pth ...
+2023-10-15 23:36:35,968 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:39,610 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 11
+2023-10-15 23:36:39,610 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.15699282764196396
+2023-10-15 23:36:39,610 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9427083333333334
+2023-10-15 23:36:39,610 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:36:39,610 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.04529710028488189
+2023-10-15 23:36:39,611 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9857
+2023-10-15 23:36:39,611 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:36:39,613 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch11.pth ...
+2023-10-15 23:36:39,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:43,494 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 12
+2023-10-15 23:36:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1543929397026698
+2023-10-15 23:36:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.94921875
+2023-10-15 23:36:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.98828125
+2023-10-15 23:36:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.044320890422468076
+2023-10-15 23:36:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9863
+2023-10-15 23:36:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:36:43,499 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch12.pth ...
+2023-10-15 23:36:43,502 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:47,559 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 13
+2023-10-15 23:36:47,559 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1406917816797892
+2023-10-15 23:36:47,559 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9505208333333334
+2023-10-15 23:36:47,559 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9921875
+2023-10-15 23:36:47,559 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.04561161986677907
+2023-10-15 23:36:47,560 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9857
+2023-10-15 23:36:47,560 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.999
+2023-10-15 23:36:47,562 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch13.pth ...
+2023-10-15 23:36:51,405 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 14
+2023-10-15 23:36:51,406 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.14419194002946217
+2023-10-15 23:36:51,406 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9596354166666666
+2023-10-15 23:36:51,406 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:36:51,406 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.04246699979426339
+2023-10-15 23:36:51,406 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9865
+2023-10-15 23:36:51,406 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9993
+2023-10-15 23:36:51,408 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch14.pth ...
+2023-10-15 23:36:51,410 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:36:55,600 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 15
+2023-10-15 23:36:55,601 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.14484558547933896
+2023-10-15 23:36:55,601 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9557291666666666
+2023-10-15 23:36:55,601 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:36:55,601 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.0427678199919872
+2023-10-15 23:36:55,601 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9872
+2023-10-15 23:36:55,601 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:36:55,603 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch15.pth ...
+2023-10-15 23:36:59,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 16
+2023-10-15 23:36:59,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1336839082956314
+2023-10-15 23:36:59,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96484375
+2023-10-15 23:36:59,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:36:59,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.04118991444255225
+2023-10-15 23:36:59,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9872
+2023-10-15 23:36:59,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9993
+2023-10-15 23:36:59,623 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch16.pth ...
+2023-10-15 23:36:59,625 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 17
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.13719237308502197
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9518229166666666
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.0400596133699175
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9875
+2023-10-15 23:37:03,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:37:03,493 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch17.pth ...
+2023-10-15 23:37:03,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:07,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 18
+2023-10-15 23:37:07,433 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1333225273569425
+2023-10-15 23:37:07,433 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96875
+2023-10-15 23:37:07,433 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:37:07,433 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03965166762459558
+2023-10-15 23:37:07,433 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.988
+2023-10-15 23:37:07,433 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:37:07,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch18.pth ...
+2023-10-15 23:37:07,437 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:11,479 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 19
+2023-10-15 23:37:11,479 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.13049183299938838
+2023-10-15 23:37:11,480 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9505208333333334
+2023-10-15 23:37:11,480 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
+2023-10-15 23:37:11,481 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.040131278781453145
+2023-10-15 23:37:11,481 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9874
+2023-10-15 23:37:11,481 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:37:11,486 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch19.pth ...
+2023-10-15 23:37:15,475 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 20
+2023-10-15 23:37:15,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.128828271540006
+2023-10-15 23:37:15,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9596354166666666
+2023-10-15 23:37:15,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:37:15,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.04254096063306788
+2023-10-15 23:37:15,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9874
+2023-10-15 23:37:15,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:37:15,479 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch20.pth ...
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 21
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.13079420944452286
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.95703125
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.038809181252180136
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9891
+2023-10-15 23:37:19,449 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:37:19,452 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch21.pth ...
+2023-10-15 23:37:19,454 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:23,273 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 22
+2023-10-15 23:37:23,273 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.12593071186939875
+2023-10-15 23:37:23,273 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9557291666666666
+2023-10-15 23:37:23,273 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:37:23,273 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03954016846534796
+2023-10-15 23:37:23,274 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9882
+2023-10-15 23:37:23,274 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:37:23,276 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch22.pth ...
+2023-10-15 23:37:27,028 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 23
+2023-10-15 23:37:27,029 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.12815254802703857
+2023-10-15 23:37:27,029 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9466145833333334
+2023-10-15 23:37:27,029 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9934895833333334
+2023-10-15 23:37:27,029 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03940165759571828
+2023-10-15 23:37:27,029 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9882
+2023-10-15 23:37:27,029 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9992
+2023-10-15 23:37:27,031 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch23.pth ...
+2023-10-15 23:37:30,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 24
+2023-10-15 23:37:30,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.12254817015329997
+2023-10-15 23:37:30,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9609375
+2023-10-15 23:37:30,784 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:37:30,784 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03788579167382559
+2023-10-15 23:37:30,784 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9885
+2023-10-15 23:37:30,784 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:37:30,786 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch24.pth ...
+2023-10-15 23:37:30,787 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:34,616 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 25
+2023-10-15 23:37:34,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.12260016223589579
+2023-10-15 23:37:34,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.94921875
+2023-10-15 23:37:34,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9895833333333334
+2023-10-15 23:37:34,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03753775097719626
+2023-10-15 23:37:34,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9885
+2023-10-15 23:37:34,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9994
+2023-10-15 23:37:34,619 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch25.pth ...
+2023-10-15 23:37:34,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:38,326 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 26
+2023-10-15 23:37:38,326 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1204370104153951
+2023-10-15 23:37:38,326 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96875
+2023-10-15 23:37:38,327 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:37:38,327 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03711907317714067
+2023-10-15 23:37:38,327 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9886
+2023-10-15 23:37:38,327 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:37:38,329 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch26.pth ...
+2023-10-15 23:37:38,331 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:37:41,980 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 27
+2023-10-15 23:37:41,980 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.122125446387132
+2023-10-15 23:37:41,980 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:37:41,980 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:37:41,980 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03786574241851922
+2023-10-15 23:37:41,981 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.988
+2023-10-15 23:37:41,981 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:37:41,983 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch27.pth ...
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 28
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11743330460786819
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03873568962770514
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9884
+2023-10-15 23:37:45,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:37:45,685 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch28.pth ...
+2023-10-15 23:37:49,588 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 29
+2023-10-15 23:37:49,589 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11963027820587158
+2023-10-15 23:37:49,589 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9661458333333334
+2023-10-15 23:37:49,589 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:37:49,589 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03744912319694413
+2023-10-15 23:37:49,589 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9881
+2023-10-15 23:37:49,589 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:37:49,591 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch29.pth ...
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 30
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11922197124958038
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96484375
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03974849458803656
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9883
+2023-10-15 23:37:53,435 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:37:53,438 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch30.pth ...
+2023-10-15 23:37:57,527 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 31
+2023-10-15 23:37:57,527 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.12336763604879379
+2023-10-15 23:37:57,527 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9713541666666666
+2023-10-15 23:37:57,527 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:37:57,527 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03800874546287814
+2023-10-15 23:37:57,527 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9884
+2023-10-15 23:37:57,528 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:37:57,530 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch31.pth ...
+2023-10-15 23:38:01,408 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 32
+2023-10-15 23:38:01,409 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1150424723426501
+2023-10-15 23:38:01,409 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9713541666666666
+2023-10-15 23:38:01,409 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:38:01,409 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03750807313012192
+2023-10-15 23:38:01,409 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9895
+2023-10-15 23:38:01,409 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:38:01,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch32.pth ...
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 33
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11607870106299718
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9674479166666666
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03866860332748038
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9884
+2023-10-15 23:38:05,099 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:38:05,102 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch33.pth ...
+2023-10-15 23:38:08,861 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 34
+2023-10-15 23:38:08,861 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11218781358798345
+2023-10-15 23:38:08,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:38:08,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:38:08,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03563729978398187
+2023-10-15 23:38:08,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9894
+2023-10-15 23:38:08,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:38:08,864 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch34.pth ...
+2023-10-15 23:38:08,866 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:38:12,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 35
+2023-10-15 23:38:12,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11398340666294098
+2023-10-15 23:38:12,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.97265625
+2023-10-15 23:38:12,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:38:12,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.035079536452243334
+2023-10-15 23:38:12,620 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9897
+2023-10-15 23:38:12,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:38:12,623 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch35.pth ...
+2023-10-15 23:38:12,625 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:38:16,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 36
+2023-10-15 23:38:16,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11007504875262579
+2023-10-15 23:38:16,490 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:38:16,491 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:38:16,491 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03859484435467748
+2023-10-15 23:38:16,491 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9882
+2023-10-15 23:38:16,491 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:38:16,493 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch36.pth ...
+2023-10-15 23:38:20,227 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 37
+2023-10-15 23:38:20,227 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11168523512283961
+2023-10-15 23:38:20,228 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9557291666666666
+2023-10-15 23:38:20,228 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9934895833333334
+2023-10-15 23:38:20,228 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03858584889001213
+2023-10-15 23:38:20,228 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9879
+2023-10-15 23:38:20,228 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:38:20,230 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch37.pth ...
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 38
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11060289001464843
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9635416666666666
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03575252966916887
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9897
+2023-10-15 23:38:24,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:38:24,080 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch38.pth ...
+2023-10-15 23:38:28,127 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 39
+2023-10-15 23:38:28,128 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11068154754638672
+2023-10-15 23:38:28,128 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
+2023-10-15 23:38:28,128 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:38:28,128 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.0346773948075599
+2023-10-15 23:38:28,128 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9898
+2023-10-15 23:38:28,128 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:38:28,130 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch39.pth ...
+2023-10-15 23:38:28,132 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:38:31,845 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 40
+2023-10-15 23:38:31,846 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11167817563613255
+2023-10-15 23:38:31,846 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9583333333333334
+2023-10-15 23:38:31,846 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:38:31,846 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.035977700251259376
+2023-10-15 23:38:31,846 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9888
+2023-10-15 23:38:31,846 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:38:31,848 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch40.pth ...
+2023-10-15 23:38:35,808 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 41
+2023-10-15 23:38:35,809 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.11062628918886185
+2023-10-15 23:38:35,809 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9674479166666666
+2023-10-15 23:38:35,809 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:38:35,809 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03461335977149429
+2023-10-15 23:38:35,809 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9893
+2023-10-15 23:38:35,809 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:38:35,811 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch41.pth ...
+2023-10-15 23:38:35,813 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 42
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.10576248160998027
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96484375
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03756298493940849
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9887
+2023-10-15 23:38:39,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9995
+2023-10-15 23:38:39,611 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch42.pth ...
+2023-10-15 23:38:43,494 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 43
+2023-10-15 23:38:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1112196694513162
+2023-10-15 23:38:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
+2023-10-15 23:38:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:38:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03489770071063831
+2023-10-15 23:38:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9896
+2023-10-15 23:38:43,495 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:38:43,497 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch43.pth ...
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 44
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1077867081284523
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03476142439747928
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9899
+2023-10-15 23:38:47,345 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:38:47,348 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch44.pth ...
+2023-10-15 23:38:51,069 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 45
+2023-10-15 23:38:51,069 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.10506120951573054
+2023-10-15 23:38:51,069 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
+2023-10-15 23:38:51,069 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:38:51,070 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.034459338052006204
+2023-10-15 23:38:51,070 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9906
+2023-10-15 23:38:51,070 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:38:51,072 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch45.pth ...
+2023-10-15 23:38:51,074 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:38:54,860 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 46
+2023-10-15 23:38:54,860 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.10518933333953222
+2023-10-15 23:38:54,860 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:38:54,860 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:38:54,861 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03500837130564032
+2023-10-15 23:38:54,861 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9889
+2023-10-15 23:38:54,861 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:38:54,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch46.pth ...
+2023-10-15 23:38:58,829 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 47
+2023-10-15 23:38:58,829 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.1085383049428463
+2023-10-15 23:38:58,830 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:38:58,830 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9908854166666666
+2023-10-15 23:38:58,830 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.036498888239113146
+2023-10-15 23:38:58,830 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9891
+2023-10-15 23:38:58,830 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:38:58,832 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch47.pth ...
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 48
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.10427984453837078
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03297097928039729
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9898
+2023-10-15 23:39:02,800 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:39:02,803 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch48.pth ...
+2023-10-15 23:39:02,805 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 49
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.10725519445339839
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9674479166666666
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03383365719476133
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9895
+2023-10-15 23:39:06,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:06,521 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch49.pth ...
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 50
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09802427710692088
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9791666666666666
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032550566884397995
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.99
+2023-10-15 23:39:10,558 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:10,561 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch50.pth ...
+2023-10-15 23:39:10,562 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:39:14,472 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 51
+2023-10-15 23:39:14,472 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09486579788128535
+2023-10-15 23:39:14,472 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.97265625
+2023-10-15 23:39:14,472 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:39:14,472 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.031603080016421155
+2023-10-15 23:39:14,472 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9903
+2023-10-15 23:39:14,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9998
+2023-10-15 23:39:14,475 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch51.pth ...
+2023-10-15 23:39:14,477 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:39:18,199 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 52
+2023-10-15 23:39:18,199 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09316671479344368
+2023-10-15 23:39:18,199 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:39:18,200 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:39:18,200 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03227843051317614
+2023-10-15 23:39:18,200 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.99
+2023-10-15 23:39:18,200 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9998
+2023-10-15 23:39:18,202 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch52.pth ...
+2023-10-15 23:39:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 53
+2023-10-15 23:39:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09414925156434377
+2023-10-15 23:39:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:39:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:39:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032066224147804315
+2023-10-15 23:39:22,211 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9901
+2023-10-15 23:39:22,211 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9998
+2023-10-15 23:39:22,213 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch53.pth ...
+2023-10-15 23:39:26,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 54
+2023-10-15 23:39:26,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09261640284856161
+2023-10-15 23:39:26,311 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.97265625
+2023-10-15 23:39:26,311 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:39:26,311 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032492629692787885
+2023-10-15 23:39:26,311 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9898
+2023-10-15 23:39:26,311 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:26,313 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch54.pth ...
+2023-10-15 23:39:30,358 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 55
+2023-10-15 23:39:30,358 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08921940746704737
+2023-10-15 23:39:30,359 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96484375
+2023-10-15 23:39:30,359 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.99609375
+2023-10-15 23:39:30,359 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.031966483423276806
+2023-10-15 23:39:30,359 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9899
+2023-10-15 23:39:30,359 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:30,361 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch55.pth ...
+2023-10-15 23:39:34,374 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 56
+2023-10-15 23:39:34,382 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.0895468622426192
+2023-10-15 23:39:34,382 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9765625
+2023-10-15 23:39:34,383 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:39:34,383 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03195478397845291
+2023-10-15 23:39:34,383 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9899
+2023-10-15 23:39:34,383 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:34,385 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch56.pth ...
+2023-10-15 23:39:38,334 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 57
+2023-10-15 23:39:38,335 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09092175423701604
+2023-10-15 23:39:38,335 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96875
+2023-10-15 23:39:38,335 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9947916666666666
+2023-10-15 23:39:38,335 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.0318133882393653
+2023-10-15 23:39:38,335 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9904
+2023-10-15 23:39:38,335 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:38,338 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch57.pth ...
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 58
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.0911541561126709
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03217711883776938
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9899
+2023-10-15 23:39:42,473 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9998
+2023-10-15 23:39:42,476 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch58.pth ...
+2023-10-15 23:39:46,313 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 59
+2023-10-15 23:39:46,314 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08963027718265851
+2023-10-15 23:39:46,314 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96875
+2023-10-15 23:39:46,314 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:39:46,314 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.031788411742032625
+2023-10-15 23:39:46,314 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9902
+2023-10-15 23:39:46,314 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:46,316 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch59.pth ...
+2023-10-15 23:39:50,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 60
+2023-10-15 23:39:50,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.09112494817972183
+2023-10-15 23:39:50,056 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:39:50,056 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:39:50,056 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03145748460793693
+2023-10-15 23:39:50,056 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.99
+2023-10-15 23:39:50,056 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9998
+2023-10-15 23:39:50,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch60.pth ...
+2023-10-15 23:39:50,060 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/Mnist_LeNet/1015-233553/checkpoints/model_best.pth
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 61
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08776593927145004
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9713541666666666
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032124043519925906
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9903
+2023-10-15 23:39:53,783 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:53,786 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch61.pth ...
+2023-10-15 23:39:57,604 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 62
+2023-10-15 23:39:57,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08967198596199354
+2023-10-15 23:39:57,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9765625
+2023-10-15 23:39:57,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:39:57,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03179503970885417
+2023-10-15 23:39:57,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9901
+2023-10-15 23:39:57,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:39:57,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch62.pth ...
+2023-10-15 23:40:01,268 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 63
+2023-10-15 23:40:01,269 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08824316172003746
+2023-10-15 23:40:01,269 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:40:01,269 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:40:01,269 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03174348707589379
+2023-10-15 23:40:01,269 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9904
+2023-10-15 23:40:01,269 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:01,271 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch63.pth ...
+2023-10-15 23:40:05,012 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 64
+2023-10-15 23:40:05,012 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08935829436182975
+2023-10-15 23:40:05,012 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9830729166666666
+2023-10-15 23:40:05,012 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9973958333333334
+2023-10-15 23:40:05,012 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032661727009233435
+2023-10-15 23:40:05,012 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9898
+2023-10-15 23:40:05,013 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:40:05,015 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch64.pth ...
+2023-10-15 23:40:09,078 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 65
+2023-10-15 23:40:09,078 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08831246083875498
+2023-10-15 23:40:09,078 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.96484375
+2023-10-15 23:40:09,078 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:40:09,078 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03194115544566885
+2023-10-15 23:40:09,079 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9901
+2023-10-15 23:40:09,079 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:09,081 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch65.pth ...
+2023-10-15 23:40:13,020 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 66
+2023-10-15 23:40:13,021 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08663237633506457
+2023-10-15 23:40:13,021 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9778645833333334
+2023-10-15 23:40:13,021 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:40:13,021 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.031961785211582903
+2023-10-15 23:40:13,021 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9905
+2023-10-15 23:40:13,021 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:13,023 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch66.pth ...
+2023-10-15 23:40:16,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 67
+2023-10-15 23:40:16,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08849613109429677
+2023-10-15 23:40:16,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9739583333333334
+2023-10-15 23:40:16,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:40:16,877 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.031785061543263146
+2023-10-15 23:40:16,877 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9903
+2023-10-15 23:40:16,877 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:16,879 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch67.pth ...
+2023-10-15 23:40:20,889 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 68
+2023-10-15 23:40:20,890 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.0884310452024142
+2023-10-15 23:40:20,890 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9752604166666666
+2023-10-15 23:40:20,890 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:40:20,890 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.031884371084856686
+2023-10-15 23:40:20,890 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9901
+2023-10-15 23:40:20,890 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:20,892 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch68.pth ...
+2023-10-15 23:40:24,904 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 69
+2023-10-15 23:40:24,904 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08843667946457863
+2023-10-15 23:40:24,905 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.97265625
+2023-10-15 23:40:24,905 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:40:24,905 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.03252234262587735
+2023-10-15 23:40:24,905 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.99
+2023-10-15 23:40:24,905 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9996
+2023-10-15 23:40:24,909 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch69.pth ...
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 70
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08559083221157392
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9700520833333334
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 0.9986979166666666
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032117595780207196
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9901
+2023-10-15 23:40:28,766 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:28,769 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/Mnist_LeNet/1015-233553/checkpoints/checkpoint-epoch70.pth ...
+2023-10-15 23:40:32,805 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 71
+2023-10-15 23:40:32,805 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 0.08400021747350693
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_1_acc      : 0.9765625
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - top_3_acc      : 1.0
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 0.032241852745151844
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_1_acc  : 0.9903
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_top_3_acc  : 0.9997
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Validation performance didn't improve for 10 epochs. Training stops.
+2023-10-15 23:40:32,806 - crystal_property_predictor.crystal_property_predictor.main - INFO - Finished!

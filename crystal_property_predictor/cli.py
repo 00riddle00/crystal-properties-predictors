@@ -1,13 +1,13 @@
 import click
 import yaml
 
-from crystal_properties_predictors import main
-from crystal_properties_predictors.utils import setup_logging
+from crystal_property_predictor import main
+from crystal_property_predictor.utils import setup_logging
 
 
 @click.group()
 def cli():
-    """CLI for crystal_properties_predictors."""
+    """CLI for crystal_property_predictor."""
     pass
 
 

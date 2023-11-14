@@ -2,8 +2,8 @@ import numpy as np
 import torch
 from torchvision.utils import make_grid
 
-from crystal_properties_predictors.base import AverageMeter, TrainerBase
-from crystal_properties_predictors.utils import setup_logger
+from crystal_property_predictor.base import AverageMeter, TrainerBase
+from crystal_property_predictor.utils import setup_logger
 
 log = setup_logger(__name__)
 

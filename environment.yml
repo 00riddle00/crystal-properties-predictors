@@ -1,4 +1,4 @@
-name: crystal_properties_predictors
+name: crystal_property_predictor
 
 channels:
   - pytorch

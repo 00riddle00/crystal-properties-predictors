@@ -1,8 +1,8 @@
 from torch.utils.data import DataLoader, random_split
 from torchvision import datasets
 
-from crystal_properties_predictors.base import DataLoaderBase
-from crystal_properties_predictors.dataset import CrystalDataset
+from crystal_property_predictor.base import DataLoaderBase
+from crystal_property_predictor.dataset import CrystalDataset
 
 
 class MnistDataLoader(DataLoaderBase):

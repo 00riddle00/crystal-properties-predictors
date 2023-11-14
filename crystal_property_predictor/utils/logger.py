@@ -41,6 +41,6 @@ def setup_logging(run_config, log_config="logging.yml") -> None:
 
 
 def setup_logger(name):
-    log = logging.getLogger(f"crystal_properties_predictors.{name}")
+    log = logging.getLogger(f"crystal_property_predictor.{name}")
     log.setLevel(LOG_LEVEL)
     return log

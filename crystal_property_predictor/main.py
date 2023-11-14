@@ -9,13 +9,13 @@ import torch.nn as nn
 import torch.optim as module_optimizer
 import torch.optim.lr_scheduler as module_scheduler
 
-import crystal_properties_predictors.data_loader.augmentations as module_aug
-import crystal_properties_predictors.data_loader.data_loaders as module_data
-import crystal_properties_predictors.model.losses as module_loss
-import crystal_properties_predictors.model.metrics as module_metric
-import crystal_properties_predictors.model.models as module_arch
-from crystal_properties_predictors.trainer import Trainer
-from crystal_properties_predictors.utils import setup_logger
+import crystal_property_predictor.data_loader.augmentations as module_aug
+import crystal_property_predictor.data_loader.data_loaders as module_data
+import crystal_property_predictor.model.losses as module_loss
+import crystal_property_predictor.model.metrics as module_metric
+import crystal_property_predictor.model.models as module_arch
+from crystal_property_predictor.trainer import Trainer
+from crystal_property_predictor.utils import setup_logger
 
 log = setup_logger(__name__)
 

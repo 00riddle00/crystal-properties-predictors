@@ -27,7 +27,7 @@ Folder Structure
 
   crystal-properties-predictors/
   │
-  ├── crystal_properties_predictors/
+  ├── crystal_property_predictor/
   │    │
   │    ├── cli.py - command line interface
   │    ├── main.py - main script to start train/test
@@ -71,7 +71,7 @@ Usage
 .. code-block::
 
   $ conda env create --file environment.yml
-  $ conda activate crystal_properties_predictors
+  $ conda activate crystal_property_predictor
 
 The code in this repo is an MNIST example of the template. You can run the
 tests, and the example project using:
@@ -79,7 +79,7 @@ tests, and the example project using:
 .. code-block::
 
   $ pytest tests
-  $ crystal_properties_predictors train -c experiments/config.yml
+  $ crystal_property_predictor train -c experiments/config.yml
 
 Config file format
 ------------------
@@ -144,7 +144,7 @@ Modify the configurations in `.yml` config files, then run:
 
 .. code-block::
 
-  $ crystal_properties_predictors train -c experiments/config.yml
+  $ crystal_property_predictor train -c experiments/config.yml
 
 Resuming from checkpoints
 -------------------------
@@ -152,7 +152,7 @@ You can resume from a previously saved checkpoint by:
 
 .. code-block::
 
-  crystal_properties_predictors train -c experiments/config.yml -r path/to/checkpoint
+  crystal_property_predictor train -c experiments/config.yml -r path/to/checkpoint
 
 Checkpoints
 -----------

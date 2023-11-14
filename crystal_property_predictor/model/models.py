@@ -3,8 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from overrides import override
 
-from crystal_properties_predictors.base import ModelBase
-from crystal_properties_predictors.utils import setup_logger
+from crystal_property_predictor.base import ModelBase
+from crystal_property_predictor.utils import setup_logger
 
 log = setup_logger(__name__)
 

@@ -1,17 +1,17 @@
-2023-10-15 23:22:21,287 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: crystal_properties_predictors.model.models.CrystalPropModel
-2023-10-15 23:22:21,298 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Using devices [0] of available devices [0]
-2023-10-15 23:22:21,373 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: torch.optim.Adam
-2023-10-15 23:22:21,374 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: torch.optim.lr_scheduler.StepLR
-2023-10-15 23:22:21,374 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: crystal_properties_predictors.data_loader.augmentations.NONE
-2023-10-15 23:22:21,374 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Building: crystal_properties_predictors.data_loader.data_loaders.CrystalDataLoader
-2023-10-15 23:22:21,395 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Getting loss and metric function handles
-2023-10-15 23:22:21,395 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Initialising trainer
-2023-10-15 23:22:21,397 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Starting training...
-2023-10-15 23:22:21,729 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - epoch          : 0
-2023-10-15 23:22:21,729 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - loss           : 110627.77486925875
-2023-10-15 23:22:21,729 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - mae_score      : 253.0653076171875
-2023-10-15 23:22:21,729 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_loss       : 183829.16386363635
-2023-10-15 23:22:21,729 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - val_mae_score  : 395.56866455078125
-2023-10-15 23:22:21,731 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1015-232221/checkpoints/checkpoint-epoch0.pth ...
-2023-10-15 23:22:21,731 - crystal_properties_predictors.crystal_properties_predictors.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1015-232221/checkpoints/model_best.pth
-2023-10-15 23:22:21,732 - crystal_properties_predictors.crystal_properties_predictors.main - INFO - Finished!
+2023-10-15 23:22:21,287 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.model.models.CrystalPropModel
+2023-10-15 23:22:21,298 - crystal_property_predictor.crystal_property_predictor.main - INFO - Using devices [0] of available devices [0]
+2023-10-15 23:22:21,373 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.Adam
+2023-10-15 23:22:21,374 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.lr_scheduler.StepLR
+2023-10-15 23:22:21,374 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.augmentations.NONE
+2023-10-15 23:22:21,374 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.data_loaders.CrystalDataLoader
+2023-10-15 23:22:21,395 - crystal_property_predictor.crystal_property_predictor.main - INFO - Getting loss and metric function handles
+2023-10-15 23:22:21,395 - crystal_property_predictor.crystal_property_predictor.main - INFO - Initialising trainer
+2023-10-15 23:22:21,397 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Starting training...
+2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 0
+2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 110627.77486925875
+2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 253.0653076171875
+2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 183829.16386363635
+2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 395.56866455078125
+2023-10-15 23:22:21,731 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1015-232221/checkpoints/checkpoint-epoch0.pth ...
+2023-10-15 23:22:21,731 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1015-232221/checkpoints/model_best.pth
+2023-10-15 23:22:21,732 - crystal_property_predictor.crystal_property_predictor.main - INFO - Finished!

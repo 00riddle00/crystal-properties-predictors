@@ -5,7 +5,7 @@ import pandas as pd
 import torch
 from overrides import override
 
-from crystal_properties_predictors.base import DatasetBase
+from crystal_property_predictor.base import DatasetBase
 
 
 class CrystalDataset(DatasetBase):
