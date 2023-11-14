@@ -40,7 +40,7 @@ optimizer:
 
 training:
   early_stop: 10
-  epochs: 100
+  epochs: 200
   monitor: min val_loss
   save_period: 1
   tensorboard: true
