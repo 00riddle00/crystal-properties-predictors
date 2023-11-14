@@ -31,8 +31,6 @@ lr_scheduler:
 
 metrics:
   - mae_score
-#  - mse_score
-#  - r_2_score
 
 optimizer:
   type: Adam
@@ -41,8 +39,8 @@ optimizer:
     weight_decay: 0
 
 training:
-  early_stop: 1
-  epochs: 1
+  early_stop: 10
+  epochs: 100
   monitor: min val_loss
   save_period: 1
   tensorboard: true

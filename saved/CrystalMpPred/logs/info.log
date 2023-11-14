@@ -1,17 +1,710 @@
-2023-10-15 23:22:21,287 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.model.models.CrystalPropModel
-2023-10-15 23:22:21,298 - crystal_property_predictor.crystal_property_predictor.main - INFO - Using devices [0] of available devices [0]
-2023-10-15 23:22:21,373 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.Adam
-2023-10-15 23:22:21,374 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.lr_scheduler.StepLR
-2023-10-15 23:22:21,374 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.augmentations.NONE
-2023-10-15 23:22:21,374 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.data_loaders.CrystalDataLoader
-2023-10-15 23:22:21,395 - crystal_property_predictor.crystal_property_predictor.main - INFO - Getting loss and metric function handles
-2023-10-15 23:22:21,395 - crystal_property_predictor.crystal_property_predictor.main - INFO - Initialising trainer
-2023-10-15 23:22:21,397 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Starting training...
-2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 0
-2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 110627.77486925875
-2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 253.0653076171875
-2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 183829.16386363635
-2023-10-15 23:22:21,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 395.56866455078125
-2023-10-15 23:22:21,731 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1015-232221/checkpoints/checkpoint-epoch0.pth ...
-2023-10-15 23:22:21,731 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1015-232221/checkpoints/model_best.pth
-2023-10-15 23:22:21,732 - crystal_property_predictor.crystal_property_predictor.main - INFO - Finished!
+2023-11-14 14:11:02,712 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.model.models.CrystalPropModel
+2023-11-14 14:11:02,741 - crystal_property_predictor.crystal_property_predictor.main - INFO - Using devices [0] of available devices [0]
+2023-11-14 14:11:02,831 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.Adam
+2023-11-14 14:11:02,832 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: torch.optim.lr_scheduler.StepLR
+2023-11-14 14:11:02,832 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.augmentations.NONE
+2023-11-14 14:11:02,832 - crystal_property_predictor.crystal_property_predictor.main - INFO - Building: crystal_property_predictor.data_loader.data_loaders.CrystalDataLoader
+2023-11-14 14:11:02,855 - crystal_property_predictor.crystal_property_predictor.main - INFO - Getting loss and metric function handles
+2023-11-14 14:11:02,855 - crystal_property_predictor.crystal_property_predictor.main - INFO - Initialising trainer
+2023-11-14 14:11:02,857 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Starting training...
+2023-11-14 14:11:03,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 0
+2023-11-14 14:11:03,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 140111.19974887758
+2023-11-14 14:11:03,163 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 369.67901611328125
+2023-11-14 14:11:03,163 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 113196.84859815742
+2023-11-14 14:11:03,163 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 319.0567321777344
+2023-11-14 14:11:03,164 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch0.pth ...
+2023-11-14 14:11:03,165 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:03,391 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 1
+2023-11-14 14:11:03,391 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 102493.8856096556
+2023-11-14 14:11:03,391 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 304.87127685546875
+2023-11-14 14:11:03,391 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 92825.65128099409
+2023-11-14 14:11:03,391 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 276.9813537597656
+2023-11-14 14:11:03,393 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch1.pth ...
+2023-11-14 14:11:03,394 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:03,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 2
+2023-11-14 14:11:03,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 91868.13306823994
+2023-11-14 14:11:03,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 274.27032470703125
+2023-11-14 14:11:03,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 86365.57281122042
+2023-11-14 14:11:03,621 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 259.0792236328125
+2023-11-14 14:11:03,623 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch2.pth ...
+2023-11-14 14:11:03,624 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:03,833 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 3
+2023-11-14 14:11:03,833 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 87894.7116620965
+2023-11-14 14:11:03,833 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 262.1685791015625
+2023-11-14 14:11:03,833 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 83020.64501819837
+2023-11-14 14:11:03,833 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 250.71865844726562
+2023-11-14 14:11:03,834 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch3.pth ...
+2023-11-14 14:11:03,835 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:04,045 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 4
+2023-11-14 14:11:04,046 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 84732.65016552058
+2023-11-14 14:11:04,046 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 255.34420776367188
+2023-11-14 14:11:04,046 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 79729.92086911396
+2023-11-14 14:11:04,046 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 243.85731506347656
+2023-11-14 14:11:04,047 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch4.pth ...
+2023-11-14 14:11:04,048 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:04,265 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 5
+2023-11-14 14:11:04,265 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 81230.99062109286
+2023-11-14 14:11:04,265 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 251.11685180664062
+2023-11-14 14:11:04,265 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 76556.90556756142
+2023-11-14 14:11:04,266 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 237.81207275390625
+2023-11-14 14:11:04,267 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch5.pth ...
+2023-11-14 14:11:04,268 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:04,515 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 6
+2023-11-14 14:11:04,516 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 77871.77975285576
+2023-11-14 14:11:04,516 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 247.55892944335938
+2023-11-14 14:11:04,516 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 73745.30945746134
+2023-11-14 14:11:04,516 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 232.31788635253906
+2023-11-14 14:11:04,517 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch6.pth ...
+2023-11-14 14:11:04,518 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:04,737 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 7
+2023-11-14 14:11:04,737 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 74989.79448365395
+2023-11-14 14:11:04,737 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 244.59555053710938
+2023-11-14 14:11:04,737 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 71630.66976726001
+2023-11-14 14:11:04,737 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 228.35797119140625
+2023-11-14 14:11:04,739 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch7.pth ...
+2023-11-14 14:11:04,740 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:04,963 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 8
+2023-11-14 14:11:04,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 72596.02812784155
+2023-11-14 14:11:04,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 242.01417541503906
+2023-11-14 14:11:04,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 69780.20661183463
+2023-11-14 14:11:04,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 224.81690979003906
+2023-11-14 14:11:04,965 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch8.pth ...
+2023-11-14 14:11:04,966 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:05,184 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 9
+2023-11-14 14:11:05,184 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 70253.736076381
+2023-11-14 14:11:05,184 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 239.67095947265625
+2023-11-14 14:11:05,184 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 68009.47978986579
+2023-11-14 14:11:05,184 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 221.40476989746094
+2023-11-14 14:11:05,186 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch9.pth ...
+2023-11-14 14:11:05,187 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:05,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 10
+2023-11-14 14:11:05,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 68327.54348022988
+2023-11-14 14:11:05,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 238.30137634277344
+2023-11-14 14:11:05,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 66701.53816679936
+2023-11-14 14:11:05,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 219.03146362304688
+2023-11-14 14:11:05,413 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch10.pth ...
+2023-11-14 14:11:05,413 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:05,635 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 11
+2023-11-14 14:11:05,635 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 66842.84623547255
+2023-11-14 14:11:05,636 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 237.42877197265625
+2023-11-14 14:11:05,636 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 65740.77984957916
+2023-11-14 14:11:05,636 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 217.34632873535156
+2023-11-14 14:11:05,637 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch11.pth ...
+2023-11-14 14:11:05,638 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:05,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 12
+2023-11-14 14:11:05,862 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 65664.97754372442
+2023-11-14 14:11:05,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 236.73434448242188
+2023-11-14 14:11:05,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 65013.33890539695
+2023-11-14 14:11:05,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 215.9209747314453
+2023-11-14 14:11:05,865 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch12.pth ...
+2023-11-14 14:11:05,866 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:06,087 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 13
+2023-11-14 14:11:06,087 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 64738.25881148414
+2023-11-14 14:11:06,087 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 236.15548706054688
+2023-11-14 14:11:06,088 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 64428.62331522976
+2023-11-14 14:11:06,088 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 214.6954345703125
+2023-11-14 14:11:06,089 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch13.pth ...
+2023-11-14 14:11:06,090 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:06,329 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 14
+2023-11-14 14:11:06,329 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 63991.72100104427
+2023-11-14 14:11:06,329 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.90762329101562
+2023-11-14 14:11:06,330 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 63943.04432651843
+2023-11-14 14:11:06,330 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 213.68466186523438
+2023-11-14 14:11:06,331 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch14.pth ...
+2023-11-14 14:11:06,332 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:06,547 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 15
+2023-11-14 14:11:06,547 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 63369.62459419044
+2023-11-14 14:11:06,547 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.71131896972656
+2023-11-14 14:11:06,547 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 63536.95938424135
+2023-11-14 14:11:06,547 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 212.70631408691406
+2023-11-14 14:11:06,548 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch15.pth ...
+2023-11-14 14:11:06,549 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:06,776 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 16
+2023-11-14 14:11:06,776 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 62848.512385627415
+2023-11-14 14:11:06,776 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.58189392089844
+2023-11-14 14:11:06,776 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 63197.90214115105
+2023-11-14 14:11:06,776 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 211.78738403320312
+2023-11-14 14:11:06,778 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch16.pth ...
+2023-11-14 14:11:06,778 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:06,988 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 17
+2023-11-14 14:11:06,989 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 62408.233670827176
+2023-11-14 14:11:06,989 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.43228149414062
+2023-11-14 14:11:06,989 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 62916.291532785486
+2023-11-14 14:11:06,989 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 210.97731018066406
+2023-11-14 14:11:06,990 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch17.pth ...
+2023-11-14 14:11:06,991 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:07,219 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 18
+2023-11-14 14:11:07,219 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 62047.46238580501
+2023-11-14 14:11:07,219 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.33712768554688
+2023-11-14 14:11:07,219 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 62682.42614734986
+2023-11-14 14:11:07,219 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 210.38018798828125
+2023-11-14 14:11:07,221 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch18.pth ...
+2023-11-14 14:11:07,222 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:07,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 19
+2023-11-14 14:11:07,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 61752.26411542396
+2023-11-14 14:11:07,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.3518829345703
+2023-11-14 14:11:07,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 62485.96138890469
+2023-11-14 14:11:07,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 209.80616760253906
+2023-11-14 14:11:07,434 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch19.pth ...
+2023-11-14 14:11:07,434 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:07,655 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 20
+2023-11-14 14:11:07,655 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 61505.799277001875
+2023-11-14 14:11:07,655 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.37405395507812
+2023-11-14 14:11:07,655 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 62320.3534605323
+2023-11-14 14:11:07,656 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 209.2873077392578
+2023-11-14 14:11:07,657 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch20.pth ...
+2023-11-14 14:11:07,658 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:07,873 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 21
+2023-11-14 14:11:07,873 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 61295.11491603205
+2023-11-14 14:11:07,873 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.36085510253906
+2023-11-14 14:11:07,873 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 62179.81238626024
+2023-11-14 14:11:07,873 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 208.782958984375
+2023-11-14 14:11:07,875 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch21.pth ...
+2023-11-14 14:11:07,875 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:08,084 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 22
+2023-11-14 14:11:08,084 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 61113.98313181973
+2023-11-14 14:11:08,085 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.31930541992188
+2023-11-14 14:11:08,085 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 62060.23965501308
+2023-11-14 14:11:08,085 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 208.32083129882812
+2023-11-14 14:11:08,086 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch22.pth ...
+2023-11-14 14:11:08,087 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:08,305 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 23
+2023-11-14 14:11:08,305 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60957.034229192715
+2023-11-14 14:11:08,305 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.26705932617188
+2023-11-14 14:11:08,305 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61958.08098626592
+2023-11-14 14:11:08,305 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 207.91099548339844
+2023-11-14 14:11:08,307 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch23.pth ...
+2023-11-14 14:11:08,307 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:08,521 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 24
+2023-11-14 14:11:08,522 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60819.66958666032
+2023-11-14 14:11:08,522 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.20558166503906
+2023-11-14 14:11:08,522 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61869.78102607484
+2023-11-14 14:11:08,522 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 207.55165100097656
+2023-11-14 14:11:08,523 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch24.pth ...
+2023-11-14 14:11:08,524 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:08,754 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 25
+2023-11-14 14:11:08,755 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60702.23284855223
+2023-11-14 14:11:08,755 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.14801025390625
+2023-11-14 14:11:08,755 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61793.09532636203
+2023-11-14 14:11:08,755 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 207.260009765625
+2023-11-14 14:11:08,756 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch25.pth ...
+2023-11-14 14:11:08,757 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:08,998 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 26
+2023-11-14 14:11:08,998 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60597.69594740992
+2023-11-14 14:11:08,998 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.08908081054688
+2023-11-14 14:11:08,998 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61724.87456281279
+2023-11-14 14:11:08,998 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 206.96408081054688
+2023-11-14 14:11:08,999 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch26.pth ...
+2023-11-14 14:11:09,000 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:09,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 27
+2023-11-14 14:11:09,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60501.150910540746
+2023-11-14 14:11:09,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 235.00927734375
+2023-11-14 14:11:09,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61658.86022093949
+2023-11-14 14:11:09,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 206.68321228027344
+2023-11-14 14:11:09,214 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch27.pth ...
+2023-11-14 14:11:09,214 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:09,438 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 28
+2023-11-14 14:11:09,438 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60403.65240857297
+2023-11-14 14:11:09,438 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 234.89212036132812
+2023-11-14 14:11:09,438 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61593.84125838831
+2023-11-14 14:11:09,438 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 206.40771484375
+2023-11-14 14:11:09,440 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch28.pth ...
+2023-11-14 14:11:09,440 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:09,649 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 29
+2023-11-14 14:11:09,650 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60305.55332444164
+2023-11-14 14:11:09,650 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 234.7630157470703
+2023-11-14 14:11:09,650 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61530.603634696316
+2023-11-14 14:11:09,650 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 206.14886474609375
+2023-11-14 14:11:09,651 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch29.pth ...
+2023-11-14 14:11:09,652 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:09,875 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 30
+2023-11-14 14:11:09,875 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60204.53465631393
+2023-11-14 14:11:09,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 234.60067749023438
+2023-11-14 14:11:09,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61468.63487047885
+2023-11-14 14:11:09,876 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 205.90541076660156
+2023-11-14 14:11:09,877 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch30.pth ...
+2023-11-14 14:11:09,878 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:10,101 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 31
+2023-11-14 14:11:10,102 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 60080.29006148414
+2023-11-14 14:11:10,102 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 234.3330078125
+2023-11-14 14:11:10,102 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61381.907888563466
+2023-11-14 14:11:10,102 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 205.65707397460938
+2023-11-14 14:11:10,103 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch31.pth ...
+2023-11-14 14:11:10,104 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:10,324 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 32
+2023-11-14 14:11:10,324 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59947.86801865481
+2023-11-14 14:11:10,324 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 233.99468994140625
+2023-11-14 14:11:10,324 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61304.61260947452
+2023-11-14 14:11:10,324 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 205.42678833007812
+2023-11-14 14:11:10,326 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch32.pth ...
+2023-11-14 14:11:10,326 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:10,544 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 33
+2023-11-14 14:11:10,545 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59825.844950556944
+2023-11-14 14:11:10,545 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 233.687255859375
+2023-11-14 14:11:10,545 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61230.773265113174
+2023-11-14 14:11:10,545 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 205.2098388671875
+2023-11-14 14:11:10,546 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch33.pth ...
+2023-11-14 14:11:10,547 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:10,768 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 34
+2023-11-14 14:11:10,769 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59708.04335679984
+2023-11-14 14:11:10,769 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 233.3875732421875
+2023-11-14 14:11:10,769 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61153.98180874659
+2023-11-14 14:11:10,769 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 204.97738647460938
+2023-11-14 14:11:10,770 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch34.pth ...
+2023-11-14 14:11:10,772 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:11,014 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 35
+2023-11-14 14:11:11,014 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59589.60615605109
+2023-11-14 14:11:11,014 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 233.08447265625
+2023-11-14 14:11:11,014 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 61072.262127502276
+2023-11-14 14:11:11,014 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 204.75851440429688
+2023-11-14 14:11:11,016 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch35.pth ...
+2023-11-14 14:11:11,016 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:11,233 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 36
+2023-11-14 14:11:11,234 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59469.00898020146
+2023-11-14 14:11:11,234 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 232.77883911132812
+2023-11-14 14:11:11,234 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60993.657003525936
+2023-11-14 14:11:11,234 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 204.54946899414062
+2023-11-14 14:11:11,235 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch36.pth ...
+2023-11-14 14:11:11,236 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:11,456 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 37
+2023-11-14 14:11:11,457 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59353.80864347721
+2023-11-14 14:11:11,457 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 232.47763061523438
+2023-11-14 14:11:11,457 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60919.313253525936
+2023-11-14 14:11:11,457 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 204.3535614013672
+2023-11-14 14:11:11,458 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch37.pth ...
+2023-11-14 14:11:11,459 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:11,671 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 38
+2023-11-14 14:11:11,671 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59242.964399757046
+2023-11-14 14:11:11,671 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 232.18307495117188
+2023-11-14 14:11:11,671 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60848.25314206097
+2023-11-14 14:11:11,672 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 204.16586303710938
+2023-11-14 14:11:11,673 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch38.pth ...
+2023-11-14 14:11:11,674 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:11,894 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 39
+2023-11-14 14:11:11,894 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59134.33257469737
+2023-11-14 14:11:11,894 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 231.88180541992188
+2023-11-14 14:11:11,894 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60779.21577143994
+2023-11-14 14:11:11,894 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 203.98155212402344
+2023-11-14 14:11:11,896 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch39.pth ...
+2023-11-14 14:11:11,897 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:12,093 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 40
+2023-11-14 14:11:12,093 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 59027.11092808735
+2023-11-14 14:11:12,093 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 231.5793914794922
+2023-11-14 14:11:12,093 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60712.120281577
+2023-11-14 14:11:12,094 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 203.8015594482422
+2023-11-14 14:11:12,095 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch40.pth ...
+2023-11-14 14:11:12,096 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:12,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 41
+2023-11-14 14:11:12,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58920.08574036713
+2023-11-14 14:11:12,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 231.2766571044922
+2023-11-14 14:11:12,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60647.20223463092
+2023-11-14 14:11:12,310 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 203.63034057617188
+2023-11-14 14:11:12,312 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch41.pth ...
+2023-11-14 14:11:12,312 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:12,514 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 42
+2023-11-14 14:11:12,514 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58816.48988939248
+2023-11-14 14:11:12,514 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 230.97987365722656
+2023-11-14 14:11:12,514 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60585.90318791231
+2023-11-14 14:11:12,514 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 203.46734619140625
+2023-11-14 14:11:12,515 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch42.pth ...
+2023-11-14 14:11:12,516 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:12,750 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 43
+2023-11-14 14:11:12,750 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58718.00637485082
+2023-11-14 14:11:12,750 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 230.69007873535156
+2023-11-14 14:11:12,750 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60526.95888662989
+2023-11-14 14:11:12,750 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 203.30654907226562
+2023-11-14 14:11:12,752 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch43.pth ...
+2023-11-14 14:11:12,753 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:12,974 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 44
+2023-11-14 14:11:12,974 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58619.61013511594
+2023-11-14 14:11:12,974 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 230.40621948242188
+2023-11-14 14:11:12,974 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60466.08775022748
+2023-11-14 14:11:12,975 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 203.14414978027344
+2023-11-14 14:11:12,976 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch44.pth ...
+2023-11-14 14:11:12,977 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:13,192 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 45
+2023-11-14 14:11:13,192 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58508.64589075642
+2023-11-14 14:11:13,192 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 230.11891174316406
+2023-11-14 14:11:13,192 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60397.918395274115
+2023-11-14 14:11:13,193 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.96685791015625
+2023-11-14 14:11:13,194 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch45.pth ...
+2023-11-14 14:11:13,195 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:13,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 46
+2023-11-14 14:11:13,411 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58387.61328835389
+2023-11-14 14:11:13,412 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 229.79336547851562
+2023-11-14 14:11:13,412 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60324.95229505516
+2023-11-14 14:11:13,412 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.77708435058594
+2023-11-14 14:11:13,413 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch46.pth ...
+2023-11-14 14:11:13,414 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:13,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 47
+2023-11-14 14:11:13,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58257.093107098204
+2023-11-14 14:11:13,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 229.43267822265625
+2023-11-14 14:11:13,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60248.570865204165
+2023-11-14 14:11:13,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.5872039794922
+2023-11-14 14:11:13,617 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch47.pth ...
+2023-11-14 14:11:13,618 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:13,842 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 48
+2023-11-14 14:11:13,842 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 58125.76131382843
+2023-11-14 14:11:13,843 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 229.0001983642578
+2023-11-14 14:11:13,843 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60178.17245969347
+2023-11-14 14:11:13,843 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.40737915039062
+2023-11-14 14:11:13,844 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch48.pth ...
+2023-11-14 14:11:13,845 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:14,066 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 49
+2023-11-14 14:11:14,067 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57992.25491677796
+2023-11-14 14:11:14,067 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 228.59140014648438
+2023-11-14 14:11:14,067 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60102.452229299364
+2023-11-14 14:11:14,067 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.2299041748047
+2023-11-14 14:11:14,068 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch49.pth ...
+2023-11-14 14:11:14,069 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:14,278 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 50
+2023-11-14 14:11:14,278 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57862.404567266705
+2023-11-14 14:11:14,278 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 228.10025024414062
+2023-11-14 14:11:14,278 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60093.8969340025
+2023-11-14 14:11:14,278 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.19546508789062
+2023-11-14 14:11:14,279 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch50.pth ...
+2023-11-14 14:11:14,280 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:14,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 51
+2023-11-14 14:11:14,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57849.224713713345
+2023-11-14 14:11:14,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 228.04937744140625
+2023-11-14 14:11:14,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60085.389622668336
+2023-11-14 14:11:14,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.17239379882812
+2023-11-14 14:11:14,501 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch51.pth ...
+2023-11-14 14:11:14,502 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:14,708 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 52
+2023-11-14 14:11:14,708 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57836.48054955672
+2023-11-14 14:11:14,708 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 228.00479125976562
+2023-11-14 14:11:14,708 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60077.197454006484
+2023-11-14 14:11:14,708 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.15049743652344
+2023-11-14 14:11:14,710 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch52.pth ...
+2023-11-14 14:11:14,711 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:14,944 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 53
+2023-11-14 14:11:14,944 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57824.182680900485
+2023-11-14 14:11:14,944 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.96255493164062
+2023-11-14 14:11:14,944 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60069.26627544927
+2023-11-14 14:11:14,944 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.1294708251953
+2023-11-14 14:11:14,946 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch53.pth ...
+2023-11-14 14:11:14,946 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:15,164 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 54
+2023-11-14 14:11:15,164 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57812.256227445156
+2023-11-14 14:11:15,164 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.9222412109375
+2023-11-14 14:11:15,164 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60061.5154490588
+2023-11-14 14:11:15,165 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.10940551757812
+2023-11-14 14:11:15,166 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch54.pth ...
+2023-11-14 14:11:15,167 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:15,385 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 55
+2023-11-14 14:11:15,385 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57800.64912746505
+2023-11-14 14:11:15,385 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.88352966308594
+2023-11-14 14:11:15,386 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60053.8895604669
+2023-11-14 14:11:15,386 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.08999633789062
+2023-11-14 14:11:15,387 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch55.pth ...
+2023-11-14 14:11:15,388 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:15,614 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 56
+2023-11-14 14:11:15,614 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57789.301215475105
+2023-11-14 14:11:15,614 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.84681701660156
+2023-11-14 14:11:15,614 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60046.431505559034
+2023-11-14 14:11:15,614 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.07110595703125
+2023-11-14 14:11:15,615 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch56.pth ...
+2023-11-14 14:11:15,616 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:15,831 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 57
+2023-11-14 14:11:15,831 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57778.165859783476
+2023-11-14 14:11:15,831 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.81112670898438
+2023-11-14 14:11:15,831 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60039.17366462409
+2023-11-14 14:11:15,831 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.05288696289062
+2023-11-14 14:11:15,833 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch57.pth ...
+2023-11-14 14:11:15,834 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:16,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 58
+2023-11-14 14:11:16,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57767.24481416231
+2023-11-14 14:11:16,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.77639770507812
+2023-11-14 14:11:16,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60032.10829624943
+2023-11-14 14:11:16,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.035400390625
+2023-11-14 14:11:16,060 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch58.pth ...
+2023-11-14 14:11:16,061 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 59
+2023-11-14 14:11:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57756.49862184587
+2023-11-14 14:11:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.74266052246094
+2023-11-14 14:11:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60025.20923140355
+2023-11-14 14:11:16,288 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.01824951171875
+2023-11-14 14:11:16,290 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch59.pth ...
+2023-11-14 14:11:16,291 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:16,499 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 60
+2023-11-14 14:11:16,499 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57745.90222209593
+2023-11-14 14:11:16,499 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.70974731445312
+2023-11-14 14:11:16,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60018.42551289524
+2023-11-14 14:11:16,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 202.0016632080078
+2023-11-14 14:11:16,501 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch60.pth ...
+2023-11-14 14:11:16,502 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:16,709 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 61
+2023-11-14 14:11:16,709 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57735.26638245198
+2023-11-14 14:11:16,709 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.6774139404297
+2023-11-14 14:11:16,709 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60011.68159797259
+2023-11-14 14:11:16,709 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.98532104492188
+2023-11-14 14:11:16,710 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch61.pth ...
+2023-11-14 14:11:16,711 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:16,931 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 62
+2023-11-14 14:11:16,931 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57724.70634128495
+2023-11-14 14:11:16,931 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.64370727539062
+2023-11-14 14:11:16,931 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 60005.02762099067
+2023-11-14 14:11:16,931 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.96849060058594
+2023-11-14 14:11:16,933 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch62.pth ...
+2023-11-14 14:11:16,933 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:17,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 63
+2023-11-14 14:11:17,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57714.17789110451
+2023-11-14 14:11:17,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.61000061035156
+2023-11-14 14:11:17,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59998.46023018085
+2023-11-14 14:11:17,162 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.9521026611328
+2023-11-14 14:11:17,164 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch63.pth ...
+2023-11-14 14:11:17,165 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:17,389 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 64
+2023-11-14 14:11:17,389 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57703.84339924557
+2023-11-14 14:11:17,389 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.5782012939453
+2023-11-14 14:11:17,389 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59991.77864464854
+2023-11-14 14:11:17,389 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.9407958984375
+2023-11-14 14:11:17,390 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch64.pth ...
+2023-11-14 14:11:17,391 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:17,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 65
+2023-11-14 14:11:17,605 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57693.43919427711
+2023-11-14 14:11:17,606 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.5494384765625
+2023-11-14 14:11:17,606 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59985.177240317906
+2023-11-14 14:11:17,606 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.929443359375
+2023-11-14 14:11:17,607 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch65.pth ...
+2023-11-14 14:11:17,608 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:17,837 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 66
+2023-11-14 14:11:17,837 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57683.086029850536
+2023-11-14 14:11:17,838 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.5191650390625
+2023-11-14 14:11:17,838 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59978.811657614875
+2023-11-14 14:11:17,838 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.91253662109375
+2023-11-14 14:11:17,839 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch66.pth ...
+2023-11-14 14:11:17,840 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:18,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 67
+2023-11-14 14:11:18,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57672.98276508155
+2023-11-14 14:11:18,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.48770141601562
+2023-11-14 14:11:18,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59972.39371552264
+2023-11-14 14:11:18,055 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.89996337890625
+2023-11-14 14:11:18,057 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch67.pth ...
+2023-11-14 14:11:18,058 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:18,281 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 68
+2023-11-14 14:11:18,281 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57662.703795429356
+2023-11-14 14:11:18,281 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.45913696289062
+2023-11-14 14:11:18,281 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59965.87116128299
+2023-11-14 14:11:18,282 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.88772583007812
+2023-11-14 14:11:18,283 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch68.pth ...
+2023-11-14 14:11:18,284 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:18,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 69
+2023-11-14 14:11:18,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57652.442397242274
+2023-11-14 14:11:18,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.42953491210938
+2023-11-14 14:11:18,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59959.50475396668
+2023-11-14 14:11:18,500 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.86988830566406
+2023-11-14 14:11:18,501 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch69.pth ...
+2023-11-14 14:11:18,502 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:18,728 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 70
+2023-11-14 14:11:18,728 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57642.396224639124
+2023-11-14 14:11:18,728 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.3994598388672
+2023-11-14 14:11:18,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59953.074119227706
+2023-11-14 14:11:18,729 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.8564453125
+2023-11-14 14:11:18,730 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch70.pth ...
+2023-11-14 14:11:18,731 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:18,945 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 71
+2023-11-14 14:11:18,945 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57632.35142663815
+2023-11-14 14:11:18,945 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.37176513671875
+2023-11-14 14:11:18,945 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59946.726953480436
+2023-11-14 14:11:18,945 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.843017578125
+2023-11-14 14:11:18,947 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch71.pth ...
+2023-11-14 14:11:18,947 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:19,166 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 72
+2023-11-14 14:11:19,166 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57622.39939652478
+2023-11-14 14:11:19,166 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.34280395507812
+2023-11-14 14:11:19,166 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59940.583285941764
+2023-11-14 14:11:19,166 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.82424926757812
+2023-11-14 14:11:19,167 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch72.pth ...
+2023-11-14 14:11:19,168 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:19,368 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 73
+2023-11-14 14:11:19,368 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57612.62313345363
+2023-11-14 14:11:19,368 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.31300354003906
+2023-11-14 14:11:19,368 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59934.4584583286
+2023-11-14 14:11:19,368 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.8104705810547
+2023-11-14 14:11:19,370 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch73.pth ...
+2023-11-14 14:11:19,370 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:19,583 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 74
+2023-11-14 14:11:19,583 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57602.86322797085
+2023-11-14 14:11:19,584 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.28591918945312
+2023-11-14 14:11:19,584 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59928.41350446428
+2023-11-14 14:11:19,584 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.79736328125
+2023-11-14 14:11:19,585 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch74.pth ...
+2023-11-14 14:11:19,586 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:19,792 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 75
+2023-11-14 14:11:19,792 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57593.07326238918
+2023-11-14 14:11:19,792 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.25775146484375
+2023-11-14 14:11:19,792 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59922.58118708769
+2023-11-14 14:11:19,792 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.77883911132812
+2023-11-14 14:11:19,794 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch75.pth ...
+2023-11-14 14:11:19,795 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:20,006 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 76
+2023-11-14 14:11:20,006 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57583.37798807257
+2023-11-14 14:11:20,006 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.22842407226562
+2023-11-14 14:11:20,006 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59916.68126030767
+2023-11-14 14:11:20,006 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.76512145996094
+2023-11-14 14:11:20,008 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch76.pth ...
+2023-11-14 14:11:20,009 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:20,225 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 77
+2023-11-14 14:11:20,225 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57573.67018249886
+2023-11-14 14:11:20,226 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.20184326171875
+2023-11-14 14:11:20,226 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59910.82420097816
+2023-11-14 14:11:20,226 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.751953125
+2023-11-14 14:11:20,227 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch77.pth ...
+2023-11-14 14:11:20,228 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:20,455 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 78
+2023-11-14 14:11:20,455 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57564.03038598971
+2023-11-14 14:11:20,455 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.17413330078125
+2023-11-14 14:11:20,455 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59905.19377168164
+2023-11-14 14:11:20,455 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.7337188720703
+2023-11-14 14:11:20,457 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch78.pth ...
+2023-11-14 14:11:20,457 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:20,681 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 79
+2023-11-14 14:11:20,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57554.57918614316
+2023-11-14 14:11:20,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.1456298828125
+2023-11-14 14:11:20,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59899.45715387568
+2023-11-14 14:11:20,682 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.72027587890625
+2023-11-14 14:11:20,683 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch79.pth ...
+2023-11-14 14:11:20,684 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:20,898 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 80
+2023-11-14 14:11:20,899 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57545.08906054643
+2023-11-14 14:11:20,899 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.1195526123047
+2023-11-14 14:11:20,899 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59893.69487708997
+2023-11-14 14:11:20,899 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.70704650878906
+2023-11-14 14:11:20,900 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch80.pth ...
+2023-11-14 14:11:20,901 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:21,132 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 81
+2023-11-14 14:11:21,132 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57535.6751827475
+2023-11-14 14:11:21,132 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.09237670898438
+2023-11-14 14:11:21,132 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59888.107469858965
+2023-11-14 14:11:21,132 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.688720703125
+2023-11-14 14:11:21,134 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch81.pth ...
+2023-11-14 14:11:21,134 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:21,352 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 82
+2023-11-14 14:11:21,353 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57526.46295322801
+2023-11-14 14:11:21,353 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.0645294189453
+2023-11-14 14:11:21,353 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59882.43837082006
+2023-11-14 14:11:21,353 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.67530822753906
+2023-11-14 14:11:21,354 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch82.pth ...
+2023-11-14 14:11:21,355 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:21,572 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 83
+2023-11-14 14:11:21,573 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57517.26622527847
+2023-11-14 14:11:21,573 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.03939819335938
+2023-11-14 14:11:21,573 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59876.8622167169
+2023-11-14 14:11:21,573 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.6623992919922
+2023-11-14 14:11:21,574 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch83.pth ...
+2023-11-14 14:11:21,575 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:21,788 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 84
+2023-11-14 14:11:21,788 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57508.0590723744
+2023-11-14 14:11:21,788 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 227.0127716064453
+2023-11-14 14:11:21,788 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59871.47225638365
+2023-11-14 14:11:21,788 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.64451599121094
+2023-11-14 14:11:21,789 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch84.pth ...
+2023-11-14 14:11:21,790 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:22,001 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 85
+2023-11-14 14:11:22,001 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57498.94040992981
+2023-11-14 14:11:22,001 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.98292541503906
+2023-11-14 14:11:22,001 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59865.942682267974
+2023-11-14 14:11:22,001 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.63137817382812
+2023-11-14 14:11:22,002 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch85.pth ...
+2023-11-14 14:11:22,003 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 86
+2023-11-14 14:11:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57489.79895821494
+2023-11-14 14:11:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.95523071289062
+2023-11-14 14:11:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59860.51678016947
+2023-11-14 14:11:22,210 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.618408203125
+2023-11-14 14:11:22,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch86.pth ...
+2023-11-14 14:11:22,212 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:22,429 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 87
+2023-11-14 14:11:22,430 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57480.70777271823
+2023-11-14 14:11:22,430 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.92648315429688
+2023-11-14 14:11:22,430 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59855.33250398089
+2023-11-14 14:11:22,430 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.60035705566406
+2023-11-14 14:11:22,431 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch87.pth ...
+2023-11-14 14:11:22,432 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:22,648 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 88
+2023-11-14 14:11:22,649 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57471.80519720391
+2023-11-14 14:11:22,649 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.89727783203125
+2023-11-14 14:11:22,649 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59850.087215295156
+2023-11-14 14:11:22,649 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.5869903564453
+2023-11-14 14:11:22,650 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch88.pth ...
+2023-11-14 14:11:22,651 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:22,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 89
+2023-11-14 14:11:22,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57462.873617405945
+2023-11-14 14:11:22,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.8707275390625
+2023-11-14 14:11:22,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59844.85704333485
+2023-11-14 14:11:22,863 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.5742645263672
+2023-11-14 14:11:22,865 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch89.pth ...
+2023-11-14 14:11:22,865 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:23,076 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 90
+2023-11-14 14:11:23,076 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57453.95255668902
+2023-11-14 14:11:23,076 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.84329223632812
+2023-11-14 14:11:23,076 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59839.84890916458
+2023-11-14 14:11:23,076 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.55665588378906
+2023-11-14 14:11:23,077 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch90.pth ...
+2023-11-14 14:11:23,078 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:23,295 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 91
+2023-11-14 14:11:23,296 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57445.21527531115
+2023-11-14 14:11:23,296 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.81480407714844
+2023-11-14 14:11:23,296 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59834.77462643597
+2023-11-14 14:11:23,296 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.5436248779297
+2023-11-14 14:11:23,297 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch91.pth ...
+2023-11-14 14:11:23,298 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:23,510 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 92
+2023-11-14 14:11:23,510 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57436.42829869004
+2023-11-14 14:11:23,511 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.78897094726562
+2023-11-14 14:11:23,511 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59829.666349735555
+2023-11-14 14:11:23,511 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.5309295654297
+2023-11-14 14:11:23,513 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch92.pth ...
+2023-11-14 14:11:23,514 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:23,738 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 93
+2023-11-14 14:11:23,738 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57427.64793489998
+2023-11-14 14:11:23,738 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.76182556152344
+2023-11-14 14:11:23,738 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59824.62699222304
+2023-11-14 14:11:23,738 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.51312255859375
+2023-11-14 14:11:23,740 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch93.pth ...
+2023-11-14 14:11:23,742 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:23,961 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 94
+2023-11-14 14:11:23,961 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57418.968056483005
+2023-11-14 14:11:23,961 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.73370361328125
+2023-11-14 14:11:23,961 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59819.486242820174
+2023-11-14 14:11:23,961 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.4999542236328
+2023-11-14 14:11:23,963 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch94.pth ...
+2023-11-14 14:11:23,964 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:24,159 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 95
+2023-11-14 14:11:24,159 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57410.18929373153
+2023-11-14 14:11:24,159 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.70864868164062
+2023-11-14 14:11:24,159 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59814.41487289582
+2023-11-14 14:11:24,159 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.4873809814453
+2023-11-14 14:11:24,161 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch95.pth ...
+2023-11-14 14:11:24,161 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:24,387 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 96
+2023-11-14 14:11:24,387 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57401.451489329964
+2023-11-14 14:11:24,387 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.68255615234375
+2023-11-14 14:11:24,387 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59809.62120748976
+2023-11-14 14:11:24,387 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.47006225585938
+2023-11-14 14:11:24,389 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch96.pth ...
+2023-11-14 14:11:24,390 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:24,593 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 97
+2023-11-14 14:11:24,593 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57392.90858185099
+2023-11-14 14:11:24,593 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.65560913085938
+2023-11-14 14:11:24,593 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59804.74476974807
+2023-11-14 14:11:24,593 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.45738220214844
+2023-11-14 14:11:24,595 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch97.pth ...
+2023-11-14 14:11:24,596 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:24,812 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 98
+2023-11-14 14:11:24,812 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57384.34881329563
+2023-11-14 14:11:24,812 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.63137817382812
+2023-11-14 14:11:24,812 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59799.814781904
+2023-11-14 14:11:24,812 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.44517517089844
+2023-11-14 14:11:24,813 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch98.pth ...
+2023-11-14 14:11:24,814 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:25,031 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - epoch          : 99
+2023-11-14 14:11:25,031 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - loss           : 57375.79511945186
+2023-11-14 14:11:25,032 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - mae_score      : 226.60586547851562
+2023-11-14 14:11:25,032 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_loss       : 59795.04805682723
+2023-11-14 14:11:25,032 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - val_mae_score  : 201.42787170410156
+2023-11-14 14:11:25,033 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving checkpoint: saved/CrystalMpPred/1114-141102/checkpoints/checkpoint-epoch99.pth ...
+2023-11-14 14:11:25,034 - crystal_property_predictor.crystal_property_predictor.base.base_trainer - INFO - Saving current best: saved/CrystalMpPred/1114-141102/checkpoints/model_best.pth
+2023-11-14 14:11:25,034 - crystal_property_predictor.crystal_property_predictor.main - INFO - Finished!
