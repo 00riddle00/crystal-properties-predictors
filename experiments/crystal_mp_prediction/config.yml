@@ -41,8 +41,8 @@ optimizer:
     weight_decay: 0
 
 training:
-  early_stop: 10
-  epochs: 300
+#  early_stop: 0
+  epochs: 200
   monitor: min val_loss
   save_period: 1
   tensorboard: true
