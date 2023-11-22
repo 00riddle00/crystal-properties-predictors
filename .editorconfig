@@ -70,8 +70,8 @@ indent_size = 4
 # JavaScript/TypeScript files
 [*.{js,jsx,mjs,ts,tsx,vue}]
 indent_style = space
-indent_size = 4
-max_line_length = 100
+indent_size = 2
+max_line_length = 80
 quote_type = double
 indent_brace_style = K&R
 
@@ -83,7 +83,7 @@ insert_final_newline = unset
 ; JSON files (normal and commented version, and JSON Lines)
 [*.{json,jsonc,jsonl}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 # The JSON files contain newlines inconsistently
 insert_final_newline = unset
 max_line_length = off
