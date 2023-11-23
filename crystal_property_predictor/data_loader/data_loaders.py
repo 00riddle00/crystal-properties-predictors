@@ -69,13 +69,12 @@ class CrystalDataLoader(DataLoaderBase):
             transform=transforms.build_transforms(train=True),
         )
 
-        # if train:
-        #     self.train_dataset, self.valid_dataset = random_split(
-        #         self.train_dataset, [1 - validation_split, validation_split]
-        #     )
-        # else:
-        #     self.valid_dataset = None
-        self.valid_dataset = None
+        if train:
+            self.train_dataset, self.valid_dataset = random_split(
+                self.train_dataset, [1 - validation_split, validation_split]
+            )
+        else:
+            self.valid_dataset = None
 
         self.init_kwargs = {"batch_size": batch_size, "num_workers": nworkers}
         super().__init__(self.train_dataset, shuffle=shuffle, **self.init_kwargs)
