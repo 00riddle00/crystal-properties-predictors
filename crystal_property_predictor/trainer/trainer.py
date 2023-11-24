@@ -31,6 +31,73 @@ class Trainer(TrainerBase):
         self.lr_scheduler = lr_scheduler
         self.log_step = int(np.sqrt(data_loader.batch_size)) * 8
 
+    def train(self):
+        """Full training logic."""
+        log.info("Starting training...")
+        for epoch in range(self.start_epoch, self.epochs):
+            result = self._train_epoch(epoch)
+
+            # save logged information into log dict
+            results = {"epoch": epoch}
+            for key, value in result.items():
+                if key == "metrics":
+                    results.update(
+                        {mtr.__name__: value[i] for i, mtr in enumerate(self.metrics)}
+                    )
+                elif key == "val_metrics":
+                    results.update(
+                        {
+                            "val_" + mtr.__name__: value[i]
+                            for i, mtr in enumerate(self.metrics)
+                        }
+                    )
+                else:
+                    results[key] = value
+
+            # print logged information to the screen
+            for key, value in results.items():
+                log.info(f"{str(key):15s}: {value}")
+
+            # evaluate model performance according to configured metric save
+            # the best checkpoint as model_best
+            best = False
+            if self.mnt_mode != "off":
+                try:
+                    # check whether model performance improved or not,
+                    # according to specified metric(mnt_metric)
+                    improved = (
+                        self.mnt_mode == "min"
+                        and results[self.mnt_metric] < self.mnt_best
+                    ) or (
+                        self.mnt_mode == "max"
+                        and results[self.mnt_metric] > self.mnt_best
+                    )
+                except KeyError:
+                    log.warning(
+                        f"Warning: Metric '{self.mnt_metric}' is not found. Model "
+                        f"performance monitoring is disabled."
+                    )
+                    self.mnt_mode = "off"
+                    improved = False
+                    not_improved_count = 0
+
+                if improved:
+                    self.mnt_best = results[self.mnt_metric]
+                    not_improved_count = 0
+                    best = True
+                else:
+                    not_improved_count += 1
+
+                if not_improved_count > self.early_stop:
+                    log.info(
+                        f"Validation performance didn't improve for {self.early_stop} "
+                        f"epochs. Training stops."
+                    )
+                    break
+
+            if epoch % self.save_period == 0:
+                self._save_checkpoint(epoch, save_best=best)
+
     def _train_epoch(self, epoch: int) -> dict:
         """Training logic for an epoch.
 
