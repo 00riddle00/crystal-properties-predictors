@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 import torch.nn as nn
 from overrides import override
 
@@ -10,7 +11,7 @@ class ModelBase(nn.Module):
     def __init__(self):
         super().__init__()
 
-    def forward(self, input_):
+    def forward(self, input_: torch.Tensor) -> torch.Tensor | None:
         """Forward pass logic.
 
         :return: Model output

@@ -32,7 +32,7 @@ class MnistModel(ModelBase):
         return F.log_softmax(x, dim=1)
 
 
-class CrystalPropModel(nn.Module):
+class CrystalPropModel(ModelBase):
     """A neural network with two linear layers."""
 
     @override
@@ -47,6 +47,7 @@ class CrystalPropModel(nn.Module):
         nn.init.kaiming_uniform_(self.layer_1.weight)
         nn.init.kaiming_uniform_(self.layer_2.weight)
 
+    @override
     def forward(self, input_: torch.Tensor) -> torch.Tensor:
         res1: torch.Tensor = F.relu(self.layer_1(input_))
         res2: torch.Tensor = F.relu(self.layer_2(res1))
