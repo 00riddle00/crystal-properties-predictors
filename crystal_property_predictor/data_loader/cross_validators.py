@@ -1,5 +1,6 @@
 import abc
 
+from overrides import override
 from sklearn.model_selection import KFold
 
 
@@ -17,6 +18,7 @@ class KFoldCV(CrossValidatorFactoryBase):
         self.shuffle = shuffle
         self.random_state = random_state
 
+    @override
     def build_validator(self):
         return KFold(
             n_splits=self.n_folds,
@@ -28,5 +30,6 @@ class KFoldCV(CrossValidatorFactoryBase):
 # TODO implement selecting no cross validation in config differently than this
 # This is a dummy cross validator that does nothing
 class NONE(CrossValidatorFactoryBase):
+    @override
     def build_validator(self):
         pass

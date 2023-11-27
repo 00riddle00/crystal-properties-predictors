@@ -1,14 +1,16 @@
 import numpy as np
 import torch.nn as nn
+from overrides import override
 
 
 class ModelBase(nn.Module):
     """Base class for all models."""
 
+    @override
     def __init__(self):
         super().__init__()
 
-    def forward(self, *input):
+    def forward(self, input_):
         """Forward pass logic.
 
         :return: Model output

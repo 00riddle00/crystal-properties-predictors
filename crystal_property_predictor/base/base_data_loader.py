@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 class DataLoaderBase(DataLoader):
     """Base class for all data loaders."""
 
-    def split_validation(self) -> DataLoader:
+    def split_validation(self) -> DataLoader | None:
         """.
 
         Return a `torch.utils.data.DataLoader` for validation, or None if not
@@ -14,10 +14,11 @@ class DataLoaderBase(DataLoader):
         """
         raise NotImplementedError
 
-    def generate_cross_validation_folds(self) -> Tuple[DataLoader, DataLoader]:
+    def generate_cross_validation_folds(self) -> Tuple[DataLoader, DataLoader] | None:
         """.
 
         For every cross validation fold, yield a tuple of two
-        `torch.utils.data.DataLoader` objects, for training and validation.
+        `torch.utils.data.DataLoader` objects, for training and validation,
+        respectively. If cross validation is not available, return None.
         """
         raise NotImplementedError

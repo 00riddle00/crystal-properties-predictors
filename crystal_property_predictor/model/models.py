@@ -10,6 +10,7 @@ log = setup_logger(__name__)
 
 
 class MnistModel(ModelBase):
+    @override
     def __init__(self, num_classes=10):
         super().__init__()
         self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
@@ -20,8 +21,9 @@ class MnistModel(ModelBase):
 
         log.info(f"<init>: \n{self}")
 
-    def forward(self, x):
-        x = F.relu(F.max_pool2d(self.conv1(x), 2))
+    @override
+    def forward(self, input_):
+        x = F.relu(F.max_pool2d(self.conv1(input_), 2))
         x = F.relu(F.max_pool2d(self.conv2_drop(self.conv2(x)), 2))
         x = x.view(-1, 320)
         x = F.relu(self.fc1(x))
@@ -45,8 +47,8 @@ class CrystalPropModel(nn.Module):
         nn.init.kaiming_uniform_(self.layer_1.weight)
         nn.init.kaiming_uniform_(self.layer_2.weight)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        res1: torch.Tensor = F.relu(self.layer_1(x))
+    def forward(self, input_: torch.Tensor) -> torch.Tensor:
+        res1: torch.Tensor = F.relu(self.layer_1(input_))
         res2: torch.Tensor = F.relu(self.layer_2(res1))
         res = F.relu(res2)
         return res

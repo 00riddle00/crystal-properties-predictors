@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+from overrides import override
 from torchvision.utils import make_grid
 
 from crystal_property_predictor.base import AverageMeter, TrainerBase
@@ -11,6 +12,7 @@ log = setup_logger(__name__)
 class Trainer(TrainerBase):
     """Responsible for training loop and validation."""
 
+    @override
     def __init__(
         self,
         model,
@@ -31,6 +33,7 @@ class Trainer(TrainerBase):
         self.lr_scheduler = lr_scheduler
         self.log_step = int(np.sqrt(data_loader.batch_size)) * 8
 
+    @override
     def _train_epoch(self, epoch: int) -> dict:
         """Training logic for an epoch.
 
