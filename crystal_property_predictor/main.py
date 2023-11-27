@@ -10,6 +10,7 @@ import torch.optim as module_optimizer
 import torch.optim.lr_scheduler as module_scheduler
 
 import crystal_property_predictor.data_loader.augmentations as module_aug
+import crystal_property_predictor.data_loader.cross_validators as module_cv
 import crystal_property_predictor.data_loader.data_loaders as module_data
 import crystal_property_predictor.model.losses as module_loss
 import crystal_property_predictor.model.metrics as module_metric
@@ -34,7 +35,10 @@ def train(cfg: Dict, resume: str) -> None:
     model, optimizer, start_epoch = resume_checkpoint(resume, model, optimizer, cfg)
 
     transforms = get_instance(module_aug, "augmentation", cfg)
-    data_loader = get_instance(module_data, "data_loader", cfg, transforms)
+    cross_validator = get_instance(module_cv, "cross_validation", cfg)
+    data_loader = get_instance(
+        module_data, "data_loader", cfg, transforms, cross_validator
+    )
     valid_data_loader = data_loader.split_validation()
 
     log.info("Getting loss and metric function handles")

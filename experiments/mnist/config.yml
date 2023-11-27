@@ -11,6 +11,10 @@ augmentation:
   type: MNISTTransforms
   args: { }
 
+cross_validation:
+  type: NONE
+  args: { }
+
 data_loader:
   type: MnistDataLoader
   args:
@@ -41,6 +45,7 @@ optimizer:
 training:
   early_stop: 10
   epochs: 100
+  do_cross_validation: false
   monitor: min val_loss
   save_period: 1
   tensorboard: true

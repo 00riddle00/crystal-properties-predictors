@@ -25,6 +25,8 @@ class TrainerBase:
         self.config = config
         self.device = device
 
+        self.do_cross_validation = config["training"]["do_cross_validation"]
+
         self._setup_monitoring(config["training"])
 
         self.checkpoint_dir, writer_dir = trainer_paths(config)
@@ -37,6 +39,10 @@ class TrainerBase:
 
     def train(self):
         """Full training logic."""
+        if self.do_cross_validation:
+            self._train_with_cross_validation()
+            return
+
         log.info("Starting training...")
         for epoch in range(self.start_epoch, self.epochs):
             result = self._train_epoch(epoch)
@@ -101,6 +107,10 @@ class TrainerBase:
 
             if epoch % self.save_period == 0:
                 self._save_checkpoint(epoch, save_best=best)
+
+    def _train_with_cross_validation(self):
+        """Training logic for training with cross validation."""
+        raise NotImplementedError
 
     def _train_epoch(self, epoch: int) -> dict:
         """Training logic for an epoch."""

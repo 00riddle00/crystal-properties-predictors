@@ -27,6 +27,7 @@ class MNISTTransforms(AugmentationFactoryBase):
         return T.Compose([T.ToTensor(), T.Normalize(self.MEANS, self.STDS)])
 
 
+# TODO implement selecting no augmentations in config differently than this
 # This is a dummy augmentation factory that does nothing
 class NONE(AugmentationFactoryBase):
     def build_train(self):

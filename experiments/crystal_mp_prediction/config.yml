@@ -12,6 +12,13 @@ augmentation:
   type: NONE
   args: { }
 
+cross_validation:
+  type: KFoldCV
+  args:
+    n_folds: 10
+    shuffle: true
+    random_state: 42
+
 data_loader:
   type: CrystalDataLoader
   args:
@@ -41,8 +48,9 @@ optimizer:
     weight_decay: 0
 
 training:
-#  early_stop: 0
-  epochs: 200
+  early_stop: 10
+  epochs: 100
+  do_cross_validation: true
   monitor: min val_loss
   save_period: 1
   tensorboard: true
