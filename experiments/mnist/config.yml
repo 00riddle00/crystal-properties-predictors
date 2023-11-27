@@ -12,7 +12,7 @@ augmentation:
   args: { }
 
 cross_validation:
-  type: NONE
+  type: NoCrossValidation
   args: { }
 
 data_loader:

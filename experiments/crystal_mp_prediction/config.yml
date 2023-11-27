@@ -9,7 +9,7 @@ arch:
     input_dim: 74
 
 augmentation:
-  type: NONE
+  type: NoAugmentation
   args: { }
 
 cross_validation:

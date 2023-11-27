@@ -32,11 +32,11 @@ class MNISTTransforms(AugmentationFactoryBase):
 
 # TODO implement selecting no augmentations in config differently than this
 # This is a dummy augmentation factory that does nothing
-class NONE(AugmentationFactoryBase):
+class NoAugmentation(AugmentationFactoryBase):
     @override
     def build_train(self):
-        pass
+        return None
 
     @override
     def build_test(self):
-        pass
+        return None

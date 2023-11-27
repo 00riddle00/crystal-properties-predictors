@@ -29,7 +29,7 @@ class KFoldCV(CrossValidatorFactoryBase):
 
 # TODO implement selecting no cross validation in config differently than this
 # This is a dummy cross validator that does nothing
-class NONE(CrossValidatorFactoryBase):
+class NoCrossValidation(CrossValidatorFactoryBase):
     @override
     def build_validator(self):
-        pass
+        return None

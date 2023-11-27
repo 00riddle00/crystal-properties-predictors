@@ -87,10 +87,8 @@ class CrystalDataLoader(DataLoaderBase):
         self.valid_dataset = None
 
         if train:
-            cross_validate = cross_validator.__class__.__name__ != "NONE"
-            if cross_validate:
-                self.cross_validator = cross_validator.build_validator()
-            else:
+            self.cross_validator = cross_validator.build_validator()
+            if self.cross_validator is None:
                 self.train_dataset, self.valid_dataset = random_split(
                     self.train_dataset, [1 - validation_split, validation_split]
                 )
