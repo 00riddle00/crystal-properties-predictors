@@ -1,10 +1,6 @@
 import numpy as np
-from torch.utils.data import (
-    ConcatDataset,
-    DataLoader,
-    SubsetRandomSampler,
-    random_split,
-)
+from overrides import override
+from torch.utils.data import DataLoader, SubsetRandomSampler, random_split
 from torchvision import datasets
 
 from crystal_property_predictor.base import DataLoaderBase
@@ -14,6 +10,7 @@ from crystal_property_predictor.dataset import CrystalDataset
 class MnistDataLoader(DataLoaderBase):
     """MNIST data loading demo using DataLoaderBase."""
 
+    @override
     def __init__(
         self,
         transforms,
@@ -44,24 +41,28 @@ class MnistDataLoader(DataLoaderBase):
             else None
         )
 
-        if cross_validator.__class__.__name__ != "NONE":
-            self.cross_validator = cross_validator.build_validator()
-        else:
-            self.cross_validator = None
+        # Not yet implemented for MNIST
+        self.cross_validator = None
 
         self.init_kwargs = {"batch_size": batch_size, "num_workers": nworkers}
         super().__init__(self.train_dataset, shuffle=shuffle, **self.init_kwargs)
 
+    @override
     def split_validation(self):
         if self.valid_dataset is None:
             return None
         else:
             return DataLoader(self.valid_dataset, **self.init_kwargs)
 
+    @override
+    def generate_cross_validation_folds(self):
+        raise NotImplementedError
+
 
 class CrystalDataLoader(DataLoaderBase):
     """Load crystal data."""
 
+    @override
     def __init__(
         self,
         transforms,
@@ -82,32 +83,32 @@ class CrystalDataLoader(DataLoaderBase):
             transform=transforms.build_transforms(train=True),
         )
 
-        if train:
-            self.train_dataset, self.valid_dataset = random_split(
-                self.train_dataset, [1 - validation_split, validation_split]
-            )
-        else:
-            self.valid_dataset = None
+        self.cross_validator = None
+        self.valid_dataset = None
 
-        if cross_validator.__class__.__name__ != "NONE":
-            self.cross_validator = cross_validator.build_validator()
-        else:
-            self.cross_validator = None
+        if train:
+            cross_validate = cross_validator.__class__.__name__ != "NONE"
+            if cross_validate:
+                self.cross_validator = cross_validator.build_validator()
+            else:
+                self.train_dataset, self.valid_dataset = random_split(
+                    self.train_dataset, [1 - validation_split, validation_split]
+                )
 
         self.init_kwargs = {"batch_size": batch_size, "num_workers": nworkers}
         super().__init__(self.train_dataset, shuffle=shuffle, **self.init_kwargs)
 
+    @override
     def split_validation(self):
         if self.valid_dataset is None:
             return None
         else:
             return DataLoader(self.valid_dataset, **self.init_kwargs)
 
+    @override
     def generate_cross_validation_folds(self):
-        train_dataset = ConcatDataset([self.train_dataset, self.valid_dataset])
-
         for fold, (train_idx, val_idx) in enumerate(
-            self.cross_validator.split(np.arange(len(train_dataset)))
+            self.cross_validator.split(np.arange(len(self.train_dataset)))
         ):
             train_sampler = SubsetRandomSampler(train_idx)
             valid_sampler = SubsetRandomSampler(val_idx)
