@@ -1,5 +1,5 @@
 import os
-from typing import Callable, Optional, Tuple
+from typing import Callable, Tuple
 
 import pandas as pd
 import torch
@@ -39,8 +39,8 @@ class CrystalDataset(DatasetBase):
         self,
         root: str,
         train: bool = True,
-        transform: Optional[Callable] = None,
-        target_transform: Optional[Callable] = None,
+        transform: Callable | None = None,
+        target_transform: Callable | None = None,
         download: bool = False,
     ) -> None:
         if isinstance(root, str):
