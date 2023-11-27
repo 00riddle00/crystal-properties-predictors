@@ -24,7 +24,7 @@ requirements = [
 setup(
     name="crystal_property_predictor",
     version="0.0.1",
-    url="https://gitlab.com/the-study-of-crystal-structures-using-machine-learning/crystal-properties-predictors",
+    url="https://gitlab.com/the-study-of-crystal-structures-using-machine-learning/crystal-properties-predictors",  # noqa
     author="Tomas Giedraitis",
     author_email="tomasgiedraitis@gmail.com",
     description="Crystal properties prediction from structure.",

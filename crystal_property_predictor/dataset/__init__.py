@@ -1,1 +1,1 @@
-from .datasets import *
+from .datasets import CrystalDataset  # noqa: F401
