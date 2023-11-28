@@ -116,9 +116,9 @@ class CrystalDataset(DatasetBase):
     @override
     def __getitem__(self, index: int) -> Tuple[torch.Tensor, torch.Tensor]:
         # E.g. element count, volume, weight, etc.
-        features: torch.Tensor = torch.tensor(self.data[index])
+        features: torch.Tensor = self.data[index].clone().detach()
         # True value, e.g. melting point
-        target: torch.Tensor = torch.tensor(self.targets[index])
+        target: torch.Tensor = self.targets[index].clone().detach()
 
         # TODO apply transformations according to self.transform and
         #  self.target_transform
