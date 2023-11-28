@@ -42,11 +42,19 @@ skip_glob = ["**/migrations/*.py"]
 # ==== mypy ====
 [tool.mypy]
 python_version = "3.11"
+disallow_subclassing_any = true
 check_untyped_defs = true
-ignore_missing_imports = true
-warn_unused_ignores = true
 warn_redundant_casts = true
+warn_unused_ignores = true
+allow_redefinition = true
+local_partial_types = true
+strict_equality = true
+pretty = true
 warn_unused_configs = true
+ignore_missing_imports = true
+exclude = [
+    "venv",
+]
 
 # ==== wheel ====
 [tool.distutils.bdist_wheel]
