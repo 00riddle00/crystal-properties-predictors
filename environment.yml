@@ -1,25 +1,25 @@
 name: crystal_property_predictor
 
 channels:
-  - pytorch
   - conda-forge
+  - pytorch
 
 dependencies:
-  - python=3.11
-  - numpy
-  - scipy
-  - pandas
-  - pytest
-  - flake8
-  - rope
+  - absl-py
   - black
   - click
-  - pyyaml
-  - pytorch>=1.1.0
-  - torchvision
   - cudatoolkit=10.0
-  - tensorboard>=1.14
-  - absl-py
+  - flake8
+  - numpy
+  - pandas
   - pip
+  - pytest
+  - python=3.11
+  - pytorch>=1.1.0
+  - pyyaml
+  - rope
+  - scipy
+  - tensorboard>=1.14
+  - torchvision
   - pip:
       - -e .  # install package in development mode
