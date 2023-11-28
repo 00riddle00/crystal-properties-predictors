@@ -10,7 +10,6 @@ dependencies:
   - click
   - cudatoolkit=10.0
   - flake8
-  - flake8-pyproject
   - isort
   - mypy
   - numpy
@@ -19,14 +18,14 @@ dependencies:
   - pandas
   - pip
   - pydocstyle
+  - pyproject-flake8
   - pytest
   - python=3.11
   - pytorch>=1.1.0
   - pyyaml
-  - rope
   - scikit-learn
   - scipy
-  - tensorboard>=1.14
+  - tensorboard
   - torchvision
   - types-pyyaml
   - pip:
