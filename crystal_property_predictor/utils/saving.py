@@ -34,7 +34,7 @@ def log_path(config: dict) -> Path:
     return ensure_exists(p)
 
 
-def trainer_paths(config: dict) -> Path:
+def trainer_paths(config: dict) -> tuple[Path, Path]:
     """
     Return the paths to save checkpoints and tensorboard runs.
 

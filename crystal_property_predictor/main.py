@@ -65,7 +65,7 @@ def train(cfg: Dict, resume: str) -> None:
 
 def setup_device(
     model: nn.Module, target_devices: List[int]
-) -> Tuple[torch.device, List[int]]:
+) -> Tuple[nn.Module, torch.device]:
     """Set up GPU device if available, move model into configured device."""
     available_devices = list(range(torch.cuda.device_count()))
 

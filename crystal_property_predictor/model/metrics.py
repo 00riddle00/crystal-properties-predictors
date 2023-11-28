@@ -13,7 +13,7 @@ def top_3_acc(output, target):
 def top_k_acc(output, target, k):
     pred = torch.topk(output, k, dim=1)[1]
     assert pred.shape[0] == len(target)
-    correct = 0
+    correct = 0.0
     for i in range(k):
         correct += torch.sum(pred[:, i] == target).item()
     return correct / len(target)

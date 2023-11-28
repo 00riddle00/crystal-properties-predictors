@@ -57,7 +57,7 @@ class TensorboardWriter:
             # default action for returning methods defined in this class,
             # set_step() for instance.
             try:
-                attr = object.__getattr__(name)
+                attr = getattr(object, name)
             except AttributeError:
                 raise AttributeError(
                     f"type object `TensorboardWriter` has no attribute {name}"

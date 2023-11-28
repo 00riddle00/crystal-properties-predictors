@@ -87,12 +87,12 @@ class TrainerBase:
                         f"Warning: Metric '{self.mnt_metric}' is not found. Model "
                         f"performance monitoring is disabled."
                     )
-                    self.mnt_mode = "off"
+                    self.mnt_mode: str = "off"
                     improved = False
                     not_improved_count = 0
 
                 if improved:
-                    self.mnt_best = results[self.mnt_metric]
+                    self.mnt_best: float = results[self.mnt_metric]
                     not_improved_count = 0
                     best = True
                 else:
@@ -148,12 +148,12 @@ class TrainerBase:
         self.monitor = config.get("monitor", "off")
         if self.monitor == "off":
             self.mnt_mode = "off"
-            self.mnt_best = 0
+            self.mnt_best = 0.0
         else:
             self.mnt_mode, self.mnt_metric = self.monitor.split()
             assert self.mnt_mode in ["min", "max"]
             self.mnt_best = math.inf if self.mnt_mode == "min" else -math.inf
-            self.early_stop = config.get("early_stop", math.inf)
+            self.early_stop: int = config.get("early_stop", math.inf)
 
 
 class AverageMeter:
@@ -165,7 +165,7 @@ class AverageMeter:
 
     def reset(self):
         self.val = 0
-        self.avg = 0
+        self.avg = 0.0
         self.sum = 0
         self.count = 0
 

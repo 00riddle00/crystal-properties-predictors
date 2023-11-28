@@ -13,7 +13,7 @@ def read(filename):
 
 
 # TODO add new packages listed in requirements/...txt to environment.yml
-requirements = [
+requirements = [  # type: ignore
     # Use either environment.yml (conda) or requirements/{requirement_file}.txt
     # (pip). environment.yml contains more packages than currently needed for
     # this project, namely scipy, matplotlib, rope, autopep8, jupyter, future,
