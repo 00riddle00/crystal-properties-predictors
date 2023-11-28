@@ -27,6 +27,8 @@ class TrainerBase:
 
         self.do_cross_validation = config["training"]["do_cross_validation"]
 
+        self.mnt_mode = None  # will be set in _setup_monitoring
+        self.mnt_best = None  # will be set in _setup_monitoring
         self._setup_monitoring(config["training"])
 
         self.checkpoint_dir, writer_dir = trainer_paths(config)
@@ -73,6 +75,7 @@ class TrainerBase:
             # the best checkpoint as model_best
             best = False
             if self.mnt_mode != "off":
+                not_improved_count = 0
                 try:
                     # check whether model performance improved or not,
                     # according to specified metric(mnt_metric)
@@ -88,12 +91,12 @@ class TrainerBase:
                         f"Warning: Metric '{self.mnt_metric}' is not found. Model "
                         f"performance monitoring is disabled."
                     )
-                    self.mnt_mode: str = "off"
+                    self.mnt_mode = "off"
                     improved = False
                     not_improved_count = 0
 
                 if improved:
-                    self.mnt_best: float = results[self.mnt_metric]
+                    self.mnt_best = results[self.mnt_metric]
                     not_improved_count = 0
                     best = True
                 else:
@@ -121,7 +124,6 @@ class TrainerBase:
         """Save checkpoints.
 
         :param epoch: current epoch number
-        :param log: logging information of the epoch
         :param save_best: if True, rename the saved checkpoint to
         'model_best.pth'
         """

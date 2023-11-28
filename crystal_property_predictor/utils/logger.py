@@ -9,13 +9,13 @@ from .saving import log_path
 LOG_LEVEL = logging.INFO
 
 
-def setup_logging(run_config, log_config="logging.yml") -> None:
+def setup_logging(run_config: dict, log_config="logging.yml") -> None:
     """Set up ``logging.config``.
 
     Parameters
     ----------
-    run_config : str
-        Path to configuration file for run
+    run_config : dict
+        Configuration for run
 
     log_config : str
         Path to configuration file for logging

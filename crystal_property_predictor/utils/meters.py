@@ -3,6 +3,10 @@ class AverageMeter:
 
     def __init__(self, name):
         self.name = name
+        self.val = None
+        self.avg = None
+        self.sum = None
+        self.count = None
         self.reset()
 
     def reset(self):

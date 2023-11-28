@@ -59,7 +59,7 @@ class Trainer(TrainerBase):
             loss_mtr.update(loss.item(), data.size(0))
 
             if batch_idx % self.log_step == 0:
-                self.writer.set_step((epoch) * len(self.data_loader) + batch_idx)
+                self.writer.set_step(epoch * len(self.data_loader) + batch_idx)
                 self.writer.add_scalar("batch/loss", loss.item())
                 for mtr, value in zip(metric_mtrs, self._eval_metrics(output, target)):
                     mtr.update(value, data.size(0))
