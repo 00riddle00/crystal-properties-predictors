@@ -10,16 +10,25 @@ dependencies:
   - click
   - cudatoolkit=10.0
   - flake8
+  - flake8-pyproject
+  - isort
+  - mypy
   - numpy
+  - overrides
+  - packaging
   - pandas
   - pip
+  - pydocstyle
   - pytest
   - python=3.11
   - pytorch>=1.1.0
   - pyyaml
   - rope
+  - scikit-learn
   - scipy
   - tensorboard>=1.14
   - torchvision
+  - torchvision
+  - types-pyyaml
   - pip:
       - -e .  # install package in development mode

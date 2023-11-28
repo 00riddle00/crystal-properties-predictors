@@ -12,8 +12,7 @@ def read(filename):
         return re.sub(text_type(r":[a-z]+:`~?(.*?)`"), text_type(r"``\1``"), fd.read())
 
 
-# TODO add new packages listed in requirements/...txt to environment.yml
-requirements = [  # type: ignore
+requirements: list = [
     # Use either environment.yml (conda) or
     # requirements/{requirement_file}.txt (pip).
 ]
