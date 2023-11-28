@@ -1,14 +1,14 @@
 name: crystal_property_predictor
 
 channels:
-  - conda-forge
+  - nvidia
   - pytorch
+  - conda-forge
 
 dependencies:
   - absl-py
   - black
   - click
-  - cudatoolkit=10.0
   - flake8
   - isort
   - mypy
@@ -21,7 +21,7 @@ dependencies:
   - pyproject-flake8
   - pytest
   - python=3.11
-  - pytorch>=1.1.0
+  - pytorch-cuda=12.1
   - pyyaml
   - scikit-learn
   - scipy
