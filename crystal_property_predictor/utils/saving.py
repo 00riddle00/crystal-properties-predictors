@@ -1,7 +1,6 @@
 from pathlib import Path
 import datetime
 
-
 LOG_DIR = "logs"
 CHECKPOINT_DIR = "checkpoints"
 RUN_DIR = "runs"

@@ -20,7 +20,6 @@ requirements = [  # type: ignore
     # tqdm.
 ]
 
-
 setup(
     name="crystal_property_predictor",
     version="0.0.1",
