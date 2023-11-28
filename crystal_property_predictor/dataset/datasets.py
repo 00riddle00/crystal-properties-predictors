@@ -101,7 +101,7 @@ class CrystalDataset(DatasetBase):
     def _validate_keys(data: pd.DataFrame, targets: pd.DataFrame) -> bool:
         return data.index.equals(targets.index)
 
-    # TODO implement if needed
+    # Implement if needed
     def download(self) -> None:
         """Download the crystal data if it doesn't exist already."""
 
