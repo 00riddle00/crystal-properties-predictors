@@ -154,23 +154,3 @@ class TrainerBase:
             assert self.mnt_mode in ["min", "max"]
             self.mnt_best = math.inf if self.mnt_mode == "min" else -math.inf
             self.early_stop: int = config.get("early_stop", math.inf)
-
-
-class AverageMeter:
-    """Compute and stores the average and current value."""
-
-    def __init__(self, name):
-        self.name = name
-        self.reset()
-
-    def reset(self):
-        self.val = 0
-        self.avg = 0.0
-        self.sum = 0
-        self.count = 0
-
-    def update(self, val, n=1):
-        self.val = val
-        self.sum += val * n
-        self.count += n
-        self.avg = self.sum / self.count

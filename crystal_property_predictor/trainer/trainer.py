@@ -3,8 +3,8 @@ import torch
 from overrides import override
 from torchvision.utils import make_grid
 
-from crystal_property_predictor.base import AverageMeter, TrainerBase
-from crystal_property_predictor.utils import setup_logger
+from crystal_property_predictor.base import TrainerBase
+from crystal_property_predictor.utils import AverageMeter, setup_logger
 
 log = setup_logger(__name__)
 
