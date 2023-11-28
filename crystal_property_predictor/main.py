@@ -113,7 +113,8 @@ def setup_param_groups(model: nn.Module, config: Dict) -> List:
 def resume_checkpoint(resume_path, model, optimizer, config):
     """Resume from saved checkpoint."""
     if not resume_path:
-        return model, optimizer, 0
+        # Counting epochs starts from 1
+        return model, optimizer, 1
 
     log.info(f"Loading checkpoint: {resume_path}")
     checkpoint = torch.load(resume_path)

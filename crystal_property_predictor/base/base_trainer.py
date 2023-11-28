@@ -44,7 +44,8 @@ class TrainerBase:
             return
 
         log.info("Starting training...")
-        for epoch in range(self.start_epoch, self.epochs):
+        # Counting epochs starts from 1
+        for epoch in range(self.start_epoch, self.epochs + 1):
             result = self._train_epoch(epoch)
 
             # save logged information into log dict
