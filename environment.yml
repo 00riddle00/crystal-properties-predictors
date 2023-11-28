@@ -28,7 +28,7 @@ dependencies:
   - scipy
   - tensorboard>=1.14
   - torchvision
-  - torchvision
   - types-pyyaml
   - pip:
+      - torcheval
       - -e .  # install package in development mode
