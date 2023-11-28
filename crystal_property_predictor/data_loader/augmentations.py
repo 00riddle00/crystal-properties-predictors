@@ -1,20 +1,7 @@
-import abc
-
 import torchvision.transforms as T
 from overrides import override
 
-
-class AugmentationFactoryBase(abc.ABC):
-    def build_transforms(self, train):
-        return self.build_train() if train else self.build_test()
-
-    @abc.abstractmethod
-    def build_train(self):
-        pass
-
-    @abc.abstractmethod
-    def build_test(self):
-        pass
+from crystal_property_predictor.base import AugmentationFactoryBase
 
 
 class MNISTTransforms(AugmentationFactoryBase):

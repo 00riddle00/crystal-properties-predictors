@@ -1,13 +1,7 @@
-import abc
-
 from overrides import override
 from sklearn.model_selection import KFold
 
-
-class CrossValidatorFactoryBase(abc.ABC):
-    @abc.abstractmethod
-    def build_validator(self):
-        pass
+from crystal_property_predictor.base import CrossValidatorFactoryBase
 
 
 class KFoldCV(CrossValidatorFactoryBase):
