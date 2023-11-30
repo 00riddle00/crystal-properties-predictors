@@ -1,7 +1,10 @@
 import math
+from logging import Logger
 from pathlib import Path
+from typing import Callable, TextIO
 
 import torch
+import torch.nn as nn
 import yaml
 
 from crystal_property_predictor.utils import (
@@ -10,13 +13,22 @@ from crystal_property_predictor.utils import (
     trainer_paths,
 )
 
-log = setup_logger(__name__)
+log: Logger = setup_logger(__name__)
 
 
 class TrainerBase:
     """Base class for all trainers."""
 
-    def __init__(self, model, loss, metrics, optimizer, start_epoch, config, device):
+    def __init__(
+        self,
+        model: nn.Module,
+        loss: Callable[[torch.Tensor, torch.Tensor], torch.Tensor],
+        metrics: Callable[[torch.Tensor, torch.Tensor], torch.Tensor | float],
+        optimizer: torch.optim.Optimizer,
+        start_epoch: int,
+        config: dict,
+        device: torch.device,
+    ):
         self.model = model
         self.loss = loss
         self.metrics = metrics
@@ -25,17 +37,28 @@ class TrainerBase:
         self.config = config
         self.device = device
 
-        self.do_cross_validation = config["training"]["do_cross_validation"]
+        self.do_cross_validation: bool = config["training"]["do_cross_validation"]
 
-        self.mnt_mode = None  # will be set in _setup_monitoring
-        self.mnt_best = None  # will be set in _setup_monitoring
+        # The following attributes will be set in _setup_monitoring() method
+        self.epochs: int | None = None
+        self.save_period: int | None
+        self.monitor: str | None = None
+        self.mnt_mode: str | None = None
+        self.mnt_metric: str | None = None
+        self.mnt_best: float | None = None
+        self.early_stop: int | None = None
         self._setup_monitoring(config["training"])
 
+        self.checkpoint_dir: Path
+        writer_dir: Path
         self.checkpoint_dir, writer_dir = trainer_paths(config)
-        self.writer = TensorboardWriter(writer_dir, config["training"]["tensorboard"])
+        self.writer: TensorboardWriter = TensorboardWriter(
+            writer_dir, config["training"]["tensorboard"]
+        )
 
         # Save configuration file into checkpoint directory:
-        config_save_path = Path(self.checkpoint_dir) / "config.yml"
+        config_save_path: Path = Path(self.checkpoint_dir) / "config.yml"
+        handle: TextIO
         with open(config_save_path, "w") as handle:
             yaml.dump(config, handle, default_flow_style=False)
 
@@ -47,11 +70,14 @@ class TrainerBase:
 
         log.info("Starting training...")
         # Counting epochs starts from 1
+        epoch: int
         for epoch in range(self.start_epoch, self.epochs + 1):
-            result = self._train_epoch(epoch)
+            result: dict = self._train_epoch(epoch)
 
             # save logged information into log dict
-            results = {"epoch": epoch}
+            results: dict = {"epoch": epoch}
+            key: str
+            value: list[torch.Tensor] | float
             for key, value in result.items():
                 if key == "metrics":
                     results.update(
@@ -68,14 +94,17 @@ class TrainerBase:
                     results[key] = value
 
             # print logged information to the screen
-            for key, value in results.items():
-                log.info(f"{str(key):15s}: {value}")
+            key_: str
+            value_: torch.Tensor | int | float
+            for key_, value_ in results.items():
+                log.info(f"{str(key_):15s}: {value_}")
 
             # evaluate model performance according to configured metric save
             # the best checkpoint as model_best
-            best = False
+            best: bool = False
             if self.mnt_mode != "off":
-                not_improved_count = 0
+                not_improved_count: int = 0
+                improved: bool
                 try:
                     # check whether model performance improved or not,
                     # according to specified metric(mnt_metric)
@@ -127,8 +156,8 @@ class TrainerBase:
         :param save_best: if True, rename the saved checkpoint to
         'model_best.pth'
         """
-        arch = type(self.model).__name__
-        state = {
+        arch: str = type(self.model).__name__
+        state: dict = {
             "arch": arch,
             "epoch": epoch,
             "state_dict": self.model.state_dict(),
@@ -136,11 +165,11 @@ class TrainerBase:
             "monitor_best": self.mnt_best,
             "config": self.config,
         }
-        filename = self.checkpoint_dir / f"checkpoint-epoch{epoch}.pth"
+        filename: Path = self.checkpoint_dir / f"checkpoint-epoch{epoch}.pth"
         torch.save(state, filename)
         log.info(f"Saving checkpoint: {filename} ...")
         if save_best:
-            best_path = self.checkpoint_dir / "model_best.pth"
+            best_path: Path = self.checkpoint_dir / "model_best.pth"
             torch.save(state, best_path)
             log.info(f"Saving current best: {best_path}")
 
@@ -156,4 +185,4 @@ class TrainerBase:
             self.mnt_mode, self.mnt_metric = self.monitor.split()
             assert self.mnt_mode in ["min", "max"]
             self.mnt_best = math.inf if self.mnt_mode == "min" else -math.inf
-            self.early_stop: int = config.get("early_stop", math.inf)
+            self.early_stop = config.get("early_stop", math.inf)

@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Iterator
 
 from torch.utils.data import DataLoader
 
@@ -14,7 +14,9 @@ class DataLoaderBase(DataLoader):
         """
         raise NotImplementedError
 
-    def generate_cross_validation_folds(self) -> Tuple[DataLoader, DataLoader] | None:
+    def generate_cross_validation_folds(
+        self,
+    ) -> Iterator[tuple[DataLoader, DataLoader]] | None:
         """.
 
         For every cross validation fold, yield a tuple of two

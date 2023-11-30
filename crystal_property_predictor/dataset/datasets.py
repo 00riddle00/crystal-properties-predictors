@@ -1,11 +1,10 @@
 import os
-from typing import Callable, Tuple
 
 import pandas as pd
 import torch
 from overrides import override
 
-from crystal_property_predictor.base import DatasetBase
+from crystal_property_predictor.base import AugmentationFactoryBase, DatasetBase
 
 
 class CrystalDataset(DatasetBase):
@@ -39,12 +38,12 @@ class CrystalDataset(DatasetBase):
         self,
         root: str,
         train: bool = True,
-        transform: Callable | None = None,
-        target_transform: Callable | None = None,
+        transform: AugmentationFactoryBase | None = None,
+        target_transform: AugmentationFactoryBase | None = None,
         download: bool = False,
     ) -> None:
         if isinstance(root, str):
-            root = os.path.expanduser(root)
+            root: str = os.path.expanduser(root)
         self.root = root
 
         # TODO set self.transform and self.target_transform according to
@@ -63,9 +62,11 @@ class CrystalDataset(DatasetBase):
                 "Dataset not found. You can use download=True to download it"
             )
 
+        self.data: torch.Tensor
+        self.targets: torch.Tensor
         self.data, self.targets = self._load_data()
 
-    def _load_data(self) -> Tuple[torch.Tensor, torch.Tensor]:
+    def _load_data(self) -> tuple[torch.Tensor, torch.Tensor]:
         structure_file: str = (
             f"{'train' if self.train else 'test'}-crystal-structures.csv"
         )
@@ -114,7 +115,7 @@ class CrystalDataset(DatasetBase):
         pass
 
     @override
-    def __getitem__(self, index: int) -> Tuple[torch.Tensor, torch.Tensor]:
+    def __getitem__(self, index: int) -> tuple[torch.Tensor, torch.Tensor]:
         # E.g. element count, volume, weight, etc.
         features: torch.Tensor = self.data[index].clone().detach()
         # True value, e.g. melting point

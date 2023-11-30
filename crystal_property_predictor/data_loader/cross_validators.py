@@ -1,3 +1,5 @@
+from typing import Callable
+
 from overrides import override
 from sklearn.model_selection import KFold
 
@@ -7,13 +9,13 @@ from crystal_property_predictor.base import CrossValidatorFactoryBase
 class KFoldCV(CrossValidatorFactoryBase):
     """K-fold cross validator."""
 
-    def __init__(self, n_folds, shuffle, random_state):
+    def __init__(self, n_folds: int, shuffle: bool, random_state: int):
         self.n_folds = n_folds
         self.shuffle = shuffle
         self.random_state = random_state
 
     @override
-    def build_validator(self):
+    def build_validator(self) -> Callable | None:
         return KFold(
             n_splits=self.n_folds,
             shuffle=self.shuffle,
@@ -25,5 +27,5 @@ class KFoldCV(CrossValidatorFactoryBase):
 # This is a dummy cross validator that does nothing
 class NoCrossValidation(CrossValidatorFactoryBase):
     @override
-    def build_validator(self):
+    def build_validator(self) -> Callable | None:
         return None
