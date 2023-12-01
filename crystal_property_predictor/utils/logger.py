@@ -33,9 +33,9 @@ def setup_logging(run_config: dict, log_config_: str = "logging.yml") -> None:
     # modify logging paths based on run config
     run_path: Path = log_path(run_config)
 
-    tw_handler_name: str
+    handler_name: str
     handler: dict
-    for tw_handler_name, handler in config["handlers"].items():
+    for handler_name, handler in config["handlers"].items():
         if "filename" in handler:
             handler["filename"] = str(run_path / handler["filename"])
 
