@@ -124,10 +124,10 @@ class CrystalDataLoader(DataLoaderBase):
                 train_sampler: SubsetRandomSampler = SubsetRandomSampler(train_idx)
                 valid_sampler: SubsetRandomSampler = SubsetRandomSampler(val_idx)
                 train_loader: DataLoader = DataLoader(
-                    self.dataset, sampler=train_sampler, **self.init_kwargs
+                    self.train_dataset, sampler=train_sampler, **self.init_kwargs
                 )
                 valid_loader: DataLoader = DataLoader(
-                    self.dataset, sampler=valid_sampler, **self.init_kwargs
+                    self.train_dataset, sampler=valid_sampler, **self.init_kwargs
                 )
 
                 yield train_loader, valid_loader
