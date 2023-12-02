@@ -1,3 +1,4 @@
+"""Command line interface for crystal_property_predictor."""
 from typing import TextIO
 
 import click
@@ -20,13 +21,13 @@ def cli():
     default=["experiments/config.yml"],  # default must be provided
     multiple=True,
     help=(
-        "Path to training configuration file. If multiple are provided, runs will be "
-        "executed in order"
+        "Path to training configuration file. If multiple are provided, experiments "
+        "(or different runs of the same experiment) will be executed in order."
     ),
 )
 @click.option("-r", "--resume", default=None, type=str, help="path to checkpoint")
 def train(config_filename: tuple[str], resume: str | None):
-    """Entry point to start training run(s)."""
+    """Entry point to start training experiment(s) / run(s)."""
     configs: list[dict] = [load_config(f) for f in config_filename]
     config: dict
     for config in configs:
@@ -35,7 +36,7 @@ def train(config_filename: tuple[str], resume: str | None):
 
 
 def load_config(filename: str) -> dict:
-    """Load a configuration file as YAML."""
+    """Load a YAML configuration file into a Python dict."""
     fh: TextIO
     with open(filename) as fh:
         config: dict = yaml.safe_load(fh)
