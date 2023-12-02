@@ -1,1 +1,1 @@
-from .datasets import CrystalDataset  # noqa: F401
+from .datasets import MNISTDataset, CrystalDataset  # noqa: F401

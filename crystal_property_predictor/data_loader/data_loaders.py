@@ -3,14 +3,13 @@ from typing import Iterator
 import numpy as np
 from overrides import override
 from torch.utils.data import DataLoader, Dataset, SubsetRandomSampler, random_split
-from torchvision import datasets
 
 from crystal_property_predictor.base import (
     AugmentationFactoryBase,
     CrossValidatorFactoryBase,
     DataLoaderBase,
 )
-from crystal_property_predictor.dataset import CrystalDataset
+from crystal_property_predictor.dataset import CrystalDataset, MNISTDataset
 
 
 class MnistDataLoader(DataLoaderBase):
@@ -29,14 +28,14 @@ class MnistDataLoader(DataLoaderBase):
         train: bool = True,
     ):
         self.data_dir = data_dir
-        self.train_dataset: Dataset = datasets.MNIST(
+        self.train_dataset: Dataset = MNISTDataset(
             self.data_dir,
             train=train,
             download=True,
             transform=transforms.build_transforms(train=True),
         )
         self.valid_dataset: Dataset = (
-            datasets.MNIST(
+            MNISTDataset(
                 self.data_dir,
                 train=False,
                 download=True,

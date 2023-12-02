@@ -1,13 +1,18 @@
 import os
+from typing import Any
 
 import pandas as pd
 import torch
 from overrides import override
+from torch.utils.data import Dataset
+from torchvision.datasets import MNIST
 
-from crystal_property_predictor.base import AugmentationFactoryBase, DatasetBase
+from crystal_property_predictor.base import AugmentationFactoryBase
+
+MNISTDataset = MNIST
 
 
-class CrystalDataset(DatasetBase):
+class CrystalDataset(Dataset[Any]):
     """Crystals Dataset.
 
     Args:
