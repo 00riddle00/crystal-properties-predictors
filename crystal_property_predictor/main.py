@@ -47,8 +47,6 @@ def train(cfg: dict, resume: str | None) -> None:
     start_epoch: int
     model, optimizer, start_epoch = resume_checkpoint(resume, model, optimizer, cfg)
 
-    str(model)
-
     transforms: AugmentationFactoryBase | None = get_instance(
         module_aug, "augmentation", cfg
     )
