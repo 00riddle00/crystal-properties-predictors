@@ -1,3 +1,4 @@
+"""Info about the package and instructions for building and installing it."""
 import io
 import os
 import re
@@ -6,6 +7,7 @@ from setuptools import find_packages, setup
 
 
 def read(filename):
+    """Read reStructuredText while assuring it is rendered correctly."""
     filename = os.path.join(os.path.dirname(__file__), filename)
     text_type = type("")
     with io.open(filename, mode="r", encoding="utf-8") as fd:
@@ -13,7 +15,7 @@ def read(filename):
 
 
 requirements: list = [
-    # Use either environment.yml (conda) or
+    # Use either environment.yml (conda) or the files in
     # requirements/{requirement_file}.txt (pip).
 ]
 

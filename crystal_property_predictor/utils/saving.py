@@ -1,9 +1,10 @@
-from pathlib import Path
+"""Functions that construct paths for saving experiment details."""
 import datetime
+from pathlib import Path
 
 LOG_DIR: str = "logs"
 CHECKPOINT_DIR: str = "checkpoints"
-RUN_DIR: str = "runs"
+RUN_DIR: str = "tensorboard_summaries"
 
 
 def ensure_exists(p: Path) -> Path:
@@ -14,34 +15,41 @@ def ensure_exists(p: Path) -> Path:
 
 
 def arch_path(config: dict) -> Path:
-    """Construct a path based on the name of a configuration file.
+    """Construct a path based on the experiment configuration's name.
 
-    e.g. 'saved/EfficientNet'
+    e.g. 'saved/EfficientNet/'
     """
     p: Path = Path(config["save_dir"]) / config["name"]
     return ensure_exists(p)
 
 
 def arch_datetime_path(config: dict) -> Path:
-    start_time: str = datetime.datetime.now().strftime("%m%d-%H%M%S")
+    """Create a timestamped directory for experiment's single run."""
+    start_time: str = datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S")
     p: Path = arch_path(config) / start_time
     return ensure_exists(p)
 
 
 def log_path(config: dict) -> Path:
+    """Create logs directory for a single experiment's configuration.
+
+    Experiment's configuration is defined by its name,
+    e.g. for a YAML file, the topmost line:
+    name: EfficientNet
+    """
     p: Path = arch_path(config) / LOG_DIR
     return ensure_exists(p)
 
 
 def trainer_paths(config: dict) -> tuple[Path, Path]:
     """
-    Return the paths to save checkpoints and tensorboard runs.
+    Return the paths to save checkpoints and tensorboard summaries.
 
     e.g.
     .. code::
 
-        saved/EfficientNet/1002-123456/checkpoints
-        saved/EfficientNet/1002-123456/runs
+        saved/EfficientNet/2023-10-02-123456/checkpoints/
+        saved/EfficientNet/2023-10-02-123456/tensorboard_summaries/
     """
     arch_datetime: Path = arch_datetime_path(config)
     return (
