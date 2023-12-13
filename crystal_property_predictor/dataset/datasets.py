@@ -113,11 +113,16 @@ class CrystalDataset(Dataset[Any]):
         # -------------------------------------
         # Transforms
         # -------------------------------------
-        # Normalizing the input vectors
-        _x: npt.NDArray[np.float64] = data_df.values
+        # Normalizing both the input vectors and the target values
+        data_and_targets_df = pd.concat([data_df, targets_df], axis=1)
+        _x: npt.NDArray[np.float64] = data_and_targets_df.values
         min_max_scaler: preprocessing.MinMaxScaler = preprocessing.MinMaxScaler()
         x_scaled: npt.NDArray[np.float64] = min_max_scaler.fit_transform(_x)
-        data_df = pd.DataFrame(x_scaled)
+        data_and_targets_df = pd.DataFrame(
+            x_scaled, columns=data_and_targets_df.columns
+        )
+        data_df = data_and_targets_df.drop(data_and_targets_df.columns[-1], axis=1)
+        targets_df = data_and_targets_df.iloc[:, -1].to_frame()
         # -------------------------------------
 
         data: torch.Tensor = torch.tensor(data_df.to_numpy(), dtype=torch.float32)
