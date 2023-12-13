@@ -1,0 +1,44 @@
++/bin/zsh:417> directory-metadata
++ whoami
+riddle
++ hostname -f
+tulkun.localdomain
++ pwd
+/home/riddle/tmp8/saved/Mnist_LeNet/logs
++ set +x
++ git remote -v
+origin	git@gitlab.com:the-study-of-crystal-structures-using-machine-learning/crystal-property-prediction.git (fetch)
+origin	git@gitlab.com:the-study-of-crystal-structures-using-machine-learning/crystal-property-prediction.git (push)
++ git branch -v
+* main 0df9118 [ahead 1] Reimplement k-fold cross validation in a simple manner, and run Crystal Mp Prediction with 10 CV folds (also add .dat files for every metric).
++ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   info.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../experiments/crystal_mp_prediction/config-normal.yml
+	loss.dat
+	loss.dat.log
+	top_1_acc.dat
+	top_1_acc.dat.log
+	top_3_acc.dat.log
+
++ df -h .
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3  932G  786G   99G  89% /
++ type osname
+osname is /home/riddle/.local/bin/scripts/osname
++ osname
+Arch-rolling
++ uname -a
+Linux tulkun 6.6.4-arch1-1 #1 SMP PREEMPT_DYNAMIC Mon, 04 Dec 2023 00:29:19 +0000 x86_64 GNU/Linux
++ date
+Wed Dec 13 02:26:16 AM EET 2023
++/bin/zsh:418> grep 'INFO - top_3_acc ' info.log
++/bin/zsh:418> awk '{ print $NF }'
