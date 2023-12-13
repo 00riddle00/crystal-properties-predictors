@@ -1,13 +1,14 @@
 import os
-from typing import Any
+from typing import Any, Callable
 
+import numpy as np
+import numpy.typing as npt
 import pandas as pd
 import torch
 from overrides import override
+from sklearn import preprocessing
 from torch.utils.data import Dataset
 from torchvision.datasets import MNIST
-
-from crystal_property_predictor.base import AugmentationFactoryBase
 
 MNISTDataset = MNIST
 
@@ -108,6 +109,16 @@ class CrystalDataset(Dataset[Any]):
                 "CODID keys in data file do not correspond to the keys in targets file."
                 " Make sure both files contain the same keys."
             )
+
+        # -------------------------------------
+        # Transforms
+        # -------------------------------------
+        # Normalizing the input vectors
+        _x: npt.NDArray[np.float64] = data_df.values
+        min_max_scaler: preprocessing.MinMaxScaler = preprocessing.MinMaxScaler()
+        x_scaled: npt.NDArray[np.float64] = min_max_scaler.fit_transform(_x)
+        data_df = pd.DataFrame(x_scaled)
+        # -------------------------------------
 
         data: torch.Tensor = torch.tensor(data_df.to_numpy(), dtype=torch.float32)
         targets: torch.Tensor = torch.tensor(targets_df.to_numpy(), dtype=torch.float32)
