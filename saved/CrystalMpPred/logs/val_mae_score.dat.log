@@ -1,4 +1,4 @@
-+/bin/zsh:337> directory-metadata
++/bin/zsh:652> directory-metadata
 + whoami
 riddle
 + hostname -f
@@ -10,40 +10,39 @@ tulkun.localdomain
 origin	git@gitlab.com:the-study-of-crystal-structures-using-machine-learning/crystal-property-prediction.git (fetch)
 origin	git@gitlab.com:the-study-of-crystal-structures-using-machine-learning/crystal-property-prediction.git (push)
 + git branch -v
-* main d826ec7 [behind 3] Add some more documentation to "cli" module.
+* main c33c4a5 [ahead 2] Train MNIST once again to see that the code is working for normal training (without cross validation) (also add .dat files for every metric).
 + git status
 On branch main
-Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   ../../../.gitignore
-	modified:   ../../../crystal_property_predictor/base/base_trainer.py
-	modified:   ../../../crystal_property_predictor/main.py
-	modified:   ../../../experiments/crystal_mp_prediction/config.yml
-	modified:   info.log
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
 
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
+  (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   ../../Mnist_LeNet/logs/info.log
+	modified:   ../../../experiments/crystal_mp_prediction/config.yml
+	modified:   info.log
+	modified:   loss.dat
+	modified:   loss.dat.log
+	modified:   mae_score.dat
+	modified:   mae_score.dat.log
+	modified:   mse_score.dat
+	modified:   mse_score.dat.log
+	modified:   r_2_score.dat
+	modified:   r_2_score.dat.log
+	modified:   val_loss.dat
+	modified:   val_loss.dat.log
+	deleted:    val_mae_score.dat
+	modified:   val_mae_score.dat.log
+	deleted:    val_mse_score.dat
+	deleted:    val_mse_score.dat.log
+	deleted:    val_r_2_score.dat
+	deleted:    val_r_2_score.dat.log
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	../../../experiments/crystal_mp_prediction/config-normal.yml
-	loss.dat
-	loss.dat.log
-	mae_score.dat
-	mae_score.dat.log
-	mse_score.dat
-	mse_score.dat.log
-	r_2_score.dat
-	r_2_score.dat.log
-	val_loss.dat
-	val_loss.dat.log
-	val_mae_score.dat.log
 
+no changes added to commit (use "git add" and/or "git commit -a")
 + df -h .
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/nvme0n1p3  932G  786G   99G  89% /
@@ -54,6 +53,6 @@ Arch-rolling
 + uname -a
 Linux tulkun 6.6.4-arch1-1 #1 SMP PREEMPT_DYNAMIC Mon, 04 Dec 2023 00:29:19 +0000 x86_64 GNU/Linux
 + date
-Wed Dec 13 02:18:41 AM EET 2023
-+/bin/zsh:338> grep 'INFO - val_mae_score ' info.log
-+/bin/zsh:338> awk '{ print $NF }'
+Wed Dec 13 02:31:14 AM EET 2023
++/bin/zsh:653> grep 'INFO - val_mae_score ' info.log
++/bin/zsh:653> awk '{ print $NF }'
