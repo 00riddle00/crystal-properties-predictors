@@ -191,8 +191,10 @@ visualization.
 
 2. Open tensorboard server
 
-    Type `tensorboard --logdir saved/runs/` at the project root, then server
-    will open at `http://localhost:6006`
+    Type `tensorboard --logdir saved/{experiment_configuration_name}/{timestamp}/tensorboard_summaries/`
+    at the project root, then server will open at `http://localhost:6006`
+
+    (e.g. `tensorboard --logdir saved/EfficientNet/2023-10-02-123456/tensorboard_summaries/`)
 
 By default, values of loss and metrics specified in config file, input images,
 and histogram of model parameters will be logged. If you need more
