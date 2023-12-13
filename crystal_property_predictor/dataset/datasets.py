@@ -15,6 +15,9 @@ MNISTDataset = MNIST
 class CrystalDataset(Dataset[Any]):
     """Crystals Dataset.
 
+    This class was created in a similar manner as torchvision.datasets.MNIST
+    and its parent class torchvision.datasets.VisionDataset.
+
     Args:
         root (string): Root directory of dataset where
             ``CrystalDataset/raw/train-crystal-structures.csv`` and
@@ -22,6 +25,9 @@ class CrystalDataset(Dataset[Any]):
         train (bool, optional): If True, creates dataset from
            ``train-crystal-structures.csv``,
             otherwise from ``test-crystal-structures.csv``.
+        transforms (callable, optional): A function/transforms that takes in
+            a feature vector and a target and returns the transformed versions
+            of both.
         transform (callable, optional): A function/transform that takes in the
             feature vector and returns a transformed version.
         target_transform (callable, optional): A function/transform that takes
@@ -29,6 +35,10 @@ class CrystalDataset(Dataset[Any]):
         download (bool, optional): If True, downloads the dataset from the
             internet and puts it in root directory. If dataset is already
             downloaded, it is not downloaded again.
+
+    Note:
+        `transforms` and the combination of `transform` and `target_transform`
+        are mutually exclusive.
     """
 
     resources = [
@@ -43,8 +53,9 @@ class CrystalDataset(Dataset[Any]):
         self,
         root: str,
         train: bool = True,
-        transform: AugmentationFactoryBase | None = None,
-        target_transform: AugmentationFactoryBase | None = None,
+        transforms: Callable | None = None,
+        transform: Callable | None = None,
+        target_transform: Callable | None = None,
         download: bool = False,
     ) -> None:
         if isinstance(root, str):
@@ -113,11 +124,11 @@ class CrystalDataset(Dataset[Any]):
 
         if self._check_exists():
             return
+        else:
+            # os.makedirs(self.raw_folder, exist_ok=True)
 
-        os.makedirs(self.raw_folder, exist_ok=True)
-
-        # download files
-        pass
+            # Download files
+            pass  # <-- Downloading implementation goes here
 
     @override
     def __getitem__(self, index: int) -> tuple[torch.Tensor, torch.Tensor]:
@@ -144,3 +155,11 @@ class CrystalDataset(Dataset[Any]):
             os.path.isfile((os.path.join(self.raw_folder, f_name)))
             for f_name, _ in self.resources
         )
+
+    # TODO implement similarly to torchvision.datasets.VisionDataset
+    def __repr__(self) -> str:
+        raise NotImplementedError
+
+    def extra_repr(self) -> str:
+        split = "Train" if self.train is True else "Test"
+        return f"Split: {split}"
