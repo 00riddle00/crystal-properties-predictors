@@ -112,12 +112,16 @@ saved/CrystalMpPred/*
 !saved/CrystalMpPred/logs
 saved/CrystalMpPred/logs/*
 !saved/CrystalMpPred/logs/info.log
+!saved/CrystalMpPred/logs/*.dat
+!saved/CrystalMpPred/logs/*.dat.log
 # Mnist_Lenet INFO log
 !saved/Mnist_LeNet/
 saved/Mnist_LeNet/*
 !saved/Mnist_LeNet/logs
 saved/Mnist_LeNet/logs/*
 !saved/Mnist_LeNet/logs/info.log
+!saved/Mnist_LeNet/logs/*.dat
+!saved/Mnist_LeNet/logs/*.dat.log
 
 # editor, os cache directory
 .vscode/

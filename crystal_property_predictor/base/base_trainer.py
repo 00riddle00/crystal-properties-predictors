@@ -37,8 +37,6 @@ class TrainerBase:
         self.config = config
         self.device = device
 
-        self.do_cross_validation: bool = config["training"]["do_cross_validation"]
-
         # The following attributes will be set in _setup_monitoring() method
         self.epochs: int | None = None
         self.save_period: int | None
@@ -64,10 +62,6 @@ class TrainerBase:
 
     def train(self):
         """Full training logic."""
-        if self.do_cross_validation:
-            self._train_with_cross_validation()
-            return
-
         log.info("Starting training...")
         # Counting epochs starts from 1
         epoch: int
@@ -140,10 +134,6 @@ class TrainerBase:
 
             if epoch % self.save_period == 0:
                 self._save_checkpoint(epoch, save_best=best)
-
-    def _train_with_cross_validation(self):
-        """Training logic for training with cross validation."""
-        raise NotImplementedError
 
     def _train_epoch(self, epoch: int) -> dict:
         """Training logic for an epoch."""

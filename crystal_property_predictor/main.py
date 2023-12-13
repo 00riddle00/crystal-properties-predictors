@@ -29,6 +29,54 @@ log: Logger = setup_logger(__name__)
 
 
 def train(cfg: dict, resume: str | None) -> None:
+    do_cross_validation: bool = cfg["training"]["do_cross_validation"]
+
+    transforms: AugmentationFactoryBase | None = get_instance(
+        module_aug, "augmentation", cfg
+    )
+    cross_validator: CrossValidatorFactoryBase | None = get_instance(
+        module_cv, "cross_validation", cfg
+    )
+    data_loader: DataLoaderBase = get_instance(
+        module_data, "data_loader", cfg, transforms, cross_validator
+    )
+    valid_data_loader: DataLoader[Any] | None = data_loader.split_validation()
+
+    if do_cross_validation:
+        train_cross_validation(cfg, resume, data_loader)
+    else:
+        train_normal(cfg, resume, data_loader, valid_data_loader)
+
+
+def train_cross_validation(
+    cfg: dict,
+    resume: str | None,
+    data_loader: DataLoaderBase,
+) -> None:
+    cv_folds_generator = data_loader.generate_cross_validation_folds()
+    fold_no = 0
+
+    while True:
+        try:
+            train_fold_loader, valid_fold_loader = next(cv_folds_generator)
+        except StopIteration:
+            break
+
+        fold_no += 1
+
+        log.info("----------------------------------------")
+        log.info(f"Fold {fold_no}")
+        log.info("----------------------------------------")
+
+        train_normal(cfg, resume, train_fold_loader, valid_fold_loader)
+
+
+def train_normal(
+    cfg: dict,
+    resume: str | None,
+    data_loader: DataLoaderBase,
+    valid_data_loader: DataLoader[Any] | None,
+) -> None:
     log.debug(f"Training: {cfg}")
     seed_everything(cfg["seed"])
 
@@ -46,17 +94,6 @@ def train(cfg: dict, resume: str | None) -> None:
     )
     start_epoch: int
     model, optimizer, start_epoch = resume_checkpoint(resume, model, optimizer, cfg)
-
-    transforms: AugmentationFactoryBase | None = get_instance(
-        module_aug, "augmentation", cfg
-    )
-    cross_validator: CrossValidatorFactoryBase | None = get_instance(
-        module_cv, "cross_validation", cfg
-    )
-    data_loader: DataLoaderBase = get_instance(
-        module_data, "data_loader", cfg, transforms, cross_validator
-    )
-    valid_data_loader: DataLoader[Any] | None = data_loader.split_validation()
 
     log.info("Getting loss and metric function handles")
     loss: Callable[[torch.Tensor, torch.Tensor], torch.Tensor] = getattr(
