@@ -11,6 +11,8 @@ Crystal Properties Predictors
    :target: https://github.com/psf/black
    :alt: Static Badge
 
+Python version: **3.11**
+
 This project was initially setup with
 `Cookiecutter <https://github.com/cookiecutter/cookiecutter/>`_ using these
 choices (the image below):
