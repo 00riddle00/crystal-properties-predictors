@@ -17,7 +17,7 @@ This project was initially setup with
 `Cookiecutter <https://github.com/cookiecutter/cookiecutter/>`_ using these
 choices (the image below):
 
-.. image:: docs/_static/cookiecutter_initial_setup.png
+.. image:: docs/_static/cookiecutter_init_setup.png
 
 .. contents:: Table of Contents
    :depth: 2
